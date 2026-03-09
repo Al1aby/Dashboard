@@ -2,14 +2,14 @@ name: Fetch iCloud Calendar
 
 on:
   schedule:
-    - cron: '*/15 * * * *'   # every 15 minutes
-  workflow_dispatch:           # lets you trigger it manually from the GitHub UI
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
     permissions:
-      contents: write          # needed to commit events.json back to the repo
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -28,14 +28,17 @@ jobs:
 
       - name: Fetch radar image
         run: |
-          curl -fsSL "https://weather.gc.ca/data/radar/temp_image/XSM/XSM_PRECIPET_RAIN_3.gif"             -H "User-Agent: Mozilla/5.0"             -o radar.gif || echo "Radar fetch failed, keeping existing"
-          git add radar.gif || true
+          curl -L \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64)" \
+            -H "Referer: https://weather.gc.ca/" \
+            "https://weather.gc.ca/data/radar/temp_image/XSM/XSM_PRECIPET_RAIN_3.gif" \
+            --output radar.gif
+          echo "Radar size: $(wc -c < radar.gif) bytes"
 
-      - name: Commit events.json if changed
+      - name: Commit changes
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add events.json radar.gif
-          # Only commit if the file actually changed
-          git diff --cached --quiet || git commit -m "chore: update events.json [skip ci]"
+          git diff --cached --quiet || git commit -m "chore: update data [skip ci]"
           git push
