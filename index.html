@@ -471,13 +471,16 @@ async function fetchWx() {
 
 // ── Location ───────────────────────────────────────────────────
 async function getLocation() {
-  const services = [
-    fetchWithTimeout('https://ipapi.co/json/', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.city,region:d.region,tz:d.timezone})),
-    fetchWithTimeout('https://ipwho.is/', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.city,region:d.region_code,tz:d.timezone?.id})),
-    fetchWithTimeout('https://freeipapi.com/api/json', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.cityName,region:d.regionName,tz:d.timeZone})),
+  const attempts = [
+    () => fetchWithTimeout('https://ipapi.co/json/', 6000)
+            .then(r => r.json())
+            .then(d => ({ lat: d.latitude, lon: d.longitude, city: d.city, region: d.region, tz: d.timezone })),
+    () => fetchWithTimeout('https://ip-api.com/json/', 6000)
+            .then(r => r.json())
+            .then(d => ({ lat: d.lat, lon: d.lon, city: d.city, region: d.regionName, tz: d.timezone })),
   ];
-  for (const svc of services) {
-    try { const l = await svc; if (l.lat && l.lon) return l; } catch {}
+  for (const attempt of attempts) {
+    try { const l = await attempt(); if (l && l.lat && l.lon) return l; } catch {}
   }
   return null;
 }
