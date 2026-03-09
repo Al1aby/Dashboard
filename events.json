@@ -1,0 +1,51 @@
+{
+  "events": [
+    {
+      "title": "Laure in office ",
+      "date": "2026-03-10",
+      "time": "All day",
+      "end": "2026-03-11",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Ultrasound ",
+      "date": "2026-03-10",
+      "time": "3:00 PM",
+      "end": "2026-03-10T16:00:00",
+      "all_day": false,
+      "location": "Regional",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure hair ",
+      "date": "2026-03-10",
+      "time": "11:00 PM",
+      "end": "2026-03-11T00:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Grand Manan Curling",
+      "date": "2026-03-13",
+      "time": "11:00 AM",
+      "end": "2026-03-15T05:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Supper @ M&K\u2019s",
+      "date": "2026-03-15",
+      "time": "7:00 PM",
+      "end": "2026-03-15T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    }
+  ],
+  "fetched_at": "2026-03-09T00:59:37.259569Z",
+  "error": null
+}
