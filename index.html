@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
 
 <script>
-const UNITS = "F"; // "C" or "F"
+const UNITS = "C"; // "C" or "F"
 </script>
 
 <style>
@@ -450,7 +450,7 @@ function renderWx(d) {
   daily.time.slice(0,7).forEach((ds, i) => {
     const d2 = new Date(ds + 'T12:00:00');
     const lo = daily.temperature_2m_min[i], hi = daily.temperature_2m_max[i];
-    const [fi] = wmo(daily.weather_code_max?.[i] ?? 0);
+    const [fi] = wmo(daily.weather_code?.[i] ?? 0);
     const bL = (lo-gMin)/rng*100, bW = (hi-lo)/rng*100;
     const lbl = i===0 ? 'TODAY' : i===1 ? 'TMRW' : DSH[d2.getDay()];
     const row = document.createElement('div'); row.className = 'fc-row';
@@ -464,7 +464,7 @@ function toggleU() { useF = !useF; if (wxData) renderWx(wxData); }
 async function fetchWx() {
   if (!lat || !lon) return;
   try {
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code_max,uv_index_max&forecast_days=7&wind_speed_unit=kmh';
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&forecast_days=7&wind_speed_unit=kmh';
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
