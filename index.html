@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
+
+<script>
+const UNITS = "F"; // "C" or "F"
+</script>
+
+<style>
+:root {
+  --bg:      #0c0f14;
+  --panel:   #111620;
+  --border:  #1e2740;
+  --accent:  #f0c060;
+  --teal:    #5ecfcf;
+  --text:    #dde6f0;
+  --muted:   #4a607a;
+  --dim:     #1e2a3a;
+  --green:   #6ec87e;
+  --red:     #d07070;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Karla', sans-serif;
+}
+
+.root {
+  display: grid;
+  width: 100%; height: 100%;
+  grid-template-columns: 340px 1fr 300px;
+  grid-template-rows: 1fr 44px;
+  padding: 5vw 5vw 3vw;
+  gap: 2px;
+}
+
+/* ── LEFT: clock + current weather ──────── */
+#left {
+  grid-column: 1; grid-row: 1;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding-right: 40px;
+  border-right: 1px solid var(--border);
+}
+
+#time {
+  font-family: 'Playfair Display', serif;
+  font-size: 96px; line-height: 1;
+  color: var(--accent); letter-spacing: -2px;
+  text-shadow: 0 0 60px rgba(240,192,96,.2);
+}
+#ampm {
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px; color: var(--muted);
+  letter-spacing: 5px; margin-top: -4px;
+}
+#date-line {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; color: var(--text); margin-top: 8px;
+}
+#date-sub {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12px; color: var(--muted);
+  letter-spacing: 3px; margin-top: 2px;
+}
+
+.l-div { height: 1px; background: var(--border); }
+
+#wx-hero { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+#wx-icon { font-size: 48px; line-height: 1; }
+#wx-temp {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px; line-height: 1;
+  color: var(--text); letter-spacing: -2px;
+}
+#wx-desc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 13px; color: var(--teal); letter-spacing: 3px;
+}
+#wx-feels, #wx-loc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted); letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.wx-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6px; margin-top: 10px;
+}
+.wx-cell {
+  background: var(--dim); border-radius: 6px; padding: 8px 12px;
+}
+.wx-lbl {
+  font-family: 'Inconsolata', monospace;
+  font-size: 9px; color: var(--muted);
+  letter-spacing: 2px; margin-bottom: 2px;
+}
+.wx-val { font-size: 18px; font-weight: 500; color: var(--text); }
+
+/* ── CENTER: agenda ──────────────────────── */
+#center {
+  grid-column: 2; grid-row: 1;
+  display: flex; flex-direction: column;
+  padding: 0 40px; overflow: hidden;
+}
+
+#agenda-hdr {
+  display: flex; align-items: baseline;
+  justify-content: space-between; margin-bottom: 16px;
+}
+#agenda-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-style: italic; color: var(--text);
+}
+#cal-badge {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; letter-spacing: 2px; color: var(--teal);
+}
+
+#agenda-days {
+  flex: 1; display: flex; flex-direction: column; overflow: hidden;
+}
+
+.agenda-day {
+  display: grid; grid-template-columns: 100px 1fr;
+  align-items: start;
+  padding: 11px 0; border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.agenda-day:last-child { border-bottom: 1px solid var(--border); }
+
+.day-name {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; letter-spacing: 3px; color: var(--muted);
+}
+.day-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px; line-height: 1.1; color: var(--text);
+}
+.day-label.today .day-name,
+.day-label.today .day-num {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(240,192,96,.25);
+}
+
+.day-events { display: flex; flex-direction: column; gap: 4px; padding-top: 3px; }
+
+.ev {
+  display: flex; align-items: center; gap: 12px;
+  padding: 5px 14px; border-radius: 4px;
+  background: var(--panel); border-left: 3px solid var(--teal);
+  overflow: hidden;
+}
+.ev.allday { border-left-color: var(--border); background: transparent; padding-left: 10px; }
+
+.ev-time {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12px; color: var(--muted);
+  white-space: nowrap; min-width: 58px; flex-shrink: 0;
+}
+.ev-title {
+  font-size: 15px; color: var(--text); flex: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.ev-loc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted);
+  white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; flex-shrink: 2; max-width: 160px;
+}
+.no-ev {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12px; color: var(--border); letter-spacing: 1px;
+}
+
+/* ── RIGHT: forecast ─────────────────────── */
+#right {
+  grid-column: 3; grid-row: 1;
+  display: flex; flex-direction: column;
+  padding-left: 36px;
+  border-left: 1px solid var(--border);
+  overflow: hidden;
+}
+#fc-title {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; letter-spacing: 4px; color: var(--muted);
+  margin-bottom: 14px;
+}
+#fc-list { flex: 1; display: flex; flex-direction: column; }
+
+.fc-row {
+  display: grid; grid-template-columns: 52px 30px 1fr 42px 48px;
+  align-items: center; gap: 8px;
+  padding: 9px 0; border-top: 1px solid var(--border);
+}
+.fc-row:last-child { border-bottom: 1px solid var(--border); }
+
+.fc-day { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); letter-spacing: 2px; }
+.fc-icon { font-size: 20px; text-align: center; }
+.fc-bg { background: var(--dim); border-radius: 3px; height: 4px; position: relative; }
+.fc-fg { position: absolute; height: 4px; border-radius: 3px; background: linear-gradient(90deg, var(--teal), var(--accent)); }
+.fc-lo { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--muted); text-align: right; }
+.fc-hi { font-family: 'Inconsolata', monospace; font-size: 14px; color: var(--text); font-weight: 500; text-align: right; }
+
+/* ── STATUS BAR ──────────────────────────── */
+#statusbar {
+  grid-column: 1 / -1; grid-row: 2;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--border); padding-top: 10px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted); letter-spacing: 1px;
+}
+.dot {
+  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); margin-right: 8px; animation: blink 3s infinite;
+}
+.dot.err { background: var(--red); }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ── LOADER ──────────────────────────────── */
+#loader {
+  position: fixed; inset: 0; background: var(--bg);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; z-index: 99; transition: opacity .7s;
+}
+#loader.gone { opacity: 0; pointer-events: none; }
+.lhead { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--accent); font-style: italic; }
+.lsub  { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--muted); letter-spacing: 4px; }
+.ltrack { width: 200px; height: 1px; background: var(--border); }
+.lfill  { height: 1px; background: var(--accent); width: 0; transition: width .4s; }
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="lhead">One moment</div>
+  <div class="ltrack"><div class="lfill" id="lfill"></div></div>
+  <div class="lsub" id="lsub">STARTING</div>
+</div>
+
+<div class="root">
+
+  <div id="left">
+    <div id="clock-block">
+      <div id="time">12:00</div>
+      <div id="ampm">AM</div>
+      <div id="date-line">Monday, January 1</div>
+      <div id="date-sub">2025</div>
+    </div>
+    <div class="l-div"></div>
+    <div id="wx-block">
+      <div id="wx-hero">
+        <div id="wx-icon">⏳</div>
+        <div id="wx-temp">--°</div>
+      </div>
+      <div id="wx-desc">LOADING WEATHER</div>
+      <div id="wx-feels">FEELS LIKE --°</div>
+      <div id="wx-loc">📍 detecting…</div>
+      <div class="wx-grid">
+        <div class="wx-cell"><div class="wx-lbl">HUMIDITY</div><div class="wx-val" id="ws-h">--%</div></div>
+        <div class="wx-cell"><div class="wx-lbl">WIND</div><div class="wx-val" id="ws-w">--</div></div>
+        <div class="wx-cell"><div class="wx-lbl">UV INDEX</div><div class="wx-val" id="ws-u">--</div></div>
+        <div class="wx-cell"><div class="wx-lbl">PRECIP.</div><div class="wx-val" id="ws-p">--</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="center">
+    <div id="agenda-hdr">
+      <div id="agenda-title">Next 7 Days</div>
+      <div id="cal-badge">● LOADING</div>
+    </div>
+    <div id="agenda-days"></div>
+  </div>
+
+  <div id="right">
+    <div id="fc-title">7-DAY FORECAST</div>
+    <div id="fc-list"><div style="color:var(--muted);font-family:'Inconsolata',monospace;font-size:12px">Loading…</div></div>
+  </div>
+
+  <div id="statusbar">
+    <div><span class="dot" id="sdot"></span><span id="stxt">ONLINE</span></div>
+    <div id="supd">—</div>
+    <div style="cursor:pointer;user-select:none" onclick="toggleU()">°C · °F</div>
+  </div>
+
+</div>
+
+<script>
+const DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const DSH    = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function fetchWithTimeout(url, ms) {
+  return new Promise((res, rej) => {
+    const t = setTimeout(() => rej(new Error('Timeout')), ms);
+    fetch(url, { cache: 'no-store' })
+      .then(r  => { clearTimeout(t); res(r); })
+      .catch(e => { clearTimeout(t); rej(e); });
+  });
+}
+
+let useF = (typeof UNITS !== 'undefined' && UNITS === 'F');
+let wxData = null, lat = null, lon = null, tzName = 'auto';
+
+// ── Loader ─────────────────────────────────────────────────────
+function load(p, m) {
+  document.getElementById('lfill').style.width = p + '%';
+  document.getElementById('lsub').textContent = m;
+}
+function doneLoading() {
+  const el = document.getElementById('loader');
+  el.classList.add('gone');
+  setTimeout(() => el.remove(), 800);
+}
+
+// ── Clock ──────────────────────────────────────────────────────
+function tick() {
+  const n = new Date();
+  const h = n.getHours(), m = String(n.getMinutes()).padStart(2,'0');
+  document.getElementById('time').textContent      = `${String(h%12||12).padStart(2,'0')}:${m}`;
+  document.getElementById('ampm').textContent      = h >= 12 ? 'PM' : 'AM';
+  document.getElementById('date-line').textContent = `${DAYS[n.getDay()]}, ${MONTHS[n.getMonth()]} ${n.getDate()}`;
+  document.getElementById('date-sub').textContent  = String(n.getFullYear());
+}
+setInterval(tick, 1000); tick();
+
+// ── Calendar — reads events.json committed by GitHub Action ────
+function toDateStr(dt) {
+  return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
+}
+
+async function fetchCalendar() {
+  try {
+    // events.json lives in the same repo, so same origin — no CORS at all
+    const res = await fetchWithTimeout('./events.json', 8000);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    buildAgenda(data.events || []);
+
+    const badge = document.getElementById('cal-badge');
+    if (data.error && !(data.events||[]).length) {
+      badge.textContent = '⚠ CAL ERROR';
+      badge.style.color = 'var(--red)';
+    } else {
+      const n = data.events ? data.events.length : 0;
+      badge.textContent = `● ${n} EVENT${n !== 1 ? 'S' : ''}`;
+      badge.style.color = 'var(--teal)';
+    }
+
+    if (data.fetched_at) {
+      const d = new Date(data.fetched_at);
+      document.getElementById('supd').textContent =
+        `CAL ${String(d.getUTCHours()).padStart(2,'0')}:${String(d.getUTCMinutes()).padStart(2,'0')} UTC`;
+    }
+  } catch(e) {
+    console.warn('events.json fetch failed:', e.message);
+    const badge = document.getElementById('cal-badge');
+    badge.textContent = '● CALENDAR OFFLINE';
+    badge.style.color = 'var(--red)';
+    buildAgenda([]);
+  }
+}
+
+function buildAgenda(events) {
+  const wrap = document.getElementById('agenda-days');
+  wrap.innerHTML = '';
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  const byDate = {};
+  events.forEach(ev => { (byDate[ev.date] = byDate[ev.date] || []).push(ev); });
+
+  for (let i = 0; i < 7; i++) {
+    const day = new Date(today); day.setDate(today.getDate() + i);
+    const ds  = toDateStr(day);
+    const evs = (byDate[ds] || []).sort((a,b) => {
+      if (a.all_day && !b.all_day) return -1;
+      if (!a.all_day && b.all_day) return  1;
+      return (a.time||'').localeCompare(b.time||'');
+    });
+
+    const row = document.createElement('div'); row.className = 'agenda-day';
+    const lbl = document.createElement('div'); lbl.className = 'day-label' + (i===0?' today':'');
+    lbl.innerHTML = `<div class="day-name">${i===0?'TODAY':DSH[day.getDay()]}</div><div class="day-num">${day.getDate()}</div>`;
+
+    const col = document.createElement('div'); col.className = 'day-events';
+
+    if (!evs.length) {
+      col.innerHTML = '<div class="no-ev">— No events</div>';
+    } else {
+      evs.slice(0,3).forEach(ev => {
+        const p = document.createElement('div');
+        p.className = 'ev' + (ev.all_day ? ' allday' : '');
+        p.innerHTML = `<div class="ev-time">${ev.all_day ? 'All day' : ev.time}</div><div class="ev-title">${ev.title}</div>${ev.location ? `<div class="ev-loc">📍 ${ev.location}</div>` : ''}`;
+        col.appendChild(p);
+      });
+      if (evs.length > 3) {
+        const m = document.createElement('div');
+        m.className = 'no-ev'; m.textContent = `+${evs.length-3} more`;
+        col.appendChild(m);
+      }
+    }
+
+    row.appendChild(lbl); row.appendChild(col); wrap.appendChild(row);
+  }
+}
+
+// ── Weather ────────────────────────────────────────────────────
+const WMO = {
+  0:['☀️','CLEAR'],1:['🌤','MOSTLY CLEAR'],2:['⛅','PARTLY CLOUDY'],3:['☁️','OVERCAST'],
+  45:['🌫','FOG'],48:['🌫','FOG'],51:['🌦','DRIZZLE'],53:['🌦','DRIZZLE'],55:['🌧','DRIZZLE'],
+  61:['🌧','LIGHT RAIN'],63:['🌧','RAIN'],65:['🌧','HEAVY RAIN'],
+  71:['🌨','LIGHT SNOW'],73:['❄️','SNOW'],75:['❄️','HEAVY SNOW'],
+  80:['🌦','SHOWERS'],81:['🌧','SHOWERS'],82:['⛈','HEAVY SHOWERS'],
+  95:['⛈','THUNDERSTORM'],96:['⛈','THUNDERSTORM'],99:['⛈','THUNDERSTORM'],
+};
+const wmo  = c => WMO[c] || ['🌡','UNKNOWN'];
+const cToF = c => Math.round(c * 9/5 + 32);
+const fmt  = c => useF ? `${cToF(c)}°F` : `${Math.round(c)}°C`;
+const fmtS = c => useF ? `${cToF(c)}°`  : `${Math.round(c)}°`;
+
+function renderWx(d) {
+  wxData = d;
+  const cur = d.current, daily = d.daily;
+  const [icon, desc] = wmo(cur.weather_code);
+  document.getElementById('wx-icon').textContent  = icon;
+  document.getElementById('wx-temp').textContent  = fmt(cur.temperature_2m);
+  document.getElementById('wx-desc').textContent  = desc;
+  document.getElementById('wx-feels').textContent = `FEELS LIKE ${fmt(cur.apparent_temperature)}`;
+  document.getElementById('ws-h').textContent     = `${Math.round(cur.relative_humidity_2m)}%`;
+  document.getElementById('ws-w').textContent     = `${Math.round(cur.wind_speed_10m)} km/h`;
+  document.getElementById('ws-u').textContent     = daily.uv_index_max?.[0]?.toFixed(1) ?? '--';
+  document.getElementById('ws-p').textContent     = `${(cur.precipitation||0).toFixed(1)} mm`;
+
+  const list = document.getElementById('fc-list'); list.innerHTML = '';
+  const gMin = Math.min(...daily.temperature_2m_min);
+  const gMax = Math.max(...daily.temperature_2m_max);
+  const rng  = gMax - gMin || 1;
+
+  daily.time.slice(0,7).forEach((ds, i) => {
+    const d2 = new Date(ds + 'T12:00:00');
+    const lo = daily.temperature_2m_min[i], hi = daily.temperature_2m_max[i];
+    const [fi] = wmo(daily.weather_code_max?.[i] ?? 0);
+    const bL = (lo-gMin)/rng*100, bW = (hi-lo)/rng*100;
+    const lbl = i===0 ? 'TODAY' : i===1 ? 'TMRW' : DSH[d2.getDay()];
+    const row = document.createElement('div'); row.className = 'fc-row';
+    row.innerHTML = `<div class="fc-day">${lbl}</div><div class="fc-icon">${fi}</div><div class="fc-bg"><div class="fc-fg" style="left:${bL}%;width:${bW}%"></div></div><div class="fc-lo">${fmtS(lo)}</div><div class="fc-hi">${fmtS(hi)}</div>`;
+    list.appendChild(row);
+  });
+}
+
+function toggleU() { useF = !useF; if (wxData) renderWx(wxData); }
+
+async function fetchWx() {
+  if (!lat || !lon) return;
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=${encodeURIComponent(tzName)}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code_max,uv_index_max&forecast_days=7&wind_speed_unit=kmh`;
+    renderWx(await (await fetch(url)).json());
+  } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
+}
+
+// ── Location ───────────────────────────────────────────────────
+async function getLocation() {
+  const services = [
+    fetchWithTimeout('https://ipapi.co/json/', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.city,region:d.region,tz:d.timezone})),
+    fetchWithTimeout('https://ipwho.is/', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.city,region:d.region_code,tz:d.timezone?.id})),
+    fetchWithTimeout('https://freeipapi.com/api/json', 5000).then(r=>r.json()).then(d=>({lat:d.latitude,lon:d.longitude,city:d.cityName,region:d.regionName,tz:d.timeZone})),
+  ];
+  for (const svc of services) {
+    try { const l = await svc; if (l.lat && l.lon) return l; } catch {}
+  }
+  return null;
+}
+
+// ── Init ───────────────────────────────────────────────────────
+async function init() {
+  load(10, 'DETECTING LOCATION');
+  const loc = await getLocation();
+  if (loc) {
+    lat = loc.lat; lon = loc.lon;
+    tzName = loc.tz || Intl.DateTimeFormat().resolvedOptions().timeZone || 'auto';
+    document.getElementById('wx-loc').textContent =
+      '📍 ' + ((loc.city && loc.region) ? `${loc.city}, ${loc.region}` : `${lat.toFixed(2)}°, ${lon.toFixed(2)}°`);
+  } else {
+    lat = 40.7128; lon = -74.006; tzName = 'America/New_York';
+    document.getElementById('wx-loc').textContent = '📍 Location unavailable';
+  }
+
+  load(50, 'FETCHING WEATHER');
+  await fetchWx();
+
+  load(75, 'LOADING CALENDAR');
+  await fetchCalendar();
+
+  load(100, 'READY');
+  setTimeout(doneLoading, 300);
+
+  setInterval(fetchCalendar, 5 * 60 * 1000);   // re-read events.json every 5 min
+  setInterval(fetchWx,       10 * 60 * 1000);   // re-fetch weather every 10 min
+}
+
+init();
+</script>
+</body>
+</html>
