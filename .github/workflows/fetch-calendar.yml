@@ -26,11 +26,16 @@ jobs:
       - name: Fetch calendar and write events.json
         run: python fetch_calendar.py
 
+      - name: Fetch radar image
+        run: |
+          curl -fsSL "https://weather.gc.ca/data/radar/temp_image/XSM/XSM_PRECIPET_RAIN_3.gif"             -H "User-Agent: Mozilla/5.0"             -o radar.gif || echo "Radar fetch failed, keeping existing"
+          git add radar.gif || true
+
       - name: Commit events.json if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add events.json
+          git add events.json radar.gif
           # Only commit if the file actually changed
           git diff --cached --quiet || git commit -m "chore: update events.json [skip ci]"
           git push
