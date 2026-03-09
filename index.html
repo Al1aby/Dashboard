@@ -540,15 +540,12 @@ function buildCalStrip(events) {
 }
 
 // ── Radar ─────────────────────────────────────────────────────────
-// Environment Canada composite radar for the Maritimes region
-// Station XSM = Chipman NB, covers Saint John / Nauwigewauk area well
-const RADAR_URL = 'https://weather.gc.ca/data/radar/temp_image/XSM/XSM_PRECIPET_RAIN_3.gif';
-
+// Radar image is fetched by the GitHub Action and saved as radar.gif in the repo
+// Same origin = no CORS issues at all
 function refreshRadar() {
   const img = document.getElementById('radar-img');
   const err = document.getElementById('radar-err');
   const age = document.getElementById('radar-age');
-  const ts  = Date.now();
   const tmp = new Image();
   tmp.onload = () => {
     img.src = tmp.src;
@@ -561,7 +558,7 @@ function refreshRadar() {
     img.style.display = 'none';
     err.style.display = 'block';
   };
-  tmp.src = RADAR_URL + '?t=' + ts;
+  tmp.src = './radar.gif?t=' + Date.now();
 }
 
 // ── Weather ───────────────────────────────────────────────────────
