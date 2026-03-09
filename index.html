@@ -210,13 +210,15 @@ html, body {
 #radar-age {
   font-size: 10px; color: var(--dim);
 }
-#radar-img {
-  flex: 1; width: 100%; object-fit: contain;
+#radar-map {
+  flex: 1; width: 100%;
   border-radius: 6px;
   border: 1px solid var(--border);
-  background: var(--dim);
+  background: #0c0f14;
   min-height: 0;
+  /* Leaflet dark override */
 }
+#radar-map .leaflet-tile-pane { filter: brightness(0.85) saturate(1.2); }
 #radar-err {
   display: none;
   font-family: 'Inconsolata', monospace;
@@ -357,7 +359,7 @@ html, body {
         <span>RADAR — MARITIMES</span>
         <span id="radar-age"></span>
       </div>
-      <img id="radar-img" alt="Radar" />
+      <div id="radar-map"></div>
       <div id="radar-err">Radar unavailable</div>
     </div>
 
@@ -539,39 +541,57 @@ function buildCalStrip(events) {
   }
 }
 
-// ── Radar ─────────────────────────────────────────────────────────
-// MSC GeoMet WMS — radar tile centered on Nauwigewauk NB
-// Direct img src, no CORS, no GitHub Action needed, updates every 6 min
+// ── Radar — RainViewer (free, no API key, 10-min updates, CORS-friendly) ──
+let radarMap = null;
+let radarLayer = null;
+
+function initRadarMap() {
+  const mapEl = document.getElementById('radar-map');
+  if (!mapEl) return;
+
+  // Nauwigewauk NB centred, zoom 7 covers the Maritimes
+  radarMap = L.map('radar-map', {
+    center: [45.47, -65.89],
+    zoom: 7,
+    zoomControl: false,
+    attributionControl: false,
+    dragging: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: false,
+  });
+
+  // Dark OpenStreetMap base
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 9,
+  }).addTo(radarMap);
+
+  initRadarMap();
+}
+
 function refreshRadar() {
-  const img = document.getElementById('radar-img');
   const err = document.getElementById('radar-err');
   const age = document.getElementById('radar-age');
+  if (!radarMap) return;
 
-  // WMS GetMap request — RADAR_RRAI layer, centered on Nauwigewauk
-  // bbox is roughly 200km around the area: lon -70 to -61, lat 43 to 49
-  const wms = 'https://geo.weather.gc.ca/geomet?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap'
-    + '&LAYERS=RADAR_RRAI,GDPS.ETA_TT'
-    + '&CRS=EPSG:4326'
-    + '&BBOX=43.5,-69.5,48.5,-62.0'
-    + '&WIDTH=600&HEIGHT=400'
-    + '&FORMAT=image/png'
-    + '&TRANSPARENT=false'
-    + '&BGCOLOR=0x0c0f14'
-    + '&t=' + Date.now();
+  fetch('https://api.rainviewer.com/public/weather-maps.json')
+    .then(r => r.json())
+    .then(api => {
+      const frames = api.radar && api.radar.past;
+      if (!frames || !frames.length) throw new Error('no frames');
 
-  const tmp = new Image();
-  tmp.onload = () => {
-    img.src = tmp.src;
-    img.style.display = 'block';
-    err.style.display = 'none';
-    const n = new Date();
-    age.textContent = `${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}`;
-  };
-  tmp.onerror = () => {
-    img.style.display = 'none';
-    err.style.display = 'block';
-  };
-  tmp.src = wms;
+      const latest = frames[frames.length - 1];
+      const tileUrl = api.host + latest.path + '/256/{z}/{x}/{y}/2/1_1.png';
+
+      if (radarLayer) radarMap.removeLayer(radarLayer);
+      radarLayer = L.tileLayer(tileUrl, { opacity: 0.7, maxZoom: 9 });
+      radarLayer.addTo(radarMap);
+
+      err.style.display = 'none';
+      const d = new Date(latest.time * 1000);
+      age.textContent = d.toLocaleTimeString('en-CA', { hour: '2-digit', minute: '2-digit', hour12: false });
+    })
+    .catch(() => { err.style.display = 'block'; });
 }
 
 // ── Weather ───────────────────────────────────────────────────────
@@ -630,7 +650,7 @@ async function init() {
   await fetchWx();
 
   load(60, 'LOADING RADAR');
-  refreshRadar();
+  initRadarMap();
 
   load(80, 'LOADING CALENDAR');
   await fetchCalendar();
@@ -640,7 +660,7 @@ async function init() {
 
   setInterval(fetchCalendar,  5 * 60 * 1000);   // calendar every 5 min
   setInterval(fetchWx,       10 * 60 * 1000);   // weather every 10 min
-  setInterval(refreshRadar,   6 * 60 * 1000);   // radar every 6 min
+  setInterval(refreshRadar,  10 * 60 * 1000);   // radar every 10 min (RainViewer update cadence)
   setInterval(() => buildToday(allCalEvents), 60 * 1000); // re-highlight current event every min
 }
 
