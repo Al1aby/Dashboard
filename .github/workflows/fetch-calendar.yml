@@ -27,13 +27,7 @@ jobs:
         run: python fetch_calendar.py
 
       - name: Fetch radar image
-        run: |
-          curl -L \
-            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64)" \
-            -H "Referer: https://weather.gc.ca/" \
-            "https://weather.gc.ca/data/radar/temp_image/XSM/XSM_PRECIPET_RAIN_3.gif" \
-            --output radar.gif
-          echo "Radar size: $(wc -c < radar.gif) bytes"
+        run: python fetch_radar.py
 
       - name: Commit changes
         run: |
