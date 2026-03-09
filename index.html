@@ -546,19 +546,19 @@ function refreshRadar() {
   const img = document.getElementById('radar-img');
   const err = document.getElementById('radar-err');
   const age = document.getElementById('radar-age');
-  const tmp = new Image();
-  tmp.onload = () => {
-    img.src = tmp.src;
+  // Set src directly — same origin, no CORS needed
+  const url = 'radar.gif?nocache=' + Date.now();
+  img.onload = () => {
     img.style.display = 'block';
     err.style.display = 'none';
     const n = new Date();
     age.textContent = `${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}`;
   };
-  tmp.onerror = () => {
+  img.onerror = () => {
     img.style.display = 'none';
     err.style.display = 'block';
   };
-  tmp.src = './radar.gif?t=' + Date.now();
+  img.src = url;
 }
 
 // ── Weather ───────────────────────────────────────────────────────
