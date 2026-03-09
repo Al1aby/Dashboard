@@ -6,238 +6,259 @@
 <title>Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Karla:wght@300;400;500&family=Inconsolata:wght@300;400;500&display=swap" rel="stylesheet">
-
-<script>
-const UNITS = "C"; // "C" or "F"
-</script>
-
+<script>const UNITS = "C";</script>
 <style>
 :root {
-  --bg:      #0c0f14;
-  --panel:   #111620;
-  --border:  #1e2740;
-  --accent:  #f0c060;
-  --teal:    #5ecfcf;
-  --text:    #dde6f0;
-  --muted:   #4a607a;
-  --dim:     #1e2a3a;
-  --green:   #6ec87e;
-  --red:     #d07070;
+  --bg:     #0c0f14;
+  --panel:  #111620;
+  --border: #1e2740;
+  --accent: #f0c060;
+  --teal:   #5ecfcf;
+  --text:   #dde6f0;
+  --muted:  #4a607a;
+  --dim:    #1e2a3a;
+  --red:    #d07070;
 }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100vw; height:100vh; overflow:hidden; background:var(--bg); color:var(--text); font-family:'Karla',sans-serif; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html, body {
-  width: 100vw; height: 100vh;
-  overflow: hidden;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Karla', sans-serif;
-}
-
+/* ── ROOT GRID: 3 columns, full height ── */
 .root {
   display: grid;
   width: 100%; height: 100%;
-  grid-template-columns: 340px 1fr 300px;
-  grid-template-rows: 1fr 44px;
-  padding: 5vw 5vw 3vw;
-  gap: 2px;
+  grid-template-columns: 320px 1fr 300px;
+  grid-template-rows: 1fr;
+  padding: 3.5vw 4vw;
+  gap: 0;
 }
 
-/* ── LEFT: clock + current weather ──────── */
+/* ══════════════════════════════════════
+   LEFT — compact clock + today's events
+   ══════════════════════════════════════ */
 #left {
-  grid-column: 1; grid-row: 1;
   display: flex; flex-direction: column;
-  justify-content: space-between;
-  padding-right: 40px;
+  padding-right: 36px;
   border-right: 1px solid var(--border);
+  overflow: hidden;
 }
 
+/* Clock block — compact */
+#clock-block {
+  flex-shrink: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
 #time {
   font-family: 'Playfair Display', serif;
-  font-size: 96px; line-height: 1;
+  font-size: 72px; line-height: 1;
   color: var(--accent); letter-spacing: -2px;
-  text-shadow: 0 0 60px rgba(240,192,96,.2);
+  text-shadow: 0 0 40px rgba(240,192,96,.2);
 }
 #ampm {
   font-family: 'Inconsolata', monospace;
-  font-size: 16px; color: var(--muted);
-  letter-spacing: 5px; margin-top: -4px;
+  font-size: 13px; color: var(--muted);
+  letter-spacing: 5px; margin-top: -2px;
 }
 #date-line {
   font-family: 'Playfair Display', serif;
-  font-size: 22px; color: var(--text); margin-top: 8px;
+  font-size: 17px; color: var(--text); margin-top: 4px;
 }
 #date-sub {
   font-family: 'Inconsolata', monospace;
-  font-size: 12px; color: var(--muted);
-  letter-spacing: 3px; margin-top: 2px;
+  font-size: 11px; color: var(--muted);
+  letter-spacing: 3px; margin-top: 1px;
 }
 
-.l-div { height: 1px; background: var(--border); }
-
-#wx-hero { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
-#wx-icon { font-size: 48px; line-height: 1; }
-#wx-temp {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px; line-height: 1;
-  color: var(--text); letter-spacing: -2px;
-}
-#wx-desc {
+/* Today's events */
+#today-hdr {
   font-family: 'Inconsolata', monospace;
-  font-size: 13px; color: var(--teal); letter-spacing: 3px;
+  font-size: 10px; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 10px; flex-shrink: 0;
 }
-#wx-feels, #wx-loc {
-  font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted); letter-spacing: 2px;
-  margin-top: 4px;
+#today-events {
+  flex: 1; display: flex; flex-direction: column;
+  gap: 5px; overflow: hidden;
 }
 
-.wx-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 6px; margin-top: 10px;
+.tev {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 12px; border-radius: 4px;
+  background: var(--panel); border-left: 3px solid var(--teal);
+  flex-shrink: 0; overflow: hidden;
 }
-.wx-cell {
-  background: var(--dim); border-radius: 6px; padding: 8px 12px;
-}
-.wx-lbl {
-  font-family: 'Inconsolata', monospace;
-  font-size: 9px; color: var(--muted);
-  letter-spacing: 2px; margin-bottom: 2px;
-}
-.wx-val { font-size: 18px; font-weight: 500; color: var(--text); }
+.tev.allday { border-left-color: var(--dim); background: transparent; padding-left: 8px; }
+.tev.past   { border-left-color: var(--muted); opacity: 0.5; }
+.tev.now    { border-left-color: var(--accent); background: rgba(240,192,96,.07); }
 
-/* ── CENTER: agenda ──────────────────────── */
+.tev-time {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted);
+  white-space: nowrap; min-width: 56px; flex-shrink: 0;
+}
+.tev.now .tev-time { color: var(--accent); }
+
+.tev-title {
+  font-size: 14px; color: var(--text); flex: 1;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tev-loc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 10px; color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  flex-shrink: 2; max-width: 120px;
+}
+.no-tev {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12px; color: var(--dim); letter-spacing: 1px;
+  padding: 4px 0;
+}
+
+/* ══════════════════════════════════════
+   CENTER — next 6 days
+   ══════════════════════════════════════ */
 #center {
-  grid-column: 2; grid-row: 1;
   display: flex; flex-direction: column;
-  padding: 0 40px; overflow: hidden;
+  padding: 0 36px; overflow: hidden;
 }
-
 #agenda-hdr {
   display: flex; align-items: baseline;
-  justify-content: space-between; margin-bottom: 16px;
+  justify-content: space-between;
+  margin-bottom: 14px; flex-shrink: 0;
 }
 #agenda-title {
   font-family: 'Playfair Display', serif;
-  font-size: 28px; font-style: italic; color: var(--text);
+  font-size: 24px; font-style: italic; color: var(--text);
 }
 #cal-badge {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; letter-spacing: 2px; color: var(--teal);
+  font-size: 10px; letter-spacing: 2px; color: var(--teal);
 }
-
 #agenda-days {
   flex: 1; display: flex; flex-direction: column; overflow: hidden;
 }
-
 .agenda-day {
-  display: grid; grid-template-columns: 100px 1fr;
+  display: grid; grid-template-columns: 88px 1fr;
   align-items: start;
-  padding: 11px 0; border-top: 1px solid var(--border);
+  padding: 9px 0; border-top: 1px solid var(--border);
   flex-shrink: 0;
 }
 .agenda-day:last-child { border-bottom: 1px solid var(--border); }
-
 .day-name {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; letter-spacing: 3px; color: var(--muted);
+  font-size: 10px; letter-spacing: 3px; color: var(--muted);
 }
 .day-num {
   font-family: 'Playfair Display', serif;
-  font-size: 34px; line-height: 1.1; color: var(--text);
+  font-size: 30px; line-height: 1.1; color: var(--text);
 }
-.day-label.today .day-name,
-.day-label.today .day-num {
-  color: var(--accent);
-  text-shadow: 0 0 20px rgba(240,192,96,.25);
-}
-
-.day-events { display: flex; flex-direction: column; gap: 4px; padding-top: 3px; }
-
+.day-events { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; }
 .ev {
-  display: flex; align-items: center; gap: 12px;
-  padding: 5px 14px; border-radius: 4px;
+  display: flex; align-items: center; gap: 10px;
+  padding: 5px 12px; border-radius: 4px;
   background: var(--panel); border-left: 3px solid var(--teal);
   overflow: hidden;
 }
-.ev.allday { border-left-color: var(--border); background: transparent; padding-left: 10px; }
-
+.ev.allday { border-left-color: var(--dim); background: transparent; padding-left: 8px; }
 .ev-time {
   font-family: 'Inconsolata', monospace;
-  font-size: 12px; color: var(--muted);
-  white-space: nowrap; min-width: 58px; flex-shrink: 0;
+  font-size: 11px; color: var(--muted);
+  white-space: nowrap; min-width: 54px; flex-shrink: 0;
 }
 .ev-title {
-  font-size: 15px; color: var(--text); flex: 1;
+  font-size: 14px; color: var(--text); flex: 1;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .ev-loc {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted);
-  white-space: nowrap; overflow: hidden;
-  text-overflow: ellipsis; flex-shrink: 2; max-width: 160px;
+  font-size: 10px; color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  flex-shrink: 2; max-width: 140px;
 }
 .no-ev {
   font-family: 'Inconsolata', monospace;
-  font-size: 12px; color: var(--border); letter-spacing: 1px;
+  font-size: 11px; color: var(--dim); letter-spacing: 1px;
 }
 
-/* ── RIGHT: forecast ─────────────────────── */
+/* ══════════════════════════════════════
+   RIGHT — current weather + 7-day forecast
+   ══════════════════════════════════════ */
 #right {
-  grid-column: 3; grid-row: 1;
   display: flex; flex-direction: column;
-  padding-left: 36px;
+  padding-left: 32px;
   border-left: 1px solid var(--border);
-  overflow: hidden;
+  gap: 0; overflow: hidden;
 }
+
+/* Current weather */
+#wx-now {
+  flex-shrink: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+#wx-hero { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+#wx-icon { font-size: 44px; line-height: 1; }
+#wx-temp {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; line-height: 1;
+  color: var(--text); letter-spacing: -2px;
+}
+#wx-desc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12px; color: var(--teal); letter-spacing: 3px;
+}
+#wx-feels {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted); letter-spacing: 2px; margin-top: 3px;
+}
+#wx-loc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 10px; color: var(--muted); letter-spacing: 1px; margin-top: 2px;
+}
+.wx-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5px; margin-top: 10px;
+}
+.wx-cell { background: var(--dim); border-radius: 5px; padding: 7px 10px; }
+.wx-lbl {
+  font-family: 'Inconsolata', monospace;
+  font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-bottom: 1px;
+}
+.wx-val { font-size: 16px; font-weight: 500; color: var(--text); }
+
+/* 7-day forecast */
 #fc-title {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; letter-spacing: 4px; color: var(--muted);
-  margin-bottom: 14px;
+  font-size: 10px; letter-spacing: 4px; color: var(--muted);
+  margin-bottom: 10px; flex-shrink: 0;
 }
-#fc-list { flex: 1; display: flex; flex-direction: column; }
-
+#fc-list { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 .fc-row {
-  display: grid; grid-template-columns: 52px 30px 1fr 42px 48px;
-  align-items: center; gap: 8px;
-  padding: 9px 0; border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: 48px 28px 1fr 38px 46px;
+  align-items: center; gap: 7px;
+  padding: 7px 0; border-top: 1px solid var(--border);
+  flex-shrink: 0;
 }
 .fc-row:last-child { border-bottom: 1px solid var(--border); }
-
-.fc-day { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); letter-spacing: 2px; }
-.fc-icon { font-size: 20px; text-align: center; }
-.fc-bg { background: var(--dim); border-radius: 3px; height: 4px; position: relative; }
-.fc-fg { position: absolute; height: 4px; border-radius: 3px; background: linear-gradient(90deg, var(--teal), var(--accent)); }
+.fc-day { font-family: 'Inconsolata', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; }
+.fc-icon { font-size: 18px; text-align: center; }
+.fc-bg { background: var(--dim); border-radius: 3px; height: 3px; position: relative; }
+.fc-fg { position: absolute; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--teal), var(--accent)); }
 .fc-lo { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--muted); text-align: right; }
-.fc-hi { font-family: 'Inconsolata', monospace; font-size: 14px; color: var(--text); font-weight: 500; text-align: right; }
+.fc-hi { font-family: 'Inconsolata', monospace; font-size: 13px; color: var(--text); font-weight: 500; text-align: right; }
 
-/* ── STATUS BAR ──────────────────────────── */
-#statusbar {
-  grid-column: 1 / -1; grid-row: 2;
-  display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid var(--border); padding-top: 10px;
-  font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted); letter-spacing: 1px;
-}
-.dot {
-  display: inline-block; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--green); margin-right: 8px; animation: blink 3s infinite;
-}
-.dot.err { background: var(--red); }
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
-
-/* ── LOADER ──────────────────────────────── */
+/* ── LOADER ── */
 #loader {
-  position: fixed; inset: 0; background: var(--bg);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 14px; z-index: 99; transition: opacity .7s;
+  position:fixed; inset:0; background:var(--bg);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:14px; z-index:99; transition:opacity .7s;
 }
-#loader.gone { opacity: 0; pointer-events: none; }
-.lhead { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--accent); font-style: italic; }
-.lsub  { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--muted); letter-spacing: 4px; }
-.ltrack { width: 200px; height: 1px; background: var(--border); }
-.lfill  { height: 1px; background: var(--accent); width: 0; transition: width .4s; }
+#loader.gone { opacity:0; pointer-events:none; }
+.lhead { font-family:'Playfair Display',serif; font-size:28px; color:var(--accent); font-style:italic; }
+.lsub  { font-family:'Inconsolata',monospace; font-size:11px; color:var(--muted); letter-spacing:4px; }
+.ltrack { width:180px; height:1px; background:var(--border); }
+.lfill  { height:1px; background:var(--accent); width:0; transition:width .4s; }
 </style>
 </head>
 <body>
@@ -250,6 +271,7 @@ html, body {
 
 <div class="root">
 
+  <!-- LEFT: clock + today's hourly events -->
   <div id="left">
     <div id="clock-block">
       <div id="time">12:00</div>
@@ -257,15 +279,31 @@ html, body {
       <div id="date-line">Monday, January 1</div>
       <div id="date-sub">2025</div>
     </div>
-    <div class="l-div"></div>
-    <div id="wx-block">
+    <div id="today-hdr">TODAY'S EVENTS</div>
+    <div id="today-events">
+      <div class="no-tev">Loading…</div>
+    </div>
+  </div>
+
+  <!-- CENTER: next 6 days -->
+  <div id="center">
+    <div id="agenda-hdr">
+      <div id="agenda-title">Coming Up</div>
+      <div id="cal-badge">● LOADING</div>
+    </div>
+    <div id="agenda-days"></div>
+  </div>
+
+  <!-- RIGHT: current weather + forecast -->
+  <div id="right">
+    <div id="wx-now">
       <div id="wx-hero">
         <div id="wx-icon">⏳</div>
         <div id="wx-temp">--°</div>
       </div>
       <div id="wx-desc">LOADING WEATHER</div>
       <div id="wx-feels">FEELS LIKE --°</div>
-      <div id="wx-loc">📍 detecting…</div>
+      <div id="wx-loc">📍 Nauwigewauk, NB</div>
       <div class="wx-grid">
         <div class="wx-cell"><div class="wx-lbl">HUMIDITY</div><div class="wx-val" id="ws-h">--%</div></div>
         <div class="wx-cell"><div class="wx-lbl">WIND</div><div class="wx-val" id="ws-w">--</div></div>
@@ -273,25 +311,8 @@ html, body {
         <div class="wx-cell"><div class="wx-lbl">PRECIP.</div><div class="wx-val" id="ws-p">--</div></div>
       </div>
     </div>
-  </div>
-
-  <div id="center">
-    <div id="agenda-hdr">
-      <div id="agenda-title">Next 7 Days</div>
-      <div id="cal-badge">● LOADING</div>
-    </div>
-    <div id="agenda-days"></div>
-  </div>
-
-  <div id="right">
     <div id="fc-title">7-DAY FORECAST</div>
-    <div id="fc-list"><div style="color:var(--muted);font-family:'Inconsolata',monospace;font-size:12px">Loading…</div></div>
-  </div>
-
-  <div id="statusbar">
-    <div><span class="dot" id="sdot"></span><span id="stxt">ONLINE</span></div>
-    <div id="supd">—</div>
-    <div style="cursor:pointer;user-select:none" onclick="toggleU()">°C · °F</div>
+    <div id="fc-list"><div style="color:var(--muted);font-family:'Inconsolata',monospace;font-size:11px">Loading…</div></div>
   </div>
 
 </div>
@@ -311,7 +332,7 @@ function fetchWithTimeout(url, ms) {
 }
 
 let useF = (typeof UNITS !== 'undefined' && UNITS === 'F');
-let wxData = null, lat = null, lon = null, tzName = 'auto';
+let wxData = null;
 
 // ── Loader ─────────────────────────────────────────────────────
 function load(p, m) {
@@ -335,43 +356,85 @@ function tick() {
 }
 setInterval(tick, 1000); tick();
 
-// ── Calendar — reads events.json committed by GitHub Action ────
+// ── Helpers ────────────────────────────────────────────────────
 function toDateStr(dt) {
   return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')}`;
 }
 
+function parseTime12(str) {
+  // "9:30 AM" → minutes since midnight
+  if (!str || str === 'All day') return -1;
+  const m = str.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return -1;
+  let h = parseInt(m[1]), min = parseInt(m[2]);
+  if (m[3].toUpperCase() === 'PM' && h !== 12) h += 12;
+  if (m[3].toUpperCase() === 'AM' && h === 12) h = 0;
+  return h * 60 + min;
+}
+
+// ── Calendar fetch ─────────────────────────────────────────────
+let allCalEvents = [];
+
 async function fetchCalendar() {
   try {
-    // events.json lives in the same repo, so same origin — no CORS at all
     const res = await fetchWithTimeout('./events.json', 8000);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    buildAgenda(data.events || []);
+    allCalEvents = data.events || [];
+    buildToday(allCalEvents);
+    buildAgenda(allCalEvents);
 
     const badge = document.getElementById('cal-badge');
-    if (data.error && !(data.events||[]).length) {
-      badge.textContent = '⚠ CAL ERROR';
-      badge.style.color = 'var(--red)';
+    if (data.error && !allCalEvents.length) {
+      badge.textContent = '⚠ CAL ERROR'; badge.style.color = 'var(--red)';
     } else {
-      const n = data.events ? data.events.length : 0;
-      badge.textContent = `● ${n} EVENT${n !== 1 ? 'S' : ''}`;
+      badge.textContent = `● ${allCalEvents.length} EVENT${allCalEvents.length !== 1 ? 'S' : ''}`;
       badge.style.color = 'var(--teal)';
     }
-
-    if (data.fetched_at) {
-      const d = new Date(data.fetched_at);
-      document.getElementById('supd').textContent =
-        `CAL ${String(d.getUTCHours()).padStart(2,'0')}:${String(d.getUTCMinutes()).padStart(2,'0')} UTC`;
-    }
   } catch(e) {
-    console.warn('events.json fetch failed:', e.message);
-    const badge = document.getElementById('cal-badge');
-    badge.textContent = '● CALENDAR OFFLINE';
-    badge.style.color = 'var(--red)';
-    buildAgenda([]);
+    document.getElementById('cal-badge').textContent = '● OFFLINE';
+    document.getElementById('cal-badge').style.color = 'var(--red)';
+    buildToday([]); buildAgenda([]);
   }
 }
 
+// ── Today's hourly events (left column) ───────────────────────
+function buildToday(events) {
+  const wrap = document.getElementById('today-events');
+  wrap.innerHTML = '';
+  const today = new Date(); today.setHours(0,0,0,0);
+  const ds = toDateStr(today);
+  const now = new Date();
+  const nowMin = now.getHours() * 60 + now.getMinutes();
+
+  const todayEvs = events
+    .filter(ev => ev.date === ds)
+    .sort((a, b) => {
+      if (a.all_day && !b.all_day) return -1;
+      if (!a.all_day && b.all_day) return 1;
+      return parseTime12(a.time) - parseTime12(b.time);
+    });
+
+  if (!todayEvs.length) {
+    wrap.innerHTML = '<div class="no-tev">— No events today</div>';
+    return;
+  }
+
+  todayEvs.forEach(ev => {
+    const evMin = parseTime12(ev.time);
+    let cls = 'tev' + (ev.all_day ? ' allday' : '');
+    if (!ev.all_day) {
+      if (evMin < nowMin - 60) cls += ' past';
+      else if (evMin <= nowMin + 30) cls += ' now';
+    }
+    const p = document.createElement('div');
+    p.className = cls;
+    p.innerHTML = `<div class="tev-time">${ev.all_day ? 'All day' : ev.time}</div><div class="tev-title">${ev.title}</div>${ev.location ? `<div class="tev-loc">📍 ${ev.location}</div>` : ''}`;
+    wrap.appendChild(p);
+  });
+}
+
+// ── Next 6 days agenda (center column) ────────────────────────
 function buildAgenda(events) {
   const wrap = document.getElementById('agenda-days');
   wrap.innerHTML = '';
@@ -380,25 +443,25 @@ function buildAgenda(events) {
   const byDate = {};
   events.forEach(ev => { (byDate[ev.date] = byDate[ev.date] || []).push(ev); });
 
-  for (let i = 0; i < 7; i++) {
+  // Start from tomorrow (i=1), show 6 days
+  for (let i = 1; i <= 6; i++) {
     const day = new Date(today); day.setDate(today.getDate() + i);
     const ds  = toDateStr(day);
     const evs = (byDate[ds] || []).sort((a,b) => {
       if (a.all_day && !b.all_day) return -1;
-      if (!a.all_day && b.all_day) return  1;
-      return (a.time||'').localeCompare(b.time||'');
+      if (!a.all_day && b.all_day) return 1;
+      return parseTime12(a.time) - parseTime12(b.time);
     });
 
     const row = document.createElement('div'); row.className = 'agenda-day';
-    const lbl = document.createElement('div'); lbl.className = 'day-label' + (i===0?' today':'');
-    lbl.innerHTML = `<div class="day-name">${i===0?'TODAY':DSH[day.getDay()]}</div><div class="day-num">${day.getDate()}</div>`;
+    const lbl = document.createElement('div'); lbl.className = 'day-label';
+    lbl.innerHTML = `<div class="day-name">${DSH[day.getDay()]}</div><div class="day-num">${day.getDate()}</div>`;
 
     const col = document.createElement('div'); col.className = 'day-events';
-
     if (!evs.length) {
       col.innerHTML = '<div class="no-ev">— No events</div>';
     } else {
-      evs.slice(0,3).forEach(ev => {
+      evs.slice(0, 3).forEach(ev => {
         const p = document.createElement('div');
         p.className = 'ev' + (ev.all_day ? ' allday' : '');
         p.innerHTML = `<div class="ev-time">${ev.all_day ? 'All day' : ev.time}</div><div class="ev-title">${ev.title}</div>${ev.location ? `<div class="ev-loc">📍 ${ev.location}</div>` : ''}`;
@@ -406,11 +469,10 @@ function buildAgenda(events) {
       });
       if (evs.length > 3) {
         const m = document.createElement('div');
-        m.className = 'no-ev'; m.textContent = `+${evs.length-3} more`;
+        m.className = 'no-ev'; m.textContent = `+${evs.length - 3} more`;
         col.appendChild(m);
       }
     }
-
     row.appendChild(lbl); row.appendChild(col); wrap.appendChild(row);
   }
 }
@@ -459,50 +521,25 @@ function renderWx(d) {
   });
 }
 
-function toggleU() { useF = !useF; if (wxData) renderWx(wxData); }
-
 async function fetchWx() {
-  if (!lat || !lon) return;
   try {
     const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&forecast_days=7&wind_speed_unit=kmh';
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
 
-// ── Location ───────────────────────────────────────────────────
-async function getLocation() {
-  const attempts = [
-    () => fetchWithTimeout('https://ipapi.co/json/', 6000)
-            .then(r => r.json())
-            .then(d => ({ lat: d.latitude, lon: d.longitude, city: d.city, region: d.region, tz: d.timezone })),
-    () => fetchWithTimeout('https://ip-api.com/json/', 6000)
-            .then(r => r.json())
-            .then(d => ({ lat: d.lat, lon: d.lon, city: d.city, region: d.regionName, tz: d.timezone })),
-  ];
-  for (const attempt of attempts) {
-    try { const l = await attempt(); if (l && l.lat && l.lon) return l; } catch {}
-  }
-  return null;
-}
-
 // ── Init ───────────────────────────────────────────────────────
 async function init() {
-  load(10, 'DETECTING LOCATION');
-  // Hardcoded location — change these if you move
-  lat = 45.4724; lon = -65.8945; tzName = 'America%2FMoncton';
-  document.getElementById('wx-loc').textContent = '📍 Nauwigewauk, NB';
-
-  load(50, 'FETCHING WEATHER');
+  load(40, 'FETCHING WEATHER');
   await fetchWx();
-
   load(75, 'LOADING CALENDAR');
   await fetchCalendar();
-
   load(100, 'READY');
   setTimeout(doneLoading, 300);
-
-  setInterval(fetchCalendar, 5 * 60 * 1000);   // re-read events.json every 5 min
-  setInterval(fetchWx,       10 * 60 * 1000);   // re-fetch weather every 10 min
+  setInterval(fetchCalendar, 5 * 60 * 1000);
+  setInterval(fetchWx,       10 * 60 * 1000);
+  // Rebuild today's events every minute so past/now highlighting stays current
+  setInterval(() => buildToday(allCalEvents), 60 * 1000);
 }
 
 init();
