@@ -1,42 +1,67 @@
 #!/usr/bin/env python3
 """
-fetch_radar.py
-──────────────
-Fetches the latest radar GIF for station CASBV (Chipman, NB)
-from Environment Canada's MSC Datamart and saves it as radar.gif.
-
-The new URL format (post April 2024) uses timestamped filenames,
-so we list the directory and grab the most recent Rain file.
+fetch_radar.py — fetches latest CASBV radar GIF from MSC Datamart
 """
 
 import requests, re, sys
 from pathlib import Path
 
-STATION   = "CASBV"   # Chipman NB — covers Saint John / Nauwigewauk
-INDEX_URL = f"https://dd.weather.gc.ca/today/radar/DPQPE/GIF/{STATION}/"
-OUTPUT    = Path(__file__).parent / "radar.gif"
-HEADERS   = {"User-Agent": "Mozilla/5.0 (dashboard-bot/1.0)"}
+STATION = "CASBV"
+OUTPUT  = Path(__file__).parent / "radar.gif"
+HEADERS = {"User-Agent": "Mozilla/5.0 (dashboard-bot/1.0)"}
+
+# Try both known URL patterns
+INDEX_URLS = [
+    f"https://dd.weather.gc.ca/today/radar/DPQPE/GIF/{STATION}/",
+    f"https://dd.weather.gc.ca/radar/DPQPE/GIF/{STATION}/",
+]
 
 def main():
-    print(f"Listing {INDEX_URL}")
-    r = requests.get(INDEX_URL, headers=HEADERS, timeout=15)
-    r.raise_for_status()
+    html = None
+    used_url = None
 
-    # Find all Rain (non-contingency) gif filenames
-    filenames = re.findall(
-        rf'\d{{8}}T\d{{4}}Z_MSC_Radar-DPQPE_{STATION}_Rain\.gif',
-        r.text
-    )
+    for url in INDEX_URLS:
+        print(f"Trying {url}")
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            print(f"  Status: {r.status_code}")
+            if r.status_code == 200:
+                html = r.text
+                used_url = url
+                break
+        except Exception as e:
+            print(f"  Error: {e}")
 
-    if not filenames:
-        print("No Rain GIF files found in directory listing", file=sys.stderr)
+    if not html:
+        print("ERROR: Could not reach any radar index URL", file=sys.stderr)
         sys.exit(1)
 
-    latest = sorted(filenames)[-1]
-    url    = INDEX_URL + latest
-    print(f"Fetching {url}")
+    # Print first 500 chars of HTML so we can see the actual filename format
+    print("--- Directory listing snippet ---")
+    print(html[:800])
+    print("--- end snippet ---")
 
-    img = requests.get(url, headers=HEADERS, timeout=15)
+    # Match any .gif file in the listing
+    filenames = re.findall(r'[\w\-]+\.gif', html)
+    print(f"All GIFs found: {filenames[:10]}")
+
+    # Filter to Rain (non-contingency) files
+    rain_files = [f for f in filenames if 'Rain' in f and 'Contingency' not in f]
+    print(f"Rain GIFs: {rain_files[:5]}")
+
+    if not rain_files:
+        # Fall back to any gif
+        rain_files = [f for f in filenames if f.endswith('.gif')]
+
+    if not rain_files:
+        print("ERROR: No GIF files found", file=sys.stderr)
+        sys.exit(1)
+
+    latest = sorted(rain_files)[-1]
+    img_url = used_url + latest
+    print(f"Fetching {img_url}")
+
+    img = requests.get(img_url, headers=HEADERS, timeout=15)
     img.raise_for_status()
 
     OUTPUT.write_bytes(img.content)
