@@ -566,7 +566,7 @@ function initRadarMap() {
     maxZoom: 9,
   }).addTo(radarMap);
 
-  initRadarMap();
+  refreshRadar();
 }
 
 function refreshRadar() {
@@ -650,7 +650,7 @@ async function init() {
   await fetchWx();
 
   load(60, 'LOADING RADAR');
-  initRadarMap();
+  initRadarMap(); // non-blocking — loads in background
 
   load(80, 'LOADING CALENDAR');
   await fetchCalendar();
