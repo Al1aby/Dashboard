@@ -1,0 +1,36 @@
+name: Fetch iCloud Calendar
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # every 15 minutes
+  workflow_dispatch:           # lets you trigger it manually from the GitHub UI
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # needed to commit events.json back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests icalendar
+
+      - name: Fetch calendar and write events.json
+        run: python fetch_calendar.py
+
+      - name: Commit events.json if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          # Only commit if the file actually changed
+          git diff --cached --quiet || git commit -m "chore: update events.json [skip ci]"
+          git push
