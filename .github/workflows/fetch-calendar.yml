@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests icalendar
+        run: pip install requests icalendar python-dateutil
 
       - name: Fetch calendar and write events.json
         run: python fetch_calendar.py
