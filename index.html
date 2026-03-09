@@ -563,9 +563,10 @@ function initRadarMap() {
     touchZoom: false,
   });
 
-  // Dark OpenStreetMap base
+  // Dark OpenStreetMap base — supports up to zoom 19
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 9,
+    maxZoom: 19,
+    maxNativeZoom: 19,
   }).addTo(radarMap);
 
   refreshRadar();
@@ -586,7 +587,7 @@ function refreshRadar() {
       const tileUrl = api.host + latest.path + '/256/{z}/{x}/{y}/2/1_1.png';
 
       if (radarLayer) radarMap.removeLayer(radarLayer);
-      radarLayer = L.tileLayer(tileUrl, { opacity: 0.7, maxZoom: 9 });
+      radarLayer = L.tileLayer(tileUrl, { opacity: 0.7, maxZoom: 19, maxNativeZoom: 7 });
       radarLayer.addTo(radarMap);
 
       err.style.display = 'none';
