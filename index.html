@@ -464,7 +464,7 @@ function toggleU() { useF = !useF; if (wxData) renderWx(wxData); }
 async function fetchWx() {
   if (!lat || !lon) return;
   try {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=${encodeURIComponent(tzName)}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code_max,uv_index_max&forecast_days=7&wind_speed_unit=kmh`;
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&timezone=${tzName}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code_max,uv_index_max&forecast_days=7&wind_speed_unit=kmh`;
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
@@ -488,16 +488,9 @@ async function getLocation() {
 // ── Init ───────────────────────────────────────────────────────
 async function init() {
   load(10, 'DETECTING LOCATION');
-  const loc = await getLocation();
-  if (loc) {
-    lat = loc.lat; lon = loc.lon;
-    tzName = loc.tz || Intl.DateTimeFormat().resolvedOptions().timeZone || 'auto';
-    document.getElementById('wx-loc').textContent =
-      '📍 ' + ((loc.city && loc.region) ? `${loc.city}, ${loc.region}` : `${lat.toFixed(2)}°, ${lon.toFixed(2)}°`);
-  } else {
-    lat = 40.7128; lon = -74.006; tzName = 'America/New_York';
-    document.getElementById('wx-loc').textContent = '📍 Location unavailable';
-  }
+  // Hardcoded location — change these if you move
+  lat = 45.4724; lon = -65.8945; tzName = 'America%2FMoncton';
+  document.getElementById('wx-loc').textContent = '📍 Nauwigewauk, NB';
 
   load(50, 'FETCHING WEATHER');
   await fetchWx();
