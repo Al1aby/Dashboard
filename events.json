@@ -1,42 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-03-10",
-      "time": "All day",
-      "end": "2026-03-11",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Garbage day",
-      "date": "2026-03-10",
-      "time": "8:00 AM",
-      "end": "2026-03-10T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Ultrasound ",
-      "date": "2026-03-10",
-      "time": "12:00 PM",
-      "end": "2026-03-10T13:00:00",
-      "all_day": false,
-      "location": "Regional",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure hair ",
-      "date": "2026-03-10",
-      "time": "8:00 PM",
-      "end": "2026-03-10T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Amy's birthday",
       "date": "2026-03-11",
       "time": "All day",
@@ -116,8 +80,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-03-17",
+      "time": "8:00 AM",
+      "end": "2026-03-17T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Massage Treatment with Jen Taylor",
+      "date": "2026-03-17",
+      "time": "6:30 PM",
+      "end": "2026-03-17T19:30:00",
+      "all_day": false,
+      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Allergy phone call",
+      "date": "2026-03-17",
+      "time": "8:30 PM",
+      "end": "2026-03-17T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-10T23:54:06.583957Z",
+  "fetched_at": "2026-03-11T05:03:33.334653Z",
   "error": null
 }
