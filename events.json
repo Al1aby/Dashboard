@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Amy's birthday",
-      "date": "2026-03-11",
-      "time": "All day",
-      "end": "2026-03-12",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Pick hello fresh meals",
-      "date": "2026-03-11",
-      "time": "8:00 PM",
-      "end": "2026-03-11T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Grand Manan Curling",
       "date": "2026-03-13",
       "time": "8:00 AM",
@@ -107,8 +89,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-03-18",
+      "time": "8:00 PM",
+      "end": "2026-03-18T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-11T23:53:52.127912Z",
+  "fetched_at": "2026-03-12T05:08:14.264250Z",
   "error": null
 }
