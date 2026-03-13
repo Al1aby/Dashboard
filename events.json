@@ -98,8 +98,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-03-19",
+      "time": "All day",
+      "end": "2026-03-20",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Physio ",
+      "date": "2026-03-19",
+      "time": "5:00 PM",
+      "end": "2026-03-19T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-12T23:54:33.124715Z",
+  "fetched_at": "2026-03-13T05:05:56.106385Z",
   "error": null
 }
