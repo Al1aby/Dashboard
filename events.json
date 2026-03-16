@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Supper @ M&K\u2019s",
-      "date": "2026-03-15",
-      "time": "4:00 PM",
-      "end": "2026-03-15T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-03-16",
       "time": "All day",
@@ -127,6 +118,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-15T23:57:35.405396Z",
+  "fetched_at": "2026-03-16T06:06:15.460701Z",
   "error": null
 }
