@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-03-17",
-      "time": "8:00 AM",
-      "end": "2026-03-17T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Massage Treatment with Jen Taylor",
-      "date": "2026-03-17",
-      "time": "6:30 PM",
-      "end": "2026-03-17T19:30:00",
-      "all_day": false,
-      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Allergy phone call",
-      "date": "2026-03-17",
-      "time": "8:30 PM",
-      "end": "2026-03-17T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Pick hello fresh meals",
       "date": "2026-03-18",
       "time": "8:00 PM",
@@ -98,8 +71,17 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-03-24",
+      "time": "8:00 AM",
+      "end": "2026-03-24T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-17T23:50:12.625087Z",
+  "fetched_at": "2026-03-18T05:23:28.291481Z",
   "error": null
 }
