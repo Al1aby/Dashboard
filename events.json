@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Pick hello fresh meals",
-      "date": "2026-03-18",
-      "time": "8:00 PM",
-      "end": "2026-03-18T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-03-19",
       "time": "All day",
@@ -80,8 +71,17 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-03-25",
+      "time": "8:00 PM",
+      "end": "2026-03-25T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-18T23:57:59.979214Z",
+  "fetched_at": "2026-03-19T05:17:28.630002Z",
   "error": null
 }
