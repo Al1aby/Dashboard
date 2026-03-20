@@ -2,24 +2,6 @@
   "events": [
     {
       "title": "Laure in office ",
-      "date": "2026-03-19",
-      "time": "All day",
-      "end": "2026-03-20",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Physio ",
-      "date": "2026-03-19",
-      "time": "5:00 PM",
-      "end": "2026-03-19T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure in office ",
       "date": "2026-03-20",
       "time": "All day",
       "end": "2026-03-21",
@@ -73,6 +55,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-19T23:58:27.446003Z",
+  "fetched_at": "2026-03-20T05:09:03.822707Z",
   "error": null
 }
