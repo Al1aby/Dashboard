@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-03-20",
-      "time": "All day",
-      "end": "2026-03-21",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "House cleaning - Deep",
-      "date": "2026-03-20",
-      "time": "8:00 AM",
-      "end": "2026-03-20T15:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-03-21",
       "time": "9:30 AM",
@@ -55,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-20T23:57:39.260086Z",
+  "fetched_at": "2026-03-21T04:55:32.354340Z",
   "error": null
 }
