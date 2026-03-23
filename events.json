@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Yoga ",
+      "date": "2026-03-23",
+      "time": "7:00 PM",
+      "end": "2026-03-23T20:00:00",
+      "all_day": false,
+      "location": "Porter Rd\nNauwigewauk, NB, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Garbage day",
       "date": "2026-03-24",
       "time": "8:00 AM",
@@ -37,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-23T15:17:15.281169Z",
+  "fetched_at": "2026-03-23T18:07:24.697384Z",
   "error": null
 }
