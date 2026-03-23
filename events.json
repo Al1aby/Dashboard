@@ -28,6 +28,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Aaron physio",
+      "date": "2026-03-24",
+      "time": "2:45 PM",
+      "end": "2026-03-24T15:45:00",
+      "all_day": false,
+      "location": "Station Street Health\n125 Station St, Saint John NB E2L 4X4, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Pick hello fresh meals",
       "date": "2026-03-25",
       "time": "8:00 PM",
@@ -46,6 +55,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-23T18:07:24.697384Z",
+  "fetched_at": "2026-03-23T20:02:37.868600Z",
   "error": null
 }
