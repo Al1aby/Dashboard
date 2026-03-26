@@ -43,12 +43,18 @@ def main():
     print(f"Got {len(data)} tide events")
 
     # Step 3 — shape into simple list
+    # wlp-hilo returns alternating high/low events; infer type by comparing
+    # each value to the next (higher = H, lower = L)
     tides = []
-    for item in data:
+    for i, item in enumerate(data):
+        if i + 1 < len(data):
+            tide_type = "H" if item["value"] >= data[i + 1]["value"] else "L"
+        else:
+            tide_type = "H" if item["value"] >= data[i - 1]["value"] else "L"
         tides.append({
-            "time":   item["eventDate"],        # ISO string UTC
-            "type":   item["tideTypecode"],     # "H" or "L"
-            "height": item["value"],            # metres
+            "time":   item["eventDate"],   # ISO string UTC
+            "type":   tide_type,           # "H" or "L"
+            "height": item["value"],       # metres
         })
 
     OUTPUT.write_text(json.dumps(tides, indent=2))
