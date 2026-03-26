@@ -368,8 +368,9 @@ html, body {
    HOURLY FORECAST (under weather stats)
    ═══════════════════════════════════════════ */
 #hourly-block {
-  margin-top: 10px;
-  padding-top: 10px;
+  flex-shrink: 0;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--border);
 }
 #hourly-lbl {
@@ -412,6 +413,11 @@ html, body {
     <div id="today-hdr">TODAY'S EVENTS</div>
     <div id="today-events"><div class="no-tev">Loading…</div></div>
 
+    <div id="hourly-block">
+      <div id="hourly-lbl">NEXT 6 HOURS</div>
+      <div id="hourly-list"></div>
+    </div>
+
     <!-- Moon + Tides -->
     <div id="left-bottom">
       <div id="moon-block">
@@ -446,10 +452,6 @@ html, body {
         <div class="wx-cell"><div class="wx-lbl">PRECIP.</div><div class="wx-val" id="ws-p">--</div></div>
       </div>
       <div id="fc-list"></div>
-      <div id="hourly-block">
-        <div id="hourly-lbl">NEXT 6 HOURS</div>
-        <div id="hourly-list"></div>
-      </div>
     </div>
 
     <div id="radar-block">
@@ -819,7 +821,7 @@ async function fetchTides() {
 
 async function fetchWx() {
   try {
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&hourly=temperature_2m,weather_code,precipitation_probability&forecast_days=2&wind_speed_unit=kmh';
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&hourly=temperature_2m,weather_code,precipitation_probability&forecast_days=7&wind_speed_unit=kmh';
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
