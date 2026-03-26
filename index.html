@@ -310,6 +310,85 @@ html, body {
 .lsub  { font-family:'Inconsolata',monospace; font-size:11px; color:var(--muted); letter-spacing:4px; }
 .ltrack { width:180px; height:1px; background:var(--border); }
 .lfill  { height:1px; background:var(--accent); width:0; transition:width .4s; }
+
+/* ═══════════════════════════════════════════
+   LEFT BOTTOM — Moon + Tides
+   ═══════════════════════════════════════════ */
+#left-bottom {
+  flex-shrink: 0;
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+  display: flex;
+  gap: 0;
+}
+
+/* Moon */
+#moon-block {
+  flex: 0 0 auto;
+  display: flex; flex-direction: column; align-items: center;
+  padding-right: 18px;
+  border-right: 1px solid var(--border);
+  min-width: 90px;
+}
+#moon-icon { font-size: 36px; line-height: 1; margin-bottom: 4px; }
+#moon-name {
+  font-family: 'Inconsolata', monospace;
+  font-size: 9px; letter-spacing: 2px; color: var(--muted);
+  text-align: center; margin-bottom: 2px;
+}
+#moon-pct  { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--text); }
+
+/* Tides */
+#tides-block {
+  flex: 1; padding-left: 18px;
+  display: flex; flex-direction: column; gap: 0;
+}
+#tides-lbl {
+  font-family: 'Inconsolata', monospace;
+  font-size: 9px; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 8px;
+}
+.tide-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.tide-row:last-child { border-bottom: none; }
+.tide-type {
+  font-family: 'Inconsolata', monospace;
+  font-size: 10px; letter-spacing: 2px;
+}
+.tide-type.hi { color: var(--teal); }
+.tide-type.lo { color: var(--muted); }
+.tide-time { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
+.tide-ht   { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); }
+
+/* ═══════════════════════════════════════════
+   HOURLY FORECAST (under weather stats)
+   ═══════════════════════════════════════════ */
+#hourly-block {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+#hourly-lbl {
+  font-family: 'Inconsolata', monospace;
+  font-size: 9px; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 8px;
+}
+#hourly-list {
+  display: flex; gap: 6px;
+}
+.hr-cell {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: var(--panel); border-radius: 5px; padding: 6px 4px;
+}
+.hr-time { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--muted); }
+.hr-icon { font-size: 16px; }
+.hr-temp { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
+.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--teal); }
+
 </style>
 </head>
 <body>
@@ -332,6 +411,19 @@ html, body {
     </div>
     <div id="today-hdr">TODAY'S EVENTS</div>
     <div id="today-events"><div class="no-tev">Loading…</div></div>
+
+    <!-- Moon + Tides -->
+    <div id="left-bottom">
+      <div id="moon-block">
+        <div id="moon-icon">🌑</div>
+        <div id="moon-name">LOADING</div>
+        <div id="moon-pct">--%</div>
+      </div>
+      <div id="tides-block">
+        <div id="tides-lbl">TIDES — SAINT JOHN</div>
+        <div id="tides-list"><div class="tide-row"><span class="tide-type">--</span></div></div>
+      </div>
+    </div>
   </div>
 
   <!-- ── TOP RIGHT: weather + radar ── -->
@@ -354,6 +446,10 @@ html, body {
         <div class="wx-cell"><div class="wx-lbl">PRECIP.</div><div class="wx-val" id="ws-p">--</div></div>
       </div>
       <div id="fc-list"></div>
+      <div id="hourly-block">
+        <div id="hourly-lbl">NEXT 6 HOURS</div>
+        <div id="hourly-list"></div>
+      </div>
     </div>
 
     <div id="radar-block">
@@ -638,11 +734,92 @@ function renderWx(d) {
     row.innerHTML = `<div class="fc-day">${lbl}</div><div class="fc-icon">${fi}</div><div class="fc-bg"><div class="fc-fg" style="left:${bL}%;width:${bW}%"></div></div><div class="fc-lo">${fmtS(lo)}</div><div class="fc-hi">${fmtS(hi)}</div>`;
     list.appendChild(row);
   });
+
+  // Hourly — next 6 hours
+  if (d.hourly) {
+    const now   = new Date();
+    const times = d.hourly.time;
+    const hrs   = [];
+    for (let i = 0; i < times.length && hrs.length < 6; i++) {
+      const t = new Date(times[i]);
+      if (t > now) {
+        hrs.push({
+          time: t,
+          temp: d.hourly.temperature_2m[i],
+          code: d.hourly.weather_code[i],
+          pop:  d.hourly.precipitation_probability[i]
+        });
+      }
+    }
+    const hl = document.getElementById('hourly-list');
+    hl.innerHTML = '';
+    hrs.forEach(h => {
+      const [ico] = wmo(h.code);
+      const label = h.time.toLocaleTimeString('en-CA', { hour: 'numeric', hour12: true })
+                          .replace(' AM','a').replace(' PM','p').replace(':00','');
+      const cell = document.createElement('div'); cell.className = 'hr-cell';
+      cell.innerHTML = `<div class="hr-time">${label}</div>`
+        + `<div class="hr-icon">${ico}</div>`
+        + `<div class="hr-temp">${useF ? Math.round(h.temp*9/5+32) : Math.round(h.temp)}°</div>`
+        + (h.pop > 0 ? `<div class="hr-pop">${h.pop}%</div>` : '<div class="hr-pop"> </div>');
+      hl.appendChild(cell);
+    });
+  }
+}
+
+
+// ── Moon Phase (pure math, no API) ────────────────────────────────
+function getMoonPhase() {
+  const MOON_ICONS = ['🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘'];
+  const MOON_NAMES = ['NEW MOON','WAXING CRESCENT','FIRST QUARTER','WAXING GIBBOUS',
+                      'FULL MOON','WANING GIBBOUS','LAST QUARTER','WANING CRESCENT'];
+  // Days since known new moon (Jan 6, 2000)
+  const known = new Date(2000, 0, 6).getTime();
+  const now   = Date.now();
+  const cycle = 29.53058867;
+  const days  = (now - known) / 86400000;
+  const phase = ((days % cycle) + cycle) % cycle;
+  const pct   = phase / cycle;
+  const idx   = Math.round(pct * 8) % 8;
+  const illum = Math.round(pct <= 0.5
+    ? pct * 2 * 100
+    : (1 - (pct - 0.5) * 2) * 100);
+  document.getElementById('moon-icon').textContent = MOON_ICONS[idx];
+  document.getElementById('moon-name').textContent = MOON_NAMES[idx];
+  document.getElementById('moon-pct').textContent  = illum + '%';
+}
+
+// ── Tides — load from tides.json (fetched by GitHub Action) ───────
+async function fetchTides() {
+  try {
+    const r = await fetch('tides.json?_=' + Date.now());
+    if (!r.ok) throw new Error('no tides.json');
+    const tides = await r.json();
+
+    const now  = Date.now();
+    const next = tides.filter(t => new Date(t.time).getTime() > now - 30*60*1000).slice(0, 4);
+    const list = document.getElementById('tides-list');
+    list.innerHTML = '';
+    if (!next.length) { list.innerHTML = '<div class="tide-row"><span class="tide-type lo">NO DATA</span></div>'; return; }
+    next.forEach(t => {
+      const d = new Date(t.time);
+      const timeStr = d.toLocaleTimeString('en-CA', { hour: '2-digit', minute: '2-digit', hour12: false });
+      const isHi  = t.type === 'H';
+      const row   = document.createElement('div'); row.className = 'tide-row';
+      row.innerHTML = `<span class="tide-type ${isHi ? 'hi' : 'lo'}">${isHi ? 'HIGH' : 'LOW'}</span>`
+        + `<span class="tide-time">${timeStr}</span>`
+        + `<span class="tide-ht">${t.height.toFixed(1)}m</span>`;
+      list.appendChild(row);
+    });
+  } catch {
+    document.getElementById('tides-list').innerHTML =
+      '<div class="tide-row"><span class="tide-type lo">UNAVAIL.</span></div>';
+  }
 }
 
 async function fetchWx() {
   try {
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&forecast_days=7&wind_speed_unit=kmh';
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&hourly=temperature_2m,weather_code,precipitation_probability&forecast_days=2&wind_speed_unit=kmh';
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
@@ -654,6 +831,8 @@ async function init() {
 
   load(60, 'LOADING RADAR');
   initRadarMap(); // non-blocking — loads in background
+  getMoonPhase();
+  fetchTides();   // non-blocking
 
   load(80, 'LOADING CALENDAR');
   await fetchCalendar();
@@ -663,6 +842,8 @@ async function init() {
 
   setInterval(fetchCalendar,  5 * 60 * 1000);   // calendar every 5 min
   setInterval(fetchWx,       10 * 60 * 1000);   // weather every 10 min
+  setInterval(fetchTides,    15 * 60 * 1000);   // tides every 15 min
+  setInterval(getMoonPhase,  60 * 60 * 1000);   // moon once per hour
   setInterval(refreshRadar,  10 * 60 * 1000);   // radar every 10 min (RainViewer update cadence)
   setInterval(() => buildToday(allCalEvents), 60 * 1000); // re-highlight current event every min
 }
