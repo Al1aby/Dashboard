@@ -62,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Reiki",
+      "date": "2026-04-02",
+      "time": "3:20 PM",
+      "end": "2026-04-02T15:50:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-26T23:00:34.058723Z",
+  "fetched_at": "2026-03-27T00:03:31.670914Z",
   "error": null
 }
