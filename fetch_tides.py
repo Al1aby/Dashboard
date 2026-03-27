@@ -28,22 +28,27 @@ HEADERS = {"User-Agent": "dashboard/1.0", "Accept": "application/json"}
 
 def get_chart_datum_offset(sid):
     """
-    Return the Mean Water Level height above Chart Datum for this station.
-    The API reports water levels above a geodetic datum (~MWL/MSL), so
-    subtracting this offset converts to traditional Chart Datum heights.
+    Return the height (m) to subtract from API values to get Chart Datum heights.
+    The CHS IWLS API returns water levels above CGVD2013 (Canadian geodetic
+    vertical datum). The station heights array lists datums above Chart Datum,
+    so the CGVD2013 entry gives the exact conversion offset needed.
     Falls back to 0 if the metadata is unavailable.
     """
     try:
         r = requests.get(f"{BASE}/stations/{sid}", headers=HEADERS, timeout=15)
         r.raise_for_status()
         station = r.json()
-        for h in station.get("heights", []):
-            if h.get("code") in ("MWL", "MSL"):
-                offset = float(h["value"])
-                print(f"Chart Datum offset ({h['code']}): {offset}m")
-                return offset
+        heights = station.get("heights", [])
+        print(f"Available height codes: {[h.get('code') for h in heights]}")
+        for code in ("CGVD2013", "CGVD28", "MWL", "MSL"):
+            for h in heights:
+                if h.get("code") == code:
+                    offset = float(h["value"])
+                    print(f"Using {code} offset: {offset}m above Chart Datum")
+                    return offset
     except Exception as e:
         print(f"Warning: could not fetch datum info: {e}")
+    print("Warning: no datum offset found, heights will be uncorrected")
     return 0.0
 
 
