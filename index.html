@@ -64,29 +64,29 @@ html, body {
 }
 #time {
   font-family: 'Playfair Display', serif;
-  font-size: 88px; line-height: 1;
+  font-size: 90px; line-height: 1;
   color: var(--accent); letter-spacing: -2px;
   text-shadow: 0 0 50px rgba(240,192,96,.22);
 }
 #ampm {
   font-family: 'Inconsolata', monospace;
-  font-size: 15px; color: var(--muted);
+  font-size: 17px; color: var(--muted);
   letter-spacing: 5px; margin-top: -2px;
 }
 #date-line {
   font-family: 'Playfair Display', serif;
-  font-size: 20px; color: var(--text); margin-top: 6px;
+  font-size: 22px; color: var(--text); margin-top: 6px;
 }
 #date-sub {
   font-family: 'Inconsolata', monospace;
-  font-size: 12px; color: var(--muted);
+  font-size: 14px; color: var(--muted);
   letter-spacing: 3px; margin-top: 2px;
 }
 
 /* Today label */
 #today-hdr {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; letter-spacing: 3px; color: var(--muted);
+  font-size: 13px; letter-spacing: 3px; color: var(--muted);
   margin-bottom: 12px; flex-shrink: 0;
 }
 
@@ -108,25 +108,25 @@ html, body {
 
 .tev-time {
   font-family: 'Inconsolata', monospace;
-  font-size: 14px; color: var(--muted);
+  font-size: 16px; color: var(--muted);
   white-space: nowrap; min-width: 68px; flex-shrink: 0;
 }
 .tev.now .tev-time { color: var(--accent); }
 
 .tev-info { flex: 1; overflow: hidden; }
 .tev-title {
-  font-size: 17px; color: var(--text); font-weight: 400;
+  font-size: 19px; color: var(--text); font-weight: 400;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .tev-loc {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted);
+  font-size: 13px; color: var(--muted);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   margin-top: 2px;
 }
 .no-tev {
   font-family: 'Inconsolata', monospace;
-  font-size: 13px; color: var(--dim); letter-spacing: 1px;
+  font-size: 15px; color: var(--dim); letter-spacing: 1px;
 }
 
 /* ═══════════════════════════════════════════
@@ -152,23 +152,23 @@ html, body {
   overflow: hidden;
 }
 #wx-hero { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
-#wx-icon { font-size: 52px; line-height: 1; }
+#wx-icon { font-size: 54px; line-height: 1; }
 #wx-temp {
   font-family: 'Playfair Display', serif;
-  font-size: 64px; line-height: 1;
+  font-size: 66px; line-height: 1;
   color: var(--text); letter-spacing: -2px;
 }
 #wx-desc {
   font-family: 'Inconsolata', monospace;
-  font-size: 12px; color: var(--teal); letter-spacing: 3px;
+  font-size: 14px; color: var(--teal); letter-spacing: 3px;
 }
 #wx-feels {
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted); letter-spacing: 2px; margin-top: 3px;
+  font-size: 13px; color: var(--muted); letter-spacing: 2px; margin-top: 3px;
 }
 #wx-loc {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; color: var(--muted); letter-spacing: 1px; margin-top: 2px;
+  font-size: 12px; color: var(--muted); letter-spacing: 1px; margin-top: 2px;
 }
 .wx-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -177,9 +177,9 @@ html, body {
 .wx-cell { background: var(--dim); border-radius: 5px; padding: 7px 10px; }
 .wx-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-bottom: 2px;
+  font-size: 11px; color: var(--muted); letter-spacing: 2px; margin-bottom: 2px;
 }
-.wx-val { font-size: 17px; font-weight: 500; color: var(--text); }
+.wx-val { font-size: 19px; font-weight: 500; color: var(--text); }
 
 /* 7-day forecast under weather */
 #fc-list { display: flex; flex-direction: column; margin-top: 10px; }
@@ -190,12 +190,12 @@ html, body {
   flex-shrink: 0;
 }
 .fc-row:last-child { border-bottom: 1px solid var(--border); }
-.fc-day { font-family: 'Inconsolata', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; }
-.fc-icon { font-size: 15px; text-align: center; }
+.fc-day { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--muted); letter-spacing: 2px; }
+.fc-icon { font-size: 17px; text-align: center; }
 .fc-bg { background: var(--dim); border-radius: 3px; height: 3px; position: relative; }
 .fc-fg { position: absolute; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--teal), var(--accent)); }
-.fc-lo { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); text-align: right; }
-.fc-hi { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); font-weight: 500; text-align: right; }
+.fc-lo { font-family: 'Inconsolata', monospace; font-size: 13px; color: var(--muted); text-align: right; }
+.fc-hi { font-family: 'Inconsolata', monospace; font-size: 14px; color: var(--text); font-weight: 500; text-align: right; }
 
 /* Radar */
 #radar-block {
@@ -205,12 +205,12 @@ html, body {
 }
 #radar-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; letter-spacing: 3px; color: var(--muted);
+  font-size: 12px; letter-spacing: 3px; color: var(--muted);
   margin-bottom: 8px; flex-shrink: 0;
   display: flex; justify-content: space-between; align-items: center;
 }
 #radar-age {
-  font-size: 10px; color: var(--dim);
+  font-size: 12px; color: var(--dim);
 }
 #radar-map {
   flex: 1; width: 100%;
@@ -224,7 +224,7 @@ html, body {
 #radar-err {
   display: none;
   font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted);
+  font-size: 13px; color: var(--muted);
   text-align: center; padding: 20px;
 }
 
@@ -245,11 +245,11 @@ html, body {
 }
 #cal-title {
   font-family: 'Playfair Display', serif;
-  font-size: 18px; font-style: italic; color: var(--text);
+  font-size: 20px; font-style: italic; color: var(--text);
 }
 #cal-badge {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; letter-spacing: 2px; color: var(--teal);
+  font-size: 12px; letter-spacing: 2px; color: var(--teal);
 }
 
 /* Day columns */
@@ -273,17 +273,17 @@ html, body {
 }
 .cal-dow {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; letter-spacing: 2px; color: var(--muted);
+  font-size: 12px; letter-spacing: 2px; color: var(--muted);
 }
 .cal-num {
   font-family: 'Playfair Display', serif;
-  font-size: 22px; line-height: 1.1; color: var(--text);
+  font-size: 24px; line-height: 1.1; color: var(--text);
 }
 
 .cal-events { flex: 1; display: flex; flex-direction: column; gap: 3px; overflow: hidden; }
 
 .cev {
-  font-size: 11px; color: var(--text);
+  font-size: 13px; color: var(--text);
   background: var(--panel); border-left: 2px solid var(--teal);
   padding: 3px 6px; border-radius: 3px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -292,11 +292,11 @@ html, body {
 .cev.allday { border-left-color: var(--dim); background: transparent; }
 .cev-time {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; color: var(--muted); display: block;
+  font-size: 11px; color: var(--muted); display: block;
 }
 .no-cev {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; color: var(--dim);
+  font-size: 12px; color: var(--dim);
 }
 
 /* ── LOADER ── */
@@ -331,13 +331,13 @@ html, body {
   border-right: 1px solid var(--border);
   min-width: 90px;
 }
-#moon-icon { font-size: 36px; line-height: 1; margin-bottom: 4px; }
+#moon-icon { font-size: 38px; line-height: 1; margin-bottom: 4px; }
 #moon-name {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; letter-spacing: 2px; color: var(--muted);
+  font-size: 11px; letter-spacing: 2px; color: var(--muted);
   text-align: center; margin-bottom: 2px;
 }
-#moon-pct  { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--text); }
+#moon-pct  { font-family: 'Inconsolata', monospace; font-size: 13px; color: var(--text); }
 
 /* Tides */
 #tides-block {
@@ -346,7 +346,7 @@ html, body {
 }
 #tides-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; letter-spacing: 3px; color: var(--muted);
+  font-size: 11px; letter-spacing: 3px; color: var(--muted);
   margin-bottom: 8px;
 }
 .tide-row {
@@ -357,12 +357,12 @@ html, body {
 .tide-row:last-child { border-bottom: none; }
 .tide-type {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; letter-spacing: 2px;
+  font-size: 12px; letter-spacing: 2px;
 }
 .tide-type.hi { color: var(--teal); }
 .tide-type.lo { color: var(--muted); }
-.tide-time { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
-.tide-ht   { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); }
+.tide-time { font-family: 'Inconsolata', monospace; font-size: 14px; color: var(--text); }
+.tide-ht   { font-family: 'Inconsolata', monospace; font-size: 13px; color: var(--muted); }
 
 /* ═══════════════════════════════════════════
    HOURLY FORECAST (under weather stats)
@@ -375,7 +375,7 @@ html, body {
 }
 #hourly-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; letter-spacing: 3px; color: var(--muted);
+  font-size: 11px; letter-spacing: 3px; color: var(--muted);
   margin-bottom: 8px;
 }
 #hourly-list {
@@ -385,10 +385,10 @@ html, body {
   flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
   background: var(--panel); border-radius: 5px; padding: 6px 4px;
 }
-.hr-time { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--muted); }
-.hr-icon { font-size: 16px; }
-.hr-temp { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
-.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--teal); }
+.hr-time { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); }
+.hr-icon { font-size: 18px; }
+.hr-temp { font-family: 'Inconsolata', monospace; font-size: 14px; color: var(--text); }
+.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--teal); }
 
 </style>
 </head>
