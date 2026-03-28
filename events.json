@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Laure in office ",
+      "date": "2026-03-30",
+      "time": "All day",
+      "end": "2026-03-31",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Laure therapy ",
       "date": "2026-03-30",
       "time": "7:00 PM",
@@ -73,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-28T15:53:30.381799Z",
+  "fetched_at": "2026-03-28T17:04:35.990359Z",
   "error": null
 }
