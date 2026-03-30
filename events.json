@@ -46,6 +46,24 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Appointment with Marcus Payne",
+      "date": "2026-03-31",
+      "time": "11:30 AM",
+      "end": "2026-03-31T12:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Magic cards with the guys",
+      "date": "2026-03-31",
+      "time": "8:30 PM",
+      "end": "2026-03-31T23:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Dr apt -The Fish man",
       "date": "2026-04-01",
       "time": "3:20 PM",
@@ -109,6 +127,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-30T14:54:27.707528Z",
+  "fetched_at": "2026-03-30T18:06:09.102898Z",
   "error": null
 }
