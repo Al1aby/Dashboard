@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-03-30",
-      "time": "All day",
-      "end": "2026-03-31",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure therapy ",
-      "date": "2026-03-30",
-      "time": "7:00 PM",
-      "end": "2026-03-30T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-03-31",
       "time": "8:00 AM",
@@ -125,8 +107,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-04-06",
+      "time": "8:00 AM",
+      "end": "2026-04-06T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Therapy",
+      "date": "2026-04-06",
+      "time": "7:00 PM",
+      "end": "2026-04-06T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-30T23:56:13.838485Z",
+  "fetched_at": "2026-03-31T05:57:11.675773Z",
   "error": null
 }
