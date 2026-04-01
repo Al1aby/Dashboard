@@ -1,51 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-03-31",
-      "time": "8:00 AM",
-      "end": "2026-03-31T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "House cleaning ",
-      "date": "2026-03-31",
-      "time": "10:00 AM",
-      "end": "2026-03-31T13:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Dr Shepperd follow up ",
-      "date": "2026-03-31",
-      "time": "10:00 AM",
-      "end": "2026-03-31T11:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Appointment with Marcus Payne",
-      "date": "2026-03-31",
-      "time": "11:30 AM",
-      "end": "2026-03-31T12:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Magic cards with the guys",
-      "date": "2026-03-31",
-      "time": "8:30 PM",
-      "end": "2026-03-31T23:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Dr apt -The Fish man",
       "date": "2026-04-01",
       "time": "3:20 PM",
@@ -125,8 +80,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-04-07",
+      "time": "8:00 AM",
+      "end": "2026-04-07T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Massage Treatment with Jen Taylor",
+      "date": "2026-04-07",
+      "time": "6:30 PM",
+      "end": "2026-04-07T19:30:00",
+      "all_day": false,
+      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-03-31T23:50:07.502462Z",
+  "fetched_at": "2026-04-01T06:13:25.336701Z",
   "error": null
 }
