@@ -19,6 +19,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Easter egg hunt ",
+      "date": "2026-04-04",
+      "time": "10:00 AM",
+      "end": "2026-04-04T11:00:00",
+      "all_day": false,
+      "location": "Nauwigewauk shelter",
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Derek's birthday",
       "date": "2026-04-05",
       "time": "All day",
@@ -73,6 +82,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Tire and oil change",
+      "date": "2026-04-07",
+      "time": "8:30 AM",
+      "end": "2026-04-07T09:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Massage Treatment with Jen Taylor",
       "date": "2026-04-07",
       "time": "6:30 PM",
@@ -91,6 +109,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-02T15:42:43.604530Z",
+  "fetched_at": "2026-04-02T18:06:12.002280Z",
   "error": null
 }
