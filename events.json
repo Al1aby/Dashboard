@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Dr apt -The Fish man",
-      "date": "2026-04-01",
-      "time": "3:20 PM",
-      "end": "2026-04-01T16:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Pick hello fresh meals",
-      "date": "2026-04-01",
-      "time": "8:00 PM",
-      "end": "2026-04-01T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Reiki",
       "date": "2026-04-02",
       "time": "3:20 PM",
@@ -98,8 +80,17 @@
       "all_day": false,
       "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-04-08",
+      "time": "8:00 PM",
+      "end": "2026-04-08T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-01T23:52:32.948448Z",
+  "fetched_at": "2026-04-02T05:51:28.436052Z",
   "error": null
 }
