@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Reiki",
-      "date": "2026-04-02",
-      "time": "3:20 PM",
-      "end": "2026-04-02T15:50:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron -  check & clean furnace filter ",
       "date": "2026-04-04",
       "time": "9:00 AM",
@@ -107,8 +98,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron physio",
+      "date": "2026-04-09",
+      "time": "11:00 AM",
+      "end": "2026-04-09T12:00:00",
+      "all_day": false,
+      "location": "Station Street Health\n125 Station St, Saint John NB E2L 4X4, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Physio ",
+      "date": "2026-04-09",
+      "time": "5:00 PM",
+      "end": "2026-04-09T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-02T23:53:27.570232Z",
+  "fetched_at": "2026-04-03T05:51:41.098449Z",
   "error": null
 }
