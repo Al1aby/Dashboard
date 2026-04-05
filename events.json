@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron -  check & clean furnace filter ",
-      "date": "2026-04-04",
-      "time": "9:00 AM",
-      "end": "2026-04-04T10:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Easter egg hunt ",
-      "date": "2026-04-04",
-      "time": "10:00 AM",
-      "end": "2026-04-04T11:00:00",
-      "all_day": false,
-      "location": "Nauwigewauk shelter",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Derek's birthday",
       "date": "2026-04-05",
       "time": "All day",
@@ -125,8 +107,17 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-04-11",
+      "time": "9:30 AM",
+      "end": "2026-04-11T10:00:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-04T23:49:27.548828Z",
+  "fetched_at": "2026-04-05T05:55:25.415158Z",
   "error": null
 }
