@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-04-06",
-      "time": "8:00 AM",
-      "end": "2026-04-06T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Therapy",
-      "date": "2026-04-06",
-      "time": "7:00 PM",
-      "end": "2026-04-06T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-04-07",
       "time": "8:00 AM",
@@ -89,8 +71,35 @@
       "all_day": false,
       "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure away ",
+      "date": "2026-04-13",
+      "time": "All day",
+      "end": "2026-04-15",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure dr appt",
+      "date": "2026-04-13",
+      "time": "10:30 AM",
+      "end": "2026-04-13T11:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "NCC meeting",
+      "date": "2026-04-13",
+      "time": "7:00 PM",
+      "end": "2026-04-13T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-06T23:53:31.543191Z",
+  "fetched_at": "2026-04-07T05:59:29.190871Z",
   "error": null
 }
