@@ -46,6 +46,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Aaron bday brunch? ",
+      "date": "2026-04-11",
+      "time": "10:30 AM",
+      "end": "2026-04-11T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Laure away ",
       "date": "2026-04-13",
       "time": "All day",
@@ -91,6 +100,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-08T15:56:27.920623Z",
+  "fetched_at": "2026-04-08T17:07:15.817172Z",
   "error": null
 }
