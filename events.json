@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Pick hello fresh meals",
-      "date": "2026-04-08",
-      "time": "8:00 PM",
-      "end": "2026-04-08T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron physio",
       "date": "2026-04-09",
       "time": "11:00 AM",
@@ -98,8 +89,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-04-15",
+      "time": "8:00 PM",
+      "end": "2026-04-15T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-08T23:53:04.047442Z",
+  "fetched_at": "2026-04-09T02:23:51.828140Z",
   "error": null
 }
