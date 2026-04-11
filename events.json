@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-04-10",
-      "time": "All day",
-      "end": "2026-04-11",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-04-11",
       "time": "9:30 AM",
@@ -98,8 +89,17 @@
       "all_day": false,
       "location": "Orthopaedics Plus\n200 Somerset St, Saint John NB E2K 2X9, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron first aid",
+      "date": "2026-04-17",
+      "time": "8:00 AM",
+      "end": "2026-04-17T16:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-10T23:38:42.661053Z",
+  "fetched_at": "2026-04-11T00:04:58.942748Z",
   "error": null
 }
