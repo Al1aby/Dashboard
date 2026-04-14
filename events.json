@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure away ",
-      "date": "2026-04-13",
-      "time": "All day",
-      "end": "2026-04-15",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure dr appt",
-      "date": "2026-04-13",
-      "time": "10:30 AM",
-      "end": "2026-04-13T11:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "NCC meeting",
-      "date": "2026-04-13",
-      "time": "7:00 PM",
-      "end": "2026-04-13T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-04-14",
       "time": "8:00 AM",
@@ -98,8 +71,26 @@
       "all_day": false,
       "location": "149 Viola Ave\nHampton, NB, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-04-20",
+      "time": "8:00 AM",
+      "end": "2026-04-20T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Therapy",
+      "date": "2026-04-20",
+      "time": "7:00 PM",
+      "end": "2026-04-20T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-13T23:59:21.908379Z",
+  "fetched_at": "2026-04-14T03:34:04.759047Z",
   "error": null
 }
