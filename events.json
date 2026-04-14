@@ -37,15 +37,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Aaron new orthodics ",
-      "date": "2026-04-16",
-      "time": "2:45 PM",
-      "end": "2026-04-16T15:45:00",
-      "all_day": false,
-      "location": "Orthopaedics Plus\n200 Somerset St, Saint John NB E2K 2X9, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron first aid",
       "date": "2026-04-17",
       "time": "8:00 AM",
@@ -91,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-14T13:54:03.379720Z",
+  "fetched_at": "2026-04-14T15:13:41.248349Z",
   "error": null
 }
