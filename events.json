@@ -19,6 +19,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Winston doctor ",
+      "date": "2026-04-15",
+      "time": "8:45 AM",
+      "end": "2026-04-15T09:45:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Pick hello fresh meals",
       "date": "2026-04-15",
       "time": "8:00 PM",
@@ -82,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-14T20:30:15.067339Z",
+  "fetched_at": "2026-04-14T21:27:43.981026Z",
   "error": null
 }
