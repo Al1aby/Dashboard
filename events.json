@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-04-14",
-      "time": "8:00 AM",
-      "end": "2026-04-14T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Katie symperica",
-      "date": "2026-04-14",
-      "time": "8:00 PM",
-      "end": "2026-04-14T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winston doctor ",
       "date": "2026-04-15",
       "time": "8:45 AM",
@@ -89,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-04-21",
+      "time": "8:00 AM",
+      "end": "2026-04-21T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron new orthodics ",
+      "date": "2026-04-21",
+      "time": "2:00 PM",
+      "end": "2026-04-21T15:00:00",
+      "all_day": false,
+      "location": "Orthopaedics Plus\n200 Somerset St, Saint John NB E2K 2X9, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-14T23:11:34.753314Z",
+  "fetched_at": "2026-04-15T00:00:23.648424Z",
   "error": null
 }
