@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Winston doctor ",
-      "date": "2026-04-15",
-      "time": "8:45 AM",
-      "end": "2026-04-15T09:45:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Pick hello fresh meals",
-      "date": "2026-04-15",
-      "time": "8:00 PM",
-      "end": "2026-04-15T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron first aid",
       "date": "2026-04-16",
       "time": "8:00 AM",
@@ -89,8 +71,17 @@
       "all_day": false,
       "location": "Orthopaedics Plus\n200 Somerset St, Saint John NB E2K 2X9, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-04-22",
+      "time": "8:00 PM",
+      "end": "2026-04-22T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-15T23:28:33.809742Z",
+  "fetched_at": "2026-04-16T00:09:17.841984Z",
   "error": null
 }
