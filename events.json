@@ -2,15 +2,6 @@
   "events": [
     {
       "title": "Aaron first aid",
-      "date": "2026-04-16",
-      "time": "8:00 AM",
-      "end": "2026-04-16T16:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Aaron first aid",
       "date": "2026-04-17",
       "time": "8:00 AM",
       "end": "2026-04-17T16:30:00",
@@ -89,8 +80,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Stephen Sheel\u2019s birthday",
+      "date": "2026-04-23",
+      "time": "All day",
+      "end": "2026-04-24",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie\u2019s birthday",
+      "date": "2026-04-23",
+      "time": "All day",
+      "end": "2026-04-24",
+      "all_day": true,
+      "location": "249 Route 100 Nauwigewauk New Brunswick E5N6Z3 Canada ",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Physio ",
+      "date": "2026-04-23",
+      "time": "5:00 PM",
+      "end": "2026-04-23T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-16T23:58:04.267268Z",
+  "fetched_at": "2026-04-17T03:32:55.947809Z",
   "error": null
 }
