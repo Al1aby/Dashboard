@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron first aid",
-      "date": "2026-04-17",
-      "time": "8:00 AM",
-      "end": "2026-04-17T16:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Hang out with Tiffany ",
-      "date": "2026-04-17",
-      "time": "6:45 PM",
-      "end": "2026-04-17T22:15:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-04-18",
       "time": "9:30 AM",
@@ -109,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-17T23:55:39.527051Z",
+  "fetched_at": "2026-04-18T02:33:02.584847Z",
   "error": null
 }
