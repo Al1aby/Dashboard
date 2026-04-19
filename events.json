@@ -37,6 +37,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Laure in office ",
+      "date": "2026-04-22",
+      "time": "All day",
+      "end": "2026-04-23",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Pick hello fresh meals",
       "date": "2026-04-22",
       "time": "8:00 PM",
@@ -82,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-19T17:21:27.298901Z",
+  "fetched_at": "2026-04-19T18:02:26.533960Z",
   "error": null
 }
