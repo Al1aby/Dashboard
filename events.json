@@ -62,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "House cleaning ",
+      "date": "2026-04-28",
+      "time": "8:30 AM",
+      "end": "2026-04-28T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-22T22:04:45.921282Z",
+  "fetched_at": "2026-04-22T23:06:34.655749Z",
   "error": null
 }
