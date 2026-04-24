@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Stephen Sheel\u2019s birthday",
-      "date": "2026-04-23",
-      "time": "All day",
-      "end": "2026-04-24",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Katie\u2019s birthday",
-      "date": "2026-04-23",
-      "time": "All day",
-      "end": "2026-04-24",
-      "all_day": true,
-      "location": "249 Route 100 Nauwigewauk New Brunswick E5N6Z3 Canada ",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Physio ",
-      "date": "2026-04-23",
-      "time": "5:00 PM",
-      "end": "2026-04-23T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-04-25",
       "time": "9:30 AM",
@@ -64,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-23T23:07:16.811178Z",
+  "fetched_at": "2026-04-24T00:03:12.946802Z",
   "error": null
 }
