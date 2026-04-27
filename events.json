@@ -62,8 +62,17 @@
       "all_day": false,
       "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Kathy\u2019s birthday",
+      "date": "2026-05-03",
+      "time": "All day",
+      "end": "2026-05-04",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-26T23:50:51.945334Z",
+  "fetched_at": "2026-04-27T02:47:15.270879Z",
   "error": null
 }
