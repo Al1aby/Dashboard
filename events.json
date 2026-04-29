@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-04-28",
-      "time": "8:00 AM",
-      "end": "2026-04-28T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "House cleaning ",
-      "date": "2026-04-28",
-      "time": "8:30 AM",
-      "end": "2026-04-28T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Pick hello fresh meals",
       "date": "2026-04-29",
       "time": "8:00 PM",
@@ -98,8 +80,17 @@
       "all_day": false,
       "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-05-05",
+      "time": "8:00 AM",
+      "end": "2026-05-05T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-28T23:38:17.891124Z",
+  "fetched_at": "2026-04-29T01:24:22.706516Z",
   "error": null
 }
