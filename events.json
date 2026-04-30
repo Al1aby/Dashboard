@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Pick hello fresh meals",
-      "date": "2026-04-29",
-      "time": "8:00 PM",
-      "end": "2026-04-29T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Sam and Stephens anniversary ",
       "date": "2026-05-01",
       "time": "All day",
@@ -89,8 +80,26 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Lana\u2019s birthday",
+      "date": "2026-05-06",
+      "time": "All day",
+      "end": "2026-05-07",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-05-06",
+      "time": "8:00 PM",
+      "end": "2026-05-06T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-29T23:36:29.609168Z",
+  "fetched_at": "2026-04-30T01:22:32.406244Z",
   "error": null
 }
