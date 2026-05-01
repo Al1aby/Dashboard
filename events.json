@@ -98,8 +98,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Marlene's birthday",
+      "date": "2026-05-07",
+      "time": "All day",
+      "end": "2026-05-08",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Physio",
+      "date": "2026-05-07",
+      "time": "5:00 PM",
+      "end": "2026-05-07T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-04-30T23:09:49.750291Z",
+  "fetched_at": "2026-05-01T00:05:17.235582Z",
   "error": null
 }
