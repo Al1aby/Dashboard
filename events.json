@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Sam and Stephens anniversary ",
-      "date": "2026-05-01",
-      "time": "All day",
-      "end": "2026-05-02",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Doctors appt ",
-      "date": "2026-05-01",
-      "time": "9:30 AM",
-      "end": "2026-05-01T10:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron -  check & clean furnace filter ",
       "date": "2026-05-02",
       "time": "9:00 AM",
@@ -116,8 +98,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-05-08",
+      "time": "All day",
+      "end": "2026-05-09",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-01T23:07:52.098437Z",
+  "fetched_at": "2026-05-02T00:05:37.290118Z",
   "error": null
 }
