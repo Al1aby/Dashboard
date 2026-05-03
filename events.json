@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron -  check & clean furnace filter ",
-      "date": "2026-05-02",
-      "time": "9:00 AM",
-      "end": "2026-05-02T10:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Winnie swim \ud83c\udf0a",
-      "date": "2026-05-02",
-      "time": "9:30 AM",
-      "end": "2026-05-02T10:00:00",
-      "all_day": false,
-      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Kathy\u2019s birthday",
       "date": "2026-05-03",
       "time": "All day",
@@ -107,8 +89,17 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-05-09",
+      "time": "9:30 AM",
+      "end": "2026-05-09T10:00:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-02T23:43:00.142350Z",
+  "fetched_at": "2026-05-03T01:21:52.184957Z",
   "error": null
 }
