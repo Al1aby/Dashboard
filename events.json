@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Kathy\u2019s birthday",
-      "date": "2026-05-03",
-      "time": "All day",
-      "end": "2026-05-04",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Recycling day",
       "date": "2026-05-04",
       "time": "8:00 AM",
@@ -100,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-03T23:02:55.183367Z",
+  "fetched_at": "2026-05-04T00:03:06.894922Z",
   "error": null
 }
