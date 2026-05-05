@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-05-04",
-      "time": "8:00 AM",
-      "end": "2026-05-04T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Massage Treatment with Jen Taylor",
-      "date": "2026-05-04",
-      "time": "6:30 PM",
-      "end": "2026-05-04T19:30:00",
-      "all_day": false,
-      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Massage Treatment with Jen Taylor",
-      "date": "2026-05-04",
-      "time": "6:30 PM",
-      "end": "2026-05-04T19:30:00",
-      "all_day": false,
-      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-05-05",
       "time": "8:00 AM",
@@ -89,8 +62,17 @@
       "all_day": false,
       "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "NCC meeting",
+      "date": "2026-05-11",
+      "time": "7:00 PM",
+      "end": "2026-05-11T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-04T23:35:54.316565Z",
+  "fetched_at": "2026-05-05T01:18:57.795897Z",
   "error": null
 }
