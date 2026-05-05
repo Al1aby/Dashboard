@@ -37,6 +37,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Laure in office ",
+      "date": "2026-05-07",
+      "time": "All day",
+      "end": "2026-05-08",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Physio",
       "date": "2026-05-07",
       "time": "5:00 PM",
@@ -73,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-05T11:00:11.214710Z",
+  "fetched_at": "2026-05-05T12:09:48.736831Z",
   "error": null
 }
