@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Garbage day",
-      "date": "2026-05-05",
-      "time": "8:00 AM",
-      "end": "2026-05-05T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Lana\u2019s birthday",
       "date": "2026-05-06",
       "time": "All day",
@@ -80,8 +71,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-05-12",
+      "time": "8:00 AM",
+      "end": "2026-05-12T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-05T23:33:45.975920Z",
+  "fetched_at": "2026-05-06T01:17:23.756260Z",
   "error": null
 }
