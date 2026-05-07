@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Lana\u2019s birthday",
-      "date": "2026-05-06",
-      "time": "All day",
-      "end": "2026-05-07",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Pick hello fresh meals",
-      "date": "2026-05-06",
-      "time": "8:00 PM",
-      "end": "2026-05-06T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Marlene's birthday",
       "date": "2026-05-07",
       "time": "All day",
@@ -80,8 +62,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Hair appt",
+      "date": "2026-05-13",
+      "time": "7:30 PM",
+      "end": "2026-05-13T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-05-13",
+      "time": "8:00 PM",
+      "end": "2026-05-13T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-06T23:08:05.350062Z",
+  "fetched_at": "2026-05-07T00:04:39.072311Z",
   "error": null
 }
