@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Marlene's birthday",
-      "date": "2026-05-07",
-      "time": "All day",
-      "end": "2026-05-08",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure in office ",
-      "date": "2026-05-07",
-      "time": "All day",
-      "end": "2026-05-08",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Physio",
-      "date": "2026-05-07",
-      "time": "5:00 PM",
-      "end": "2026-05-07T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-05-08",
       "time": "All day",
@@ -80,8 +53,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie symperica",
+      "date": "2026-05-14",
+      "time": "8:00 PM",
+      "end": "2026-05-14T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-07T23:26:44.380251Z",
+  "fetched_at": "2026-05-08T01:17:51.331174Z",
   "error": null
 }
