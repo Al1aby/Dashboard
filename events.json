@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-05-08",
-      "time": "All day",
-      "end": "2026-05-09",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-05-09",
       "time": "9:30 AM",
@@ -64,6 +55,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-08T23:31:07.033070Z",
+  "fetched_at": "2026-05-09T01:22:34.211130Z",
   "error": null
 }
