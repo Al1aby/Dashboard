@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Winnie swim \ud83c\udf0a",
-      "date": "2026-05-09",
-      "time": "9:30 AM",
-      "end": "2026-05-09T10:00:00",
-      "all_day": false,
-      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "NCC meeting",
       "date": "2026-05-11",
       "time": "7:00 PM",
@@ -53,8 +44,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-05-16",
+      "time": "9:30 AM",
+      "end": "2026-05-16T10:00:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Supper and concert?",
+      "date": "2026-05-16",
+      "time": "5:00 PM",
+      "end": "2026-05-17T00:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-09T23:04:51.618979Z",
+  "fetched_at": "2026-05-10T00:04:17.930538Z",
   "error": null
 }
