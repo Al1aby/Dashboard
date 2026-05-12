@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "NCC meeting",
-      "date": "2026-05-11",
-      "time": "7:00 PM",
-      "end": "2026-05-11T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-05-12",
       "time": "8:00 AM",
@@ -62,8 +53,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-05-18",
+      "time": "8:00 AM",
+      "end": "2026-05-18T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure therapy",
+      "date": "2026-05-18",
+      "time": "5:00 PM",
+      "end": "2026-05-18T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-11T23:11:32.382357Z",
+  "fetched_at": "2026-05-12T00:11:02.700283Z",
   "error": null
 }
