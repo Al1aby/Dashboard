@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Katie symperica",
-      "date": "2026-05-14",
-      "time": "8:00 PM",
-      "end": "2026-05-14T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-05-16",
       "time": "9:30 AM",
@@ -73,6 +64,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-14T23:12:23.053821Z",
+  "fetched_at": "2026-05-15T00:10:57.631140Z",
   "error": null
 }
