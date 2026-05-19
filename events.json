@@ -19,6 +19,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "King Mazda - Service",
+      "date": "2026-05-20",
+      "time": "1:00 PM",
+      "end": "2026-05-20T14:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Pick hello fresh meals",
       "date": "2026-05-20",
       "time": "8:00 PM",
@@ -37,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-19T21:45:19.904563Z",
+  "fetched_at": "2026-05-19T23:01:24.792128Z",
   "error": null
 }
