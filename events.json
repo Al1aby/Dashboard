@@ -20,6 +20,15 @@
     },
     {
       "title": "Laure in office ",
+      "date": "2026-05-22",
+      "time": "All day",
+      "end": "2026-05-23",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
       "date": "2026-05-25",
       "time": "All day",
       "end": "2026-05-26",
@@ -46,6 +55,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-20T11:27:05.375410Z",
+  "fetched_at": "2026-05-20T14:05:49.559286Z",
   "error": null
 }
