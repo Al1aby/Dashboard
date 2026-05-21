@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "King Mazda - Service",
-      "date": "2026-05-20",
-      "time": "1:00 PM",
-      "end": "2026-05-20T14:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Pick hello fresh meals",
-      "date": "2026-05-20",
-      "time": "8:00 PM",
-      "end": "2026-05-20T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-05-22",
       "time": "All day",
@@ -62,8 +44,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pickup rental",
+      "date": "2026-05-27",
+      "time": "4:00 PM",
+      "end": "2026-05-27T17:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Pick hello fresh meals",
+      "date": "2026-05-27",
+      "time": "8:00 PM",
+      "end": "2026-05-27T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-20T22:52:16.576623Z",
+  "fetched_at": "2026-05-21T00:06:46.289033Z",
   "error": null
 }
