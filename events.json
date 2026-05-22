@@ -62,8 +62,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Stay",
+      "date": "2026-05-28",
+      "time": "All day",
+      "end": "2026-05-30",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Car breaks",
+      "date": "2026-05-28",
+      "time": "8:00 AM",
+      "end": "2026-05-28T16:00:00",
+      "all_day": false,
+      "location": "King Mazda\n440 Rothesay Ave, Saint John NB E2L 4G7, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-21T23:42:13.195133Z",
+  "fetched_at": "2026-05-22T01:49:09.828035Z",
   "error": null
 }
