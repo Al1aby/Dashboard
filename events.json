@@ -2,24 +2,6 @@
   "events": [
     {
       "title": "Laure in office ",
-      "date": "2026-05-22",
-      "time": "All day",
-      "end": "2026-05-23",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Meet up with Tiffany ",
-      "date": "2026-05-22",
-      "time": "6:00 PM",
-      "end": "2026-05-22T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure in office ",
       "date": "2026-05-25",
       "time": "All day",
       "end": "2026-05-26",
@@ -80,8 +62,17 @@
       "all_day": false,
       "location": "King Mazda\n440 Rothesay Ave, Saint John NB E2L 4G7, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Concert and diner",
+      "date": "2026-05-29",
+      "time": "5:00 PM",
+      "end": "2026-05-29T23:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-22T23:18:56.964609Z",
+  "fetched_at": "2026-05-23T01:22:35.305843Z",
   "error": null
 }
