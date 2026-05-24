@@ -71,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Jds birthday",
+      "date": "2026-05-30",
+      "time": "All day",
+      "end": "2026-05-31",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-05-30",
+      "time": "9:30 AM",
+      "end": "2026-05-30T10:00:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-23T23:57:27.676570Z",
+  "fetched_at": "2026-05-24T04:11:54.310079Z",
   "error": null
 }
