@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-05-26",
-      "time": "8:00 AM",
-      "end": "2026-05-26T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Physio",
-      "date": "2026-05-26",
-      "time": "5:00 PM",
-      "end": "2026-05-26T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Pickup rental",
       "date": "2026-05-27",
       "time": "4:00 PM",
@@ -98,8 +80,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-06-02",
+      "time": "8:00 AM",
+      "end": "2026-06-02T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Allergy follow up",
+      "date": "2026-06-02",
+      "time": "9:45 AM",
+      "end": "2026-06-02T10:15:00",
+      "all_day": false,
+      "location": "Phone call",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Massage Treatment with Jen Taylor",
+      "date": "2026-06-02",
+      "time": "6:30 PM",
+      "end": "2026-06-02T19:30:00",
+      "all_day": false,
+      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-26T22:56:48.908206Z",
+  "fetched_at": "2026-05-27T00:11:42.575758Z",
   "error": null
 }
