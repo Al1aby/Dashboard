@@ -10,30 +10,12 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Pick hello fresh meals",
-      "date": "2026-05-27",
-      "time": "8:00 PM",
-      "end": "2026-05-27T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Stay",
       "date": "2026-05-28",
       "time": "All day",
       "end": "2026-05-30",
       "all_day": true,
       "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Car breaks",
-      "date": "2026-05-28",
-      "time": "8:00 AM",
-      "end": "2026-05-28T16:00:00",
-      "all_day": false,
-      "location": "King Mazda\n440 Rothesay Ave, Saint John NB E2L 4G7, Canada",
       "calendar": "Laure and Aaron "
     },
     {
@@ -82,12 +64,30 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Laure in office ",
+      "date": "2026-06-02",
+      "time": "All day",
+      "end": "2026-06-03",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Garbage day",
       "date": "2026-06-02",
       "time": "8:00 AM",
       "end": "2026-06-02T09:00:00",
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Car breaks",
+      "date": "2026-06-02",
+      "time": "9:00 AM",
+      "end": "2026-06-02T16:00:00",
+      "all_day": false,
+      "location": "King Mazda\n440 Rothesay Ave, Saint John NB E2L 4G7, Canada",
       "calendar": "Laure and Aaron "
     },
     {
@@ -109,6 +109,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-27T11:59:21.334245Z",
+  "fetched_at": "2026-05-27T16:05:13.762393Z",
   "error": null
 }
