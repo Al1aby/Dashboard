@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Pickup rental",
-      "date": "2026-05-27",
-      "time": "4:00 PM",
-      "end": "2026-05-27T17:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Stay",
       "date": "2026-05-28",
       "time": "All day",
@@ -107,8 +98,17 @@
       "all_day": false,
       "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie vet ",
+      "date": "2026-06-03",
+      "time": "10:30 AM",
+      "end": "2026-06-03T11:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-27T23:47:22.932753Z",
+  "fetched_at": "2026-05-28T03:36:08.743830Z",
   "error": null
 }
