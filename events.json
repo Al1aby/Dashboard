@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Stay",
-      "date": "2026-05-28",
-      "time": "All day",
-      "end": "2026-05-30",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Concert and diner",
       "date": "2026-05-29",
       "time": "5:00 PM",
@@ -107,8 +98,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Physio ",
+      "date": "2026-06-04",
+      "time": "5:00 PM",
+      "end": "2026-06-04T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-05-28T23:49:15.510091Z",
+  "fetched_at": "2026-05-29T03:36:34.959378Z",
   "error": null
 }
