@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Katie vet ",
-      "date": "2026-06-03",
-      "time": "10:30 AM",
-      "end": "2026-06-03T11:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Physio ",
       "date": "2026-06-04",
       "time": "5:00 PM",
@@ -80,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-06-10",
+      "time": "All day",
+      "end": "2026-06-11",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Saint John Regional Hospital - Lab ",
+      "date": "2026-06-10",
+      "time": "3:30 PM",
+      "end": "2026-06-10T15:45:00",
+      "all_day": false,
+      "location": "Saint John Regional Hospital",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-03T22:05:01.626750Z",
+  "fetched_at": "2026-06-04T00:00:19.017783Z",
   "error": null
 }
