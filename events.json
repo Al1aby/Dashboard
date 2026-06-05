@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Physio ",
-      "date": "2026-06-04",
-      "time": "5:00 PM",
-      "end": "2026-06-04T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron -  check & clean furnace filter ",
       "date": "2026-06-06",
       "time": "9:00 AM",
@@ -91,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-04T23:36:46.283802Z",
+  "fetched_at": "2026-06-05T01:53:00.979472Z",
   "error": null
 }
