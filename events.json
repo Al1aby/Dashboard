@@ -2,33 +2,6 @@
   "events": [
     {
       "title": "Laure in office ",
-      "date": "2026-06-08",
-      "time": "All day",
-      "end": "2026-06-09",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Doctors appt ",
-      "date": "2026-06-08",
-      "time": "2:45 PM",
-      "end": "2026-06-08T15:15:00",
-      "all_day": false,
-      "location": "Chelsey drive ",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "NCC meeting",
-      "date": "2026-06-08",
-      "time": "7:00 PM",
-      "end": "2026-06-08T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure in office ",
       "date": "2026-06-09",
       "time": "All day",
       "end": "2026-06-10",
@@ -107,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-06-15",
+      "time": "8:00 AM",
+      "end": "2026-06-15T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-08T22:50:04.608629Z",
+  "fetched_at": "2026-06-09T00:05:36.999801Z",
   "error": null
 }
