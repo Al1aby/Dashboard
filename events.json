@@ -2,24 +2,6 @@
   "events": [
     {
       "title": "Laure in office ",
-      "date": "2026-06-09",
-      "time": "All day",
-      "end": "2026-06-10",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Compost day ",
-      "date": "2026-06-09",
-      "time": "8:00 AM",
-      "end": "2026-06-09T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure in office ",
       "date": "2026-06-10",
       "time": "All day",
       "end": "2026-06-11",
@@ -89,8 +71,17 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-06-16",
+      "time": "8:00 AM",
+      "end": "2026-06-16T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-09T22:52:04.285191Z",
+  "fetched_at": "2026-06-10T00:13:21.336614Z",
   "error": null
 }
