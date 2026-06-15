@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Katie symperica",
-      "date": "2026-06-14",
-      "time": "8:00 PM",
-      "end": "2026-06-14T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Recycling day",
       "date": "2026-06-15",
       "time": "8:00 AM",
@@ -37,6 +28,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-14T23:50:12.823646Z",
+  "fetched_at": "2026-06-15T04:17:05.773761Z",
   "error": null
 }
