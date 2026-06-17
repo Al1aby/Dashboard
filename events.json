@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Garbage day",
-      "date": "2026-06-16",
-      "time": "8:00 AM",
-      "end": "2026-06-16T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "House cleaning ",
       "date": "2026-06-18",
       "time": "8:30 AM",
@@ -26,8 +17,44 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-06-23",
+      "time": "All day",
+      "end": "2026-06-24",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-06-23",
+      "time": "8:00 AM",
+      "end": "2026-06-23T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Scott flight in ",
+      "date": "2026-06-23",
+      "time": "3:55 PM",
+      "end": "2026-06-23T16:55:00",
+      "all_day": false,
+      "location": "Saint John Airport\n4180 Loch Lomond Rd, St. John NB E2N 1L7, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure physio",
+      "date": "2026-06-23",
+      "time": "5:00 PM",
+      "end": "2026-06-23T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-16T23:43:06.634532Z",
+  "fetched_at": "2026-06-17T02:06:16.092454Z",
   "error": null
 }
