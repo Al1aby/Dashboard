@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "House cleaning ",
-      "date": "2026-06-18",
-      "time": "8:30 AM",
-      "end": "2026-06-18T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure therapy ",
       "date": "2026-06-22",
       "time": "7:00 PM",
@@ -62,8 +53,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure dentist ",
+      "date": "2026-06-25",
+      "time": "3:40 PM",
+      "end": "2026-06-25T16:40:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-18T23:19:46.013607Z",
+  "fetched_at": "2026-06-19T02:16:47.016800Z",
   "error": null
 }
