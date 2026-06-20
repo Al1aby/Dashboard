@@ -62,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in Fredericton - rental ",
+      "date": "2026-06-26",
+      "time": "7:00 PM",
+      "end": "2026-06-26T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-20T21:39:34.416052Z",
+  "fetched_at": "2026-06-20T22:48:58.111872Z",
   "error": null
 }
