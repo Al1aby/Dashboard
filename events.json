@@ -71,8 +71,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Sheels are here!",
+      "date": "2026-06-27",
+      "time": "4:00 PM",
+      "end": "2026-07-11T17:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-20T22:48:58.111872Z",
+  "fetched_at": "2026-06-21T00:05:52.906482Z",
   "error": null
 }
