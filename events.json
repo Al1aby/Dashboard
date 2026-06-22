@@ -80,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Win party ",
+      "date": "2026-06-28",
+      "time": "2:30 PM",
+      "end": "2026-06-28T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-21T23:50:35.435863Z",
+  "fetched_at": "2026-06-22T04:14:16.128852Z",
   "error": null
 }
