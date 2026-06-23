@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure therapy ",
-      "date": "2026-06-22",
-      "time": "7:00 PM",
-      "end": "2026-06-22T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-06-23",
       "time": "8:00 AM",
@@ -80,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Our Anniversary ",
+      "date": "2026-06-29",
+      "time": "All day",
+      "end": "2026-06-30",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-06-29",
+      "time": "8:00 AM",
+      "end": "2026-06-29T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-22T23:05:21.196854Z",
+  "fetched_at": "2026-06-23T01:22:51.178820Z",
   "error": null
 }
