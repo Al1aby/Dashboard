@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-06-23",
-      "time": "8:00 AM",
-      "end": "2026-06-23T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Scott flight in ",
-      "date": "2026-06-23",
-      "time": "3:55 PM",
-      "end": "2026-06-23T16:55:00",
-      "all_day": false,
-      "location": "Saint John Airport\n4180 Loch Lomond Rd, St. John NB E2N 1L7, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure physio",
-      "date": "2026-06-23",
-      "time": "5:00 PM",
-      "end": "2026-06-23T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Katie nails - 845",
       "date": "2026-06-24",
       "time": "8:30 AM",
@@ -89,8 +62,35 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-06-30",
+      "time": "8:00 AM",
+      "end": "2026-06-30T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure dr appt",
+      "date": "2026-06-30",
+      "time": "2:30 PM",
+      "end": "2026-06-30T15:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Massage Treatment with Jen Taylor",
+      "date": "2026-06-30",
+      "time": "6:30 PM",
+      "end": "2026-06-30T19:30:00",
+      "all_day": false,
+      "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-23T23:40:47.153343Z",
+  "fetched_at": "2026-06-24T01:31:26.014245Z",
   "error": null
 }
