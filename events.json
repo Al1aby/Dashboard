@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure dentist ",
-      "date": "2026-06-25",
-      "time": "3:40 PM",
-      "end": "2026-06-25T16:40:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in Fredericton - rental ",
       "date": "2026-06-26",
       "time": "7:00 PM",
@@ -80,8 +71,17 @@
       "all_day": false,
       "location": "Jen Taylor Massage Therapy, 114 Logie Dr, Hampton, NB, E5N 5T2",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Ultrasound ",
+      "date": "2026-07-02",
+      "time": "2:30 PM",
+      "end": "2026-07-02T15:30:00",
+      "all_day": false,
+      "location": "Regional",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-25T22:46:18.561606Z",
+  "fetched_at": "2026-06-26T00:09:06.601744Z",
   "error": null
 }
