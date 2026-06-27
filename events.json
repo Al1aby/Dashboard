@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in Fredericton - rental ",
-      "date": "2026-06-26",
-      "time": "7:00 PM",
-      "end": "2026-06-26T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Sheels are here!",
       "date": "2026-06-27",
       "time": "4:00 PM",
@@ -80,8 +71,17 @@
       "all_day": false,
       "location": "Regional",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Audrey birthday",
+      "date": "2026-07-03",
+      "time": "All day",
+      "end": "2026-07-04",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-26T23:46:44.048309Z",
+  "fetched_at": "2026-06-27T03:27:17.601549Z",
   "error": null
 }
