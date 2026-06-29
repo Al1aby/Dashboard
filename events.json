@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Win party ",
-      "date": "2026-06-28",
-      "time": "2:30 PM",
-      "end": "2026-06-28T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Our Anniversary ",
       "date": "2026-06-29",
       "time": "All day",
@@ -82,6 +73,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-06-28T23:31:19.587781Z",
+  "fetched_at": "2026-06-29T01:54:02.527562Z",
   "error": null
 }
