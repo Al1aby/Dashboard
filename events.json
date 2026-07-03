@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Ultrasound ",
-      "date": "2026-07-02",
-      "time": "2:30 PM",
-      "end": "2026-07-02T15:30:00",
-      "all_day": false,
-      "location": "Regional",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Audrey birthday",
       "date": "2026-07-03",
       "time": "All day",
@@ -46,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-02T22:46:26.620774Z",
+  "fetched_at": "2026-07-03T00:04:34.623324Z",
   "error": null
 }
