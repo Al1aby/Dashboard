@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron -  check & clean furnace filter ",
-      "date": "2026-07-04",
-      "time": "9:00 AM",
-      "end": "2026-07-04T10:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in Fredericton",
       "date": "2026-07-07",
       "time": "All day",
@@ -28,6 +19,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-04T23:34:47.378155Z",
+  "fetched_at": "2026-07-05T01:24:09.952103Z",
   "error": null
 }
