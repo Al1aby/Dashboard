@@ -62,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Moonlight bazar ",
+      "date": "2026-07-18",
+      "time": "All day",
+      "end": "2026-07-19",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-11T23:26:28.532366Z",
+  "fetched_at": "2026-07-12T01:04:46.834105Z",
   "error": null
 }
