@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-07-13",
-      "time": "8:00 AM",
-      "end": "2026-07-13T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "NCC meeting",
-      "date": "2026-07-13",
-      "time": "7:00 PM",
-      "end": "2026-07-13T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Omlyclo delivery ",
       "date": "2026-07-14",
       "time": "All day",
@@ -82,6 +64,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-13T23:12:35.623717Z",
+  "fetched_at": "2026-07-14T00:08:21.966667Z",
   "error": null
 }
