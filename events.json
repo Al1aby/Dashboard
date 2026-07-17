@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure physio",
-      "date": "2026-07-16",
-      "time": "5:00 PM",
-      "end": "2026-07-16T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure therapy ",
-      "date": "2026-07-16",
-      "time": "7:00 PM",
-      "end": "2026-07-16T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Moonlight bazar ",
       "date": "2026-07-18",
       "time": "All day",
@@ -44,8 +26,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-07-23",
+      "time": "All day",
+      "end": "2026-07-24",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-16T23:10:20.537849Z",
+  "fetched_at": "2026-07-17T00:11:59.739354Z",
   "error": null
 }
