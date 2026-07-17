@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Coffee date with Kate (win too)",
+      "date": "2026-07-18",
+      "time": "9:30 AM",
+      "end": "2026-07-18T11:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Compost day ",
       "date": "2026-07-21",
       "time": "8:00 AM",
@@ -37,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-17T13:27:08.214606Z",
+  "fetched_at": "2026-07-17T14:57:40.243240Z",
   "error": null
 }
