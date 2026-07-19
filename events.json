@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Moonlight bazar ",
-      "date": "2026-07-18",
-      "time": "All day",
-      "end": "2026-07-19",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Coffee date with Kate (win too)",
-      "date": "2026-07-18",
-      "time": "9:30 AM",
-      "end": "2026-07-18T11:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-07-21",
       "time": "8:00 AM",
@@ -44,8 +26,17 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "SJ pride parade",
+      "date": "2026-07-25",
+      "time": "10:00 AM",
+      "end": "2026-07-25T14:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-18T23:25:47.381219Z",
+  "fetched_at": "2026-07-19T01:01:45.230598Z",
   "error": null
 }
