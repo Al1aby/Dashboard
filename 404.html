@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Nauwigewauk Community Club</title>
+  <link rel="icon" type="image/png" href="NCC_logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .notfound-section {
+      margin-top: 132px; min-height: calc(100vh - 132px);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--navy-dark); text-align: center; padding: 4rem 2rem;
+      position: relative; overflow: hidden;
+    }
+    .notfound-section::before {
+      content: '🍁'; position: absolute; font-size: 18rem; opacity: 0.04;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+    .notfound-inner { position: relative; z-index: 1; max-width: 560px; }
+    .notfound-num {
+      font-family: 'Playfair Display', serif; font-size: clamp(5rem, 14vw, 9rem);
+      font-weight: 900; color: var(--gold-lt); line-height: 1; margin-bottom: 1rem;
+    }
+    .notfound-title {
+      font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      color: #fff; font-weight: 700; margin-bottom: 1rem;
+    }
+    .notfound-body {
+      font-family: 'Lora', serif; font-style: italic; color: rgba(255,255,255,0.65);
+      font-size: 1.05rem; line-height: 1.8; margin-bottom: 2.5rem;
+    }
+    .notfound-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+<section class="notfound-section">
+  <div class="notfound-inner">
+    <div class="notfound-num">404</div>
+    <h1 class="notfound-title">Looks like this trail doesn't exist.</h1>
+    <p class="notfound-body">The page you're looking for may have been moved, renamed, or never existed in the first place. Let's get you back on track.</p>
+    <div class="notfound-actions">
+      <a href="index.html" class="btn btn-gold">Back to Home</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<script src="nav.js"></script>
+</body>
+</html>

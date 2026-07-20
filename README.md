@@ -1,124 +1,113 @@
-# Dashboard
+# Nauwigewauk Community Club — Website
 
-A personal home dashboard displaying weather, calendar events, tides, radar, and moon phase for the Maritimes region of New Brunswick, Canada.
+A full multi-page website for the Nauwigewauk Community Club, ready for deployment on GitHub Pages.
 
-![Dark dashboard layout](https://via.placeholder.com/800x450/0c0f14/f0c060?text=Dashboard)
+---
 
-## Features
+## Files in This Package
 
-- **Live clock** — updates every second
-- **Today's events** — pulled from iCloud calendar, color-coded past/current/future
-- **Weather** — current conditions + 7-day forecast + next 6 hours (Open-Meteo)
-- **Radar** — live RainViewer radar overlay on an interactive Leaflet map
-- **Tides** — next 4 high/low tide events for Saint John, NB (CHS API)
-- **Moon phase** — icon, name, and illumination percentage (calculated locally)
-- **6-day calendar strip** — compact view of upcoming events
+| File | Description |
+|------|-------------|
+| `index.html` | Homepage |
+| `news-events.html` | News & Events page |
+| `executive.html` | Executive & volunteers page |
+| `facilities.html` | Facilities & hall rental page |
+| `nature-trail.html` | Nature Trail page |
+| `photo-archive.html` | Photo Archive page |
+| `contact.html` | Contact page |
+| `style.css` | Shared stylesheet (used by all pages) |
+| `nav.js` | Shared navigation & footer (used by all pages) |
+| `NBCC_logo.png` | Club logo — **place this file in the same folder** |
 
-## Layout
+---
 
-```
-┌──────────────────┬───────────────────────────┐
-│  Clock           │  Weather  │  Radar map     │
-│  Today's events  ├───────────────────────────┤
-│  Moon / Tides    │  6-day calendar strip      │
-└──────────────────┴───────────────────────────┘
-```
+## How to Deploy on GitHub Pages (Free Hosting)
 
-## How It Works
+### Step 1 — Create a GitHub Account
+Go to [github.com](https://github.com) and sign up for a free account if you don't have one.
 
-The dashboard is a single static `index.html` file. Two Python scripts run on a schedule via GitHub Actions every 15 minutes and commit updated data files back to the repo. The page fetches those files on load and polls every few minutes.
+### Step 2 — Create a New Repository
+1. Click the **+** button → **New repository**
+2. Name it: `nauwigewauk` (or any name you like)
+3. Set it to **Public**
+4. Click **Create repository**
 
-```
-GitHub Actions (every 15 min)
-  ├── fetch_calendar.py  →  events.json  (iCloud ICS)
-  └── fetch_tides.py     →  tides.json   (CHS IWLS API)
-        ↓
-    git commit + push
+### Step 3 — Upload Your Files
+1. On your new repository page, click **uploading an existing file**
+2. Drag and drop ALL files from this folder (including `NBCC_logo.png`)
+3. Click **Commit changes**
 
-Browser (index.html)
-  ├── ./events.json       — calendar events
-  ├── ./tides.json        — tide predictions
-  ├── Open-Meteo API      — weather (free, no key)
-  └── RainViewer API      — radar tiles (free, no key)
-```
+### Step 4 — Enable GitHub Pages
+1. Go to your repository → **Settings** tab
+2. In the left sidebar click **Pages**
+3. Under "Source", select **Deploy from a branch**
+4. Set Branch to **main**, folder to **/ (root)**
+5. Click **Save**
 
-## Running Locally
+### Step 5 — Your Site is Live!
+After 1–2 minutes, your site will be live at:
+`https://[your-github-username].github.io/nauwigewauk/`
 
-**Requirements:** Python 3.12+, any modern browser
+---
 
-```bash
-# Install Python dependencies
-pip install requests icalendar python-dateutil
+## Connecting Your GoDaddy Domain
 
-# Fetch data
-python fetch_calendar.py   # → events.json
-python fetch_tides.py      # → tides.json
+Once your site is live on GitHub Pages:
 
-# Serve the page (required for fetch() to work with local files)
-python -m http.server 8000
-# Open http://localhost:8000
-```
+1. In GoDaddy, go to **My Domains** → **DNS** for your domain
+2. Add a **CNAME record**:
+   - Name: `www`
+   - Value: `[your-github-username].github.io`
+3. In GitHub → Settings → Pages, under **Custom domain**, enter your domain (e.g. `www.nauwigewauk.ca`)
+4. Check **Enforce HTTPS**
 
-## Configuration
+DNS changes can take up to 24 hours to propagate.
 
-Everything is hardcoded for a specific location — edit these to relocate:
+---
 
-| What | File | Variable/Line |
-|------|------|---------------|
-| iCloud calendar URL | `fetch_calendar.py` | `CALENDAR_URL` |
-| Tide station | `fetch_tides.py` | `CODE = "00065"` (Saint John NB) |
-| Weather location | `index.html` | `LAT`, `LON` constants |
-| Temperature unit | `index.html` | `UNITS = "C"` (change to `"F"`) |
+## Making the Contact Form Work
 
-No API keys or secrets are required — all data sources are free and public.
+The contact form on `contact.html` needs a backend to send emails. The easiest free option is **Formspree**:
 
-## Data Files
+1. Go to [formspree.io](https://formspree.io) and create a free account
+2. Create a new form and get your endpoint URL (looks like `https://formspree.io/f/xxxxxxxx`)
+3. In `contact.html`, find this line:
+   ```html
+   <form class="contact-form" action="#" method="POST">
+   ```
+4. Replace `action="#"` with your Formspree URL:
+   ```html
+   <form class="contact-form" action="https://formspree.io/f/xxxxxxxx" method="POST">
+   ```
 
-**`events.json`** — written by `fetch_calendar.py`
-```json
-{
-  "events": [
-    {
-      "title": "Event Name",
-      "date": "2026-03-28",
-      "time": "9:30 AM",
-      "end": "2026-03-28T10:00:00",
-      "all_day": false,
-      "location": "123 Main St",
-      "calendar": "Personal"
-    }
-  ],
-  "fetched_at": "2026-03-26T11:37:56Z",
-  "error": null
-}
-```
+---
 
-**`tides.json`** — written by `fetch_tides.py`
-```json
-[
-  { "time": "2026-03-26T18:30:00Z", "type": "H", "height": 6.25 },
-  { "time": "2026-03-27T00:45:00Z", "type": "L", "height": 0.81 }
-]
-```
+## Updating Content
 
-## GitHub Actions Workflow
+All placeholder text is marked with notices like:
+> 📋 **For the Club Executive** — Replace the sample content below with your actual information.
 
-`.github/workflows/fetch-calendar.yml` runs every 15 minutes:
+### To add photos to the archive:
+1. Place your image files in the site folder
+2. Open `photo-archive.html`
+3. Find the `photo-placeholder` divs and replace them with:
+   ```html
+   <div class="photo-card">
+     <img src="your-photo-filename.jpg" alt="Description of photo" />
+     <div class="photo-overlay">
+       <p class="photo-caption">Your caption here, circa 1965</p>
+     </div>
+   </div>
+   ```
 
-1. Runs `fetch_calendar.py` and `fetch_tides.py`
-2. Commits any changed `events.json` / `tides.json` with `[skip ci]`
-3. Uses `git pull --rebase` before pushing to handle concurrent runs
+### To embed a Google Map on the Contact page:
+1. Go to [maps.google.com](https://maps.google.com)
+2. Search for the club location
+3. Click **Share** → **Embed a map** → Copy the HTML
+4. Paste it in `contact.html` where the map placeholder is
 
-## Tech Stack
+---
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Vanilla HTML/CSS/JS (no framework) |
-| Maps | [Leaflet.js](https://leafletjs.com/) v1.9.4 |
-| Radar tiles | [RainViewer](https://www.rainviewer.com/api.html) |
-| Basemap | CartoDB Dark Matter |
-| Weather | [Open-Meteo](https://open-meteo.com/) |
-| Tides | [CHS IWLS API](https://api-iwls.dfo-mpo.gc.ca/) |
-| Calendar | iCloud public share link (ICS) |
-| Automation | GitHub Actions |
-| Fonts | Google Fonts (Playfair Display, Karla, Inconsolata) |
+## Need Help?
+
+Contact the person who built this site or reach out to GitHub support at [docs.github.com](https://docs.github.com).

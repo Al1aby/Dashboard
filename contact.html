@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Nauwigewauk Community Club</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.nauwigewauk.ca/contact.html" />
+  <meta property="og:title" content="Contact — Nauwigewauk Community Club" />
+  <meta property="og:description" content="Get in touch with the Nauwigewauk Community Club — location, email, and Facebook." />
+  <meta property="og:image" content="https://www.nauwigewauk.ca/hero-picnic-shelter.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Nauwigewauk Community Club" />
+  <meta name="twitter:description" content="Get in touch with the Nauwigewauk Community Club — location, email, and Facebook." />
+  <meta name="twitter:image" content="https://www.nauwigewauk.ca/hero-picnic-shelter.jpg" />
+  <meta name="description" content="Get in touch with the Nauwigewauk Community Club — location, email, and Facebook." />
+  <link rel="icon" type="image/png" href="NCC_logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-section { background: var(--paper); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+
+    /* Info sidebar */
+    .info-block { margin-bottom: 2.5rem; }
+    .info-block h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--navy-dark); margin-bottom: 0.75rem; }
+    .info-row { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); font-size: 0.9rem; }
+    .info-row:last-child { border-bottom: none; }
+    .info-row .info-label { color: var(--muted); min-width: 130px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    .info-row .info-value { color: var(--ink); line-height: 1.5; }
+    .info-row a { color: var(--navy); text-decoration: none; }
+    .info-row a:hover { color: var(--gold); }
+
+    .map-embed-wrap { border: 1px solid var(--rule); box-shadow: 0 8px 24px rgba(17,31,62,0.1); }
+    .map-embed-wrap iframe { width: 100%; height: 480px; border: 0; display: block; }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker"><div class="page-hero-kicker-line"></div><span>Get In Touch</span></div>
+    <h1>Contact <em>Us</em></h1>
+    <p class="page-hero-sub">Questions, bookings, volunteering — we'd love to hear from you.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO -->
+      <div class="reveal">
+        <div class="label-tag">Find Us</div>
+        <h2 class="editorial">Club <em>Information</em></h2>
+        <div style="margin-top:1.5rem"></div>
+
+        <div class="info-block">
+          <h3>Location</h3>
+          <div class="info-row"><span class="info-label">Address</span><span class="info-value">36 Darlings Island Road<br>Nauwigewauk, New Brunswick</span></div>
+        </div>
+
+        <div class="info-block">
+          <h3>Contact</h3>
+          <div class="info-row"><span class="info-label">General Enquiries</span><span class="info-value"><a href="mailto:nauwigewaukcommunityclub@gmail.com">nauwigewaukcommunityclub@gmail.com</a></span></div>
+          <div class="info-row"><span class="info-label">Facebook</span><span class="info-value"><a href="https://www.facebook.com/profile.php?id=61587271520864" target="_blank">Nauwigewauk Community Club</a></span></div>
+        </div>
+
+        <div class="info-block">
+          <h3>Grounds &amp; Rentals</h3>
+          <div class="info-row"><span class="info-label">Shelter Rentals</span><span class="info-value"><a href="mailto:event.bookings.ncc@gmail.com">event.bookings.ncc@gmail.com</a></span></div>
+          <div class="info-row"><span class="info-label">Rink</span><span class="info-value">Open in winter, weather permitting</span></div>
+          <div class="info-row"><span class="info-label">Trail</span><span class="info-value">Open year-round, dawn to dusk</span></div>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="reveal">
+        <div class="label-tag">Find Us on the Map</div>
+        <h2 class="editorial">The <em>Grounds</em></h2>
+        <div style="margin-top:1.5rem"></div>
+        <div class="map-embed-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=45.475062,-65.8942548&z=15&output=embed"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Map to Nauwigewauk Community Club, 36 Darlings Island Road">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="nav.js"></script>
+</body>
+</html>
