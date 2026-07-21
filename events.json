@@ -35,8 +35,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-07-27",
+      "time": "8:00 AM",
+      "end": "2026-07-27T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Yoga",
+      "date": "2026-07-27",
+      "time": "7:00 PM",
+      "end": "2026-07-27T20:00:00",
+      "all_day": false,
+      "location": "Porter Rd\nNauwigewauk, NB, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Need milk expired 25",
+      "date": "2026-07-27",
+      "time": "8:00 PM",
+      "end": "2026-07-27T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-20T23:40:17.806882Z",
+  "fetched_at": "2026-07-21T01:09:13.565628Z",
   "error": null
 }
