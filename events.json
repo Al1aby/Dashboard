@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-07-21",
-      "time": "8:00 AM",
-      "end": "2026-07-21T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Hair appt",
-      "date": "2026-07-21",
-      "time": "7:45 PM",
-      "end": "2026-07-21T20:45:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-07-23",
       "time": "All day",
@@ -62,8 +44,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-07-28",
+      "time": "8:00 AM",
+      "end": "2026-07-28T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "House cleaning ",
+      "date": "2026-07-28",
+      "time": "8:30 AM",
+      "end": "2026-07-28T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure massage",
+      "date": "2026-07-28",
+      "time": "6:45 PM",
+      "end": "2026-07-28T19:45:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-21T23:40:52.422881Z",
+  "fetched_at": "2026-07-22T01:07:28.406442Z",
   "error": null
 }
