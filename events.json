@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Doula call",
+      "date": "2026-07-23",
+      "time": "8:00 PM",
+      "end": "2026-07-23T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "SJ pride parade",
       "date": "2026-07-25",
       "time": "10:00 AM",
@@ -71,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Dinner and thrift with Laura",
+      "date": "2026-07-29",
+      "time": "6:00 PM",
+      "end": "2026-07-29T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-23T15:57:03.731378Z",
+  "fetched_at": "2026-07-23T17:27:11.271257Z",
   "error": null
 }
