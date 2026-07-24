@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-07-23",
-      "time": "All day",
-      "end": "2026-07-24",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Doula call",
-      "date": "2026-07-23",
-      "time": "8:00 PM",
-      "end": "2026-07-23T20:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "SJ pride parade",
       "date": "2026-07-25",
       "time": "10:00 AM",
@@ -34,6 +16,15 @@
       "end": "2026-07-27T09:00:00",
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Doula call",
+      "date": "2026-07-27",
+      "time": "12:15 PM",
+      "end": "2026-07-27T12:45:00",
+      "all_day": false,
+      "location": null,
       "calendar": "Laure and Aaron "
     },
     {
@@ -89,8 +80,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-07-30",
+      "time": "All day",
+      "end": "2026-07-31",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Dr appt ",
+      "date": "2026-07-30",
+      "time": "2:00 PM",
+      "end": "2026-07-30T15:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-23T23:39:04.591126Z",
+  "fetched_at": "2026-07-24T01:08:46.465539Z",
   "error": null
 }
