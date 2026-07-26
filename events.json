@@ -89,8 +89,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure meet J&K - time tbd",
+      "date": "2026-08-01",
+      "time": "10:00 AM",
+      "end": "2026-08-01T14:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-26T17:43:12.633216Z",
+  "fetched_at": "2026-07-26T18:44:10.019453Z",
   "error": null
 }
