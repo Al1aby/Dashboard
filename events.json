@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "SJ pride parade",
-      "date": "2026-07-25",
-      "time": "10:00 AM",
-      "end": "2026-07-25T14:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Recycling day",
       "date": "2026-07-27",
       "time": "8:00 AM",
@@ -89,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron -  check & clean furnace filter ",
+      "date": "2026-08-01",
+      "time": "9:00 AM",
+      "end": "2026-08-01T10:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-25T23:31:54.894413Z",
+  "fetched_at": "2026-07-26T01:14:49.242859Z",
   "error": null
 }
