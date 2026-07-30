@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Dinner and thrift with Laura",
-      "date": "2026-07-29",
-      "time": "6:00 PM",
-      "end": "2026-07-29T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-07-30",
       "time": "All day",
@@ -55,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-29T23:42:02.334386Z",
+  "fetched_at": "2026-07-30T01:02:21.737647Z",
   "error": null
 }
