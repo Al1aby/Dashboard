@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-07-30",
-      "time": "All day",
-      "end": "2026-07-31",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Dr appt ",
-      "date": "2026-07-30",
-      "time": "2:00 PM",
-      "end": "2026-07-30T15:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron -  check & clean furnace filter ",
       "date": "2026-08-01",
       "time": "9:00 AM",
@@ -53,8 +35,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-08-06",
+      "time": "All day",
+      "end": "2026-08-07",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Maternal Fetal Medicine appt - 9am",
+      "date": "2026-08-06",
+      "time": "8:30 AM",
+      "end": "2026-08-06T10:00:00",
+      "all_day": false,
+      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-07-30T22:46:03.973592Z",
+  "fetched_at": "2026-07-31T00:00:46.756304Z",
   "error": null
 }
