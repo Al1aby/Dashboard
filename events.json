@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron -  check & clean furnace filter ",
-      "date": "2026-08-01",
-      "time": "9:00 AM",
-      "end": "2026-08-01T10:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure meet J&K - time tbd",
-      "date": "2026-08-01",
-      "time": "10:00 AM",
-      "end": "2026-08-01T14:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-08-04",
       "time": "8:00 AM",
@@ -64,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-01T23:59:11.747919Z",
+  "fetched_at": "2026-08-02T03:41:11.354647Z",
   "error": null
 }
