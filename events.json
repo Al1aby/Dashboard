@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "title": "Video chat - Jade",
+      "date": "2026-08-05",
+      "time": "7:00 PM",
+      "end": "2026-08-05T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Laure in office ",
       "date": "2026-08-06",
       "time": "All day",
@@ -73,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-05T11:36:28.062904Z",
+  "fetched_at": "2026-08-05T13:21:08.506054Z",
   "error": null
 }
