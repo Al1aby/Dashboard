@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-08-04",
-      "time": "8:00 AM",
-      "end": "2026-08-04T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Katie nails - 845",
-      "date": "2026-08-04",
-      "time": "8:30 AM",
-      "end": "2026-08-04T09:10:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-08-06",
       "time": "All day",
@@ -71,8 +53,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-08-11",
+      "time": "8:00 AM",
+      "end": "2026-08-11T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure physio",
+      "date": "2026-08-11",
+      "time": "5:00 PM",
+      "end": "2026-08-11T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-04T23:18:13.997000Z",
+  "fetched_at": "2026-08-05T00:53:57.918303Z",
   "error": null
 }
