@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-08-06",
-      "time": "All day",
-      "end": "2026-08-07",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Maternal Fetal Medicine appt - 9am",
-      "date": "2026-08-06",
-      "time": "8:30 AM",
-      "end": "2026-08-06T10:00:00",
-      "all_day": false,
-      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Car service",
       "date": "2026-08-07",
       "time": "8:00 AM",
@@ -71,8 +53,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure therapy ",
+      "date": "2026-08-13",
+      "time": "7:00 PM",
+      "end": "2026-08-13T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-06T15:40:45.435130Z",
+  "fetched_at": "2026-08-07T00:39:42.809703Z",
   "error": null
 }
