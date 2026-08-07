@@ -1,122 +1,69 @@
 #!/usr/bin/env python3
 """
 fetch_tides.py
-Fetches the next 48h of high/low tide predictions for Saint John NB
-from the Canadian Hydrographic Service (CHS) IWLS API and saves tides.json.
+Fetches high/low tide predictions for Saint John NB (station 00065)
+directly from the official CHS tides.gc.ca station page and writes tides.json.
 
-CHS API: https://api-iwls.dfo-mpo.gc.ca/api/v1/
-Station: Saint John NB — code 00065
-
-Notes:
-  - The API returns eventDate in local Atlantic time but labels it with Z
-    (as if UTC). We strip the Z so the browser displays it correctly as
-    local time rather than double-converting.
-  - Heights are returned above a geodetic datum (~MSL), not above Chart
-    Datum. We fetch the station's MWL height above Chart Datum and subtract
-    it so displayed heights match the official Canadian Tide Tables.
+This page renders the actual daily high/low table server-side, e.g.:
+  2026-08-06 (Thu) Time ADT Height (m) Height (ft)
+  05:47 7.208 23.6
+  12:02 1.531 5.0
+  18:13 7.605 25.0
 """
 
-import requests, json
-from datetime import datetime, timezone, timedelta
+import re, json, requests
 from pathlib import Path
 
-BASE    = "https://api-iwls.dfo-mpo.gc.ca/api/v1"
-CODE    = "00065"   # Saint John NB
+URL     = "https://www.tides.gc.ca/en/stations/65"   # Saint John, NB
 OUTPUT  = Path(__file__).parent / "tides.json"
-HEADERS = {"User-Agent": "dashboard/1.0", "Accept": "application/json"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (dashboard/1.0)"}
 
+TZ_OFFSET = {"ADT": "-03:00", "AST": "-04:00"}
 
-def get_chart_datum_offset(sid):
-    """
-    Return the height (m) to subtract from API values to get Chart Datum heights.
-    The CHS IWLS API returns water levels above CGVD2013 (Canadian geodetic
-    vertical datum). The station heights array lists datums above Chart Datum,
-    so the CGVD2013 entry gives the exact conversion offset needed.
-    Falls back to 0 if the metadata is unavailable.
-    """
-    try:
-        r = requests.get(f"{BASE}/stations/{sid}", headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        station = r.json()
-        heights = station.get("heights", [])
-        print(f"Available height codes: {[h.get('code') for h in heights]}")
-        for code in ("CGVD2013", "CGVD28", "MWL", "MSL"):
-            for h in heights:
-                if h.get("code") == code:
-                    offset = float(h["value"])
-                    print(f"Using {code} offset: {offset}m above Chart Datum")
-                    return offset
-    except Exception as e:
-        print(f"Warning: could not fetch datum info: {e}")
-    print("Warning: no datum offset found, heights will be uncorrected")
-    return 0.0
-
-
-def strip_tz(event_date):
-    """
-    Strip timezone info from an ISO datetime string.
-    The CHS API marks local Atlantic times with Z — removing it lets the
-    browser parse the value as local time instead of UTC.
-    """
-    # Remove trailing Z
-    s = event_date
-    if s.endswith("Z"):
-        s = s[:-1]
-    # Remove any +HH:MM or -HH:MM offset that follows the time component
-    if "T" in s:
-        date_part, time_part = s.split("T", 1)
-        time_part = time_part[:8]   # keep HH:MM:SS only
-        s = f"{date_part}T{time_part}"
-    return s
-
+DAY_BLOCK_RE = re.compile(
+    r'(\d{4}-\d{2}-\d{2})\s*\((\w+)\)\s*Time\s*(A[SD]T)\s*Height\s*\(m\)\s*Height\s*\(ft\)\s*'
+    r'((?:\d{2}:\d{2}\s+[\d.]+\s+[\d.]+\s*)+)'
+)
+EVENT_RE = re.compile(r'(\d{2}:\d{2})\s+([\d.]+)\s+[\d.]+')
 
 def main():
-    # Step 1 — look up the station's internal UUID
-    print(f"Looking up station {CODE}...")
-    r = requests.get(f"{BASE}/stations", params={"chs-station-code": CODE}, headers=HEADERS, timeout=15)
+    print(f"Fetching {URL}")
+    r = requests.get(URL, headers=HEADERS, timeout=20)
     r.raise_for_status()
-    stations = r.json()
-    if not stations:
-        raise RuntimeError(f"Station {CODE} not found")
-    sid = stations[0]["id"]
-    print(f"Station ID: {sid}")
+    html = r.text
+    print(f"Got {len(html)} chars")
 
-    # Step 2 — get Chart Datum offset so we can correct the heights
-    datum_offset = get_chart_datum_offset(sid)
+    # Only look at the section before the per-minute "Hourly Predictions" table,
+    # which is a different (much larger) block we don't need.
+    cutoff = html.find("Hourly Predictions")
+    if cutoff > 0:
+        html = html[:cutoff]
 
-    # Step 3 — fetch high/low predictions for next 48h
-    now    = datetime.now(timezone.utc)
-    end    = now + timedelta(hours=48)
-    params = {
-        "time-series-code": "wlp-hilo",
-        "from": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "to":   end.strftime("%Y-%m-%dT%H:%M:%SZ"),
-    }
-    print(f"Fetching tide predictions {params['from']} → {params['to']}")
-    r2 = requests.get(f"{BASE}/stations/{sid}/data", params=params, headers=HEADERS, timeout=15)
-    r2.raise_for_status()
-    data = r2.json()
-    print(f"Got {len(data)} tide events")
+    events = []
+    for m in DAY_BLOCK_RE.finditer(html):
+        date, _weekday, tzabbr, blob = m.groups()
+        offset = TZ_OFFSET.get(tzabbr, "-03:00")
+        for time_str, height_str in EVENT_RE.findall(blob):
+            events.append({
+                "time":   f"{date}T{time_str}:00{offset}",
+                "height": float(height_str),
+            })
 
-    # Step 4 — shape into simple list
-    # wlp-hilo returns alternating high/low events; infer type by comparing
-    # each value to the next (higher = H, lower = L).
-    tides = []
-    for i, item in enumerate(data):
-        if i + 1 < len(data):
-            tide_type = "H" if item["value"] >= data[i + 1]["value"] else "L"
-        else:
-            tide_type = "H" if item["value"] >= data[i - 1]["value"] else "L"
+    if not events:
+        raise RuntimeError("No tide events parsed — page format may have changed")
 
-        tides.append({
-            "time":   strip_tz(item["eventDate"]),
-            "type":   tide_type,
-            "height": round(item["value"] - datum_offset, 2),
-        })
+    print(f"Parsed {len(events)} raw events")
 
-    OUTPUT.write_text(json.dumps(tides, indent=2))
-    print(f"Saved tides.json ({len(tides)} events)")
+    # Events alternate High/Low (semi-diurnal tide). Determine the first event's
+    # type by comparing it to the next one, then alternate through the list.
+    first_is_high = events[0]["height"] >= events[1]["height"] if len(events) > 1 else True
+    for i, ev in enumerate(events):
+        is_high = first_is_high if i % 2 == 0 else not first_is_high
+        ev["type"] = "H" if is_high else "L"
 
+    OUTPUT.write_text(json.dumps(events, indent=2))
+    print(f"Saved tides.json ({len(events)} events)")
+    print(json.dumps(events[:4], indent=2))
 
 if __name__ == "__main__":
     main()
