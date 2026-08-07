@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /donate-thank-you.html
-Disallow: /donate-cancelled.html
-
-Sitemap: https://www.nauwigewauk.ca/sitemap.xml
