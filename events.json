@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Car service",
-      "date": "2026-08-07",
-      "time": "8:00 AM",
-      "end": "2026-08-07T11:00:00",
-      "all_day": false,
-      "location": "King Mazda\n440 Rothesay Ave, Saint John NB E2L 4G7, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Fam breakfast ",
       "date": "2026-08-08",
       "time": "9:00 AM",
@@ -71,8 +62,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-08-14",
+      "time": "All day",
+      "end": "2026-08-15",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie symperica",
+      "date": "2026-08-14",
+      "time": "8:00 PM",
+      "end": "2026-08-14T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-07T23:54:11.881203Z",
+  "fetched_at": "2026-08-08T00:42:31.054837Z",
   "error": null
 }
