@@ -28,10 +28,21 @@ DAY_BLOCK_RE = re.compile(
 )
 EVENT_RE = re.compile(r'(\d{2}:\d{2})\s+([\d.]+)\s+[\d.]+')
 
+def fetch_with_retry(url, attempts=3, timeout=45):
+    last_err = None
+    for i in range(1, attempts + 1):
+        try:
+            print(f"Fetching {url} (attempt {i}/{attempts}, timeout={timeout}s)")
+            r = requests.get(url, headers=HEADERS, timeout=timeout)
+            r.raise_for_status()
+            return r
+        except Exception as e:
+            last_err = e
+            print(f"  Attempt {i} failed: {e}")
+    raise last_err
+
 def main():
-    print(f"Fetching {URL}")
-    r = requests.get(URL, headers=HEADERS, timeout=20)
-    r.raise_for_status()
+    r = fetch_with_retry(URL, attempts=3, timeout=45)
     print(f"Got {len(r.text)} chars of raw HTML")
 
     # Strip HTML tags -> plain text, same shape as what the page visually shows
