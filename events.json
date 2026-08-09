@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Fam breakfast ",
-      "date": "2026-08-08",
-      "time": "9:00 AM",
-      "end": "2026-08-08T11:00:00",
-      "all_day": false,
-      "location": "Common's Creperie Cafe\n11 Hampton Rd, Rothesay NB E2E 5K8, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Recycling day",
       "date": "2026-08-10",
       "time": "8:00 AM",
@@ -80,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Saint John summer party",
+      "date": "2026-08-15",
+      "time": "1:30 PM",
+      "end": "2026-08-15T17:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Kv community fest ",
+      "date": "2026-08-15",
+      "time": "4:00 PM",
+      "end": "2026-08-15T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-08T23:50:24.367946Z",
+  "fetched_at": "2026-08-09T00:44:41.978543Z",
   "error": null
 }
