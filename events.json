@@ -89,8 +89,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Photos",
+      "date": "2026-08-16",
+      "time": "6:20 PM",
+      "end": "2026-08-16T19:20:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-09T23:54:46.312764Z",
+  "fetched_at": "2026-08-10T00:47:18.882243Z",
   "error": null
 }
