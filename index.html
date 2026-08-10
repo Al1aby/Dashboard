@@ -280,6 +280,15 @@ html, body {
   font-size: 22px; line-height: 1.1; color: var(--text);
 }
 
+.cal-wx {
+  display: flex; align-items: center; gap: 5px;
+  margin-top: 4px; margin-bottom: 2px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 11px; color: var(--muted);
+}
+.cal-wx-icon { font-size: 15px; }
+.cal-wx-hi { color: var(--text); }
+
 .cal-events { flex: 1; display: flex; flex-direction: column; gap: 3px; overflow: hidden; }
 
 .cev {
@@ -368,26 +377,26 @@ html, body {
    HOURLY FORECAST (under weather stats)
    ═══════════════════════════════════════════ */
 #hourly-block {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
   border-top: 1px solid var(--border);
 }
 #hourly-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 9px; letter-spacing: 3px; color: var(--muted);
-  margin-bottom: 8px;
+  font-size: 10px; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 10px;
 }
 #hourly-list {
-  display: flex; gap: 6px;
+  display: flex; gap: 10px;
 }
 .hr-cell {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
-  background: var(--panel); border-radius: 5px; padding: 6px 4px;
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px;
+  background: var(--panel); border-radius: 8px; padding: 14px 8px;
 }
-.hr-time { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--muted); }
-.hr-icon { font-size: 16px; }
-.hr-temp { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
-.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--teal); }
+.hr-time { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); }
+.hr-icon { font-size: 28px; }
+.hr-temp { font-family: 'Inconsolata', monospace; font-size: 18px; color: var(--text); }
+.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--teal); }
 
 </style>
 </head>
@@ -447,7 +456,7 @@ html, body {
       </div>
       <div id="fc-list"></div>
       <div id="hourly-block">
-        <div id="hourly-lbl">NEXT 6 HOURS</div>
+        <div id="hourly-lbl">NEXT 5 HOURS</div>
         <div id="hourly-list"></div>
       </div>
     </div>
@@ -616,6 +625,18 @@ function buildCalStrip(events) {
     hdr.innerHTML = `<div class="cal-dow">${DSH[day.getDay()]}</div><div class="cal-num">${day.getDate()}</div>`;
     col.appendChild(hdr);
 
+    // Per-day weather badge (pulled from the already-fetched daily forecast)
+    if (wxData && wxData.daily && wxData.daily.time && wxData.daily.time[i]) {
+      const lo = wxData.daily.temperature_2m_min[i];
+      const hi = wxData.daily.temperature_2m_max[i];
+      const code = wxData.daily.weather_code?.[i] ?? 0;
+      const [ico] = wmo(code);
+      const fmtS = c => useF ? `${Math.round(c*9/5+32)}°` : `${Math.round(c)}°`;
+      const wx = document.createElement('div'); wx.className = 'cal-wx';
+      wx.innerHTML = `<span class="cal-wx-icon">${ico}</span><span class="cal-wx-hi">${fmtS(hi)}</span><span>/${fmtS(lo)}</span>`;
+      col.appendChild(wx);
+    }
+
     const eWrap = document.createElement('div'); eWrap.className = 'cal-events';
 
     if (!evs.length) {
@@ -740,7 +761,7 @@ function renderWx(d) {
     const now   = new Date();
     const times = d.hourly.time;
     const hrs   = [];
-    for (let i = 0; i < times.length && hrs.length < 6; i++) {
+    for (let i = 0; i < times.length && hrs.length < 5; i++) {
       const t = new Date(times[i]);
       if (t > now) {
         hrs.push({
@@ -819,7 +840,7 @@ async function fetchTides() {
 
 async function fetchWx() {
   try {
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&hourly=temperature_2m,weather_code,precipitation_probability&forecast_days=2&wind_speed_unit=kmh';
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=45.4724&longitude=-65.8945&timezone=auto&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,precipitation&daily=temperature_2m_min,temperature_2m_max,weather_code,uv_index_max&hourly=temperature_2m,weather_code,precipitation_probability&forecast_days=7&wind_speed_unit=kmh';
     renderWx(await (await fetch(url)).json());
   } catch { document.getElementById('wx-desc').textContent = 'WEATHER UNAVAILABLE'; }
 }
@@ -841,7 +862,7 @@ async function init() {
   setTimeout(doneLoading, 300);
 
   setInterval(fetchCalendar,  5 * 60 * 1000);   // calendar every 5 min
-  setInterval(fetchWx,       10 * 60 * 1000);   // weather every 10 min
+  setInterval(() => { fetchWx().then(() => buildCalStrip(allCalEvents)); }, 10 * 60 * 1000);   // weather every 10 min, then refresh cal-tile weather
   setInterval(fetchTides,    15 * 60 * 1000);   // tides every 15 min
   setInterval(getMoonPhase,  60 * 60 * 1000);   // moon once per hour
   setInterval(refreshRadar,  10 * 60 * 1000);   // radar every 10 min (RainViewer update cadence)
