@@ -281,13 +281,14 @@ html, body {
 }
 
 .cal-wx {
-  display: flex; align-items: center; gap: 5px;
-  margin-top: 4px; margin-bottom: 2px;
-  font-family: 'Inconsolata', monospace;
-  font-size: 11px; color: var(--muted);
+  display: flex; align-items: center; gap: 6px;
+  margin-top: 5px; margin-bottom: 4px;
 }
-.cal-wx-icon { font-size: 15px; }
-.cal-wx-hi { color: var(--text); }
+.cal-wx .fc-bg { flex: 1; }
+.cal-wx-nums {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 6px;
+}
 
 .cal-events { flex: 1; display: flex; flex-direction: column; gap: 3px; overflow: hidden; }
 
@@ -377,26 +378,26 @@ html, body {
    HOURLY FORECAST (under weather stats)
    ═══════════════════════════════════════════ */
 #hourly-block {
-  margin-top: 14px;
-  padding-top: 14px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid var(--border);
 }
 #hourly-lbl {
   font-family: 'Inconsolata', monospace;
-  font-size: 10px; letter-spacing: 3px; color: var(--muted);
-  margin-bottom: 10px;
+  font-size: 9px; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 8px;
 }
 #hourly-list {
-  display: flex; gap: 10px;
+  display: flex; gap: 6px;
 }
 .hr-cell {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px;
-  background: var(--panel); border-radius: 8px; padding: 14px 8px;
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: var(--panel); border-radius: 5px; padding: 6px 4px;
 }
-.hr-time { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--muted); }
-.hr-icon { font-size: 28px; }
-.hr-temp { font-family: 'Inconsolata', monospace; font-size: 18px; color: var(--text); }
-.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 11px; color: var(--teal); }
+.hr-time { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--muted); }
+.hr-icon { font-size: 16px; }
+.hr-temp { font-family: 'Inconsolata', monospace; font-size: 12px; color: var(--text); }
+.hr-pop  { font-family: 'Inconsolata', monospace; font-size: 9px; color: var(--teal); }
 
 </style>
 </head>
@@ -625,16 +626,28 @@ function buildCalStrip(events) {
     hdr.innerHTML = `<div class="cal-dow">${DSH[day.getDay()]}</div><div class="cal-num">${day.getDate()}</div>`;
     col.appendChild(hdr);
 
-    // Per-day weather badge (pulled from the already-fetched daily forecast)
+    // Per-day weather badge — reuses the exact same bar/icon styling as the
+    // daily forecast list (fc-icon / fc-bg / fc-fg / fc-lo / fc-hi), scaled
+    // against the same week-wide min/max range.
     if (wxData && wxData.daily && wxData.daily.time && wxData.daily.time[i]) {
-      const lo = wxData.daily.temperature_2m_min[i];
-      const hi = wxData.daily.temperature_2m_max[i];
-      const code = wxData.daily.weather_code?.[i] ?? 0;
+      const daily = wxData.daily;
+      const gMin = Math.min(...daily.temperature_2m_min);
+      const gMax = Math.max(...daily.temperature_2m_max);
+      const rng  = gMax - gMin || 1;
+      const lo = daily.temperature_2m_min[i];
+      const hi = daily.temperature_2m_max[i];
+      const code = daily.weather_code?.[i] ?? 0;
       const [ico] = wmo(code);
+      const bL = (lo-gMin)/rng*100, bW = (hi-lo)/rng*100;
       const fmtS = c => useF ? `${Math.round(c*9/5+32)}°` : `${Math.round(c)}°`;
+
       const wx = document.createElement('div'); wx.className = 'cal-wx';
-      wx.innerHTML = `<span class="cal-wx-icon">${ico}</span><span class="cal-wx-hi">${fmtS(hi)}</span><span>/${fmtS(lo)}</span>`;
+      wx.innerHTML = `<div class="fc-icon">${ico}</div><div class="fc-bg"><div class="fc-fg" style="left:${bL}%;width:${bW}%"></div></div>`;
       col.appendChild(wx);
+
+      const nums = document.createElement('div'); nums.className = 'cal-wx-nums';
+      nums.innerHTML = `<span class="fc-hi">${fmtS(hi)}</span><span class="fc-lo">${fmtS(lo)}</span>`;
+      col.appendChild(nums);
     }
 
     const eWrap = document.createElement('div'); eWrap.className = 'cal-events';
