@@ -9,6 +9,7 @@ Fetches the public iCloud calendar share link and writes the next
 import json, sys
 from datetime import datetime, date, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ICS_URLS = [
     "https://p165-caldav.icloud.com/published/2/Mjc1MDE3NTk4Mjc1MDE3NcNKGptmumQbi69riMVJicVrcLZINKkxPaqFq1UjFIYeSXvsQh0mv80XocmmlmSw9gQy8s1oFPN_FK4HFE5pMtU"
@@ -35,7 +36,13 @@ def parse_ics(text, cal_name="iCloud"):
     except ImportError:
         HAS_DATEUTIL = False
 
-    today    = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    # GitHub Actions runners run on UTC. If we used datetime.now() directly,
+    # "today" could roll over to the wrong calendar date during NB evening
+    # hours (e.g. 9pm ADT is already past midnight UTC) — which throws off
+    # all-day events since they sit right at that midnight boundary.
+    # Anchor "today" to Atlantic time instead so the date always matches NB.
+    NB_TZ = ZoneInfo("America/Moncton")
+    today = datetime.now(NB_TZ).replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
     end_date = today + timedelta(days=DAYS_AHEAD)
     events   = []
 
