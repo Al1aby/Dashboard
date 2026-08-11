@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-08-10",
-      "time": "8:00 AM",
-      "end": "2026-08-10T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "NCC meeting",
-      "date": "2026-08-10",
-      "time": "7:00 PM",
-      "end": "2026-08-10T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Need milk expired aug8",
-      "date": "2026-08-10",
-      "time": "8:00 PM",
-      "end": "2026-08-10T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-08-11",
       "time": "8:00 AM",
@@ -98,8 +71,26 @@
       "all_day": false,
       "location": "Irving Nature Park\nSand Cove Rd, Saint John NB E2M 4Z9, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie dr appt",
+      "date": "2026-08-17",
+      "time": "8:45 AM",
+      "end": "2026-08-17T09:45:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure yoga",
+      "date": "2026-08-17",
+      "time": "7:00 PM",
+      "end": "2026-08-17T20:00:00",
+      "all_day": false,
+      "location": "Porter Rd\nNauwigewauk, NB, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-11T02:57:34.125047Z",
+  "fetched_at": "2026-08-11T04:15:13.447196Z",
   "error": null
 }
