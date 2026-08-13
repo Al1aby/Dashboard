@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Colin & Brittany anniversary ",
-      "date": "2026-08-12",
-      "time": "All day",
-      "end": "2026-08-13",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure therapy ",
       "date": "2026-08-13",
       "time": "7:00 PM",
@@ -100,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-13T00:42:38.564157Z",
+  "fetched_at": "2026-08-13T03:13:14.730670Z",
   "error": null
 }
