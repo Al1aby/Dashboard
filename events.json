@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Saint John summer party",
-      "date": "2026-08-15",
-      "time": "1:30 PM",
-      "end": "2026-08-15T17:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Kv community fest ",
-      "date": "2026-08-15",
-      "time": "4:00 PM",
-      "end": "2026-08-15T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Photos",
       "date": "2026-08-16",
       "time": "6:20 PM",
@@ -73,6 +55,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-16T02:09:23.688057Z",
+  "fetched_at": "2026-08-16T03:10:21.993763Z",
   "error": null
 }
