@@ -28,15 +28,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "House cleaning ",
-      "date": "2026-08-18",
-      "time": "8:30 AM",
-      "end": "2026-08-18T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-08-20",
       "time": "All day",
@@ -46,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-17T20:16:38.459573Z",
+  "fetched_at": "2026-08-17T20:49:18.696571Z",
   "error": null
 }
