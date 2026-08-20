@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Coffee with Josie & Kate",
+      "date": "2026-08-23",
+      "time": "10:30 AM",
+      "end": "2026-08-23T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Supper @ M&K\u2019s",
       "date": "2026-08-23",
       "time": "3:30 PM",
@@ -64,6 +73,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-20T20:00:57.544493Z",
+  "fetched_at": "2026-08-20T20:42:43.339124Z",
   "error": null
 }
