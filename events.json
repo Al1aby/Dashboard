@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "title": "Magic cards with the guys",
+      "date": "2026-08-21",
+      "time": "8:30 PM",
+      "end": "2026-08-21T23:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Pool?",
       "date": "2026-08-22",
       "time": "2:00 PM",
@@ -100,6 +109,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-21T14:03:42.676022Z",
+  "fetched_at": "2026-08-21T14:50:49.810141Z",
   "error": null
 }
