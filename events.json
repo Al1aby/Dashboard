@@ -46,15 +46,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "House cleaning ",
-      "date": "2026-08-25",
-      "time": "8:30 AM",
-      "end": "2026-08-25T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in Fredericton",
       "date": "2026-08-26",
       "time": "All day",
@@ -109,6 +100,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-23T16:42:20.230605Z",
+  "fetched_at": "2026-08-23T17:00:11.922577Z",
   "error": null
 }
