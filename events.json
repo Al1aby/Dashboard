@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-08-24",
-      "time": "8:00 AM",
-      "end": "2026-08-24T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure massage",
-      "date": "2026-08-24",
-      "time": "6:45 PM",
-      "end": "2026-08-24T19:45:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-08-25",
       "time": "8:00 AM",
@@ -80,8 +62,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie milk expires aug 29",
+      "date": "2026-08-31",
+      "time": "8:00 AM",
+      "end": "2026-08-31T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "House cleaning ",
+      "date": "2026-08-31",
+      "time": "8:30 AM",
+      "end": "2026-08-31T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Yoga ",
+      "date": "2026-08-31",
+      "time": "7:00 PM",
+      "end": "2026-08-31T20:00:00",
+      "all_day": false,
+      "location": "Porter Rd\nNauwigewauk, NB, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-25T02:06:58.262509Z",
+  "fetched_at": "2026-08-25T03:10:17.767371Z",
   "error": null
 }
