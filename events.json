@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Garbage day",
-      "date": "2026-08-25",
-      "time": "8:00 AM",
-      "end": "2026-08-25T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in Fredericton",
       "date": "2026-08-26",
       "time": "All day",
@@ -89,8 +80,17 @@
       "all_day": false,
       "location": "Porter Rd\nNauwigewauk, NB, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-09-01",
+      "time": "8:00 AM",
+      "end": "2026-09-01T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-26T02:16:59.374095Z",
+  "fetched_at": "2026-08-26T03:29:33.425050Z",
   "error": null
 }
