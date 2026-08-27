@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in Fredericton",
-      "date": "2026-08-26",
-      "time": "All day",
-      "end": "2026-08-27",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-08-27",
       "time": "All day",
@@ -100,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-26T23:48:14.255258Z",
+  "fetched_at": "2026-08-27T05:24:22.587604Z",
   "error": null
 }
