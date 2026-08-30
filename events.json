@@ -10,15 +10,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Winnie milk expires aug 29",
-      "date": "2026-08-31",
-      "time": "8:00 AM",
-      "end": "2026-08-31T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Yoga ",
       "date": "2026-08-31",
       "time": "7:00 PM",
@@ -55,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-08-30T16:50:35.625150Z",
+  "fetched_at": "2026-08-30T19:32:22.689524Z",
   "error": null
 }
