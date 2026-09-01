@@ -44,8 +44,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Fantasy draft",
+      "date": "2026-09-07",
+      "time": "8:00 PM",
+      "end": "2026-09-08T23:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-01T16:35:44.010141Z",
+  "fetched_at": "2026-09-01T19:34:01.918649Z",
   "error": null
 }
