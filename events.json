@@ -62,8 +62,17 @@
       "all_day": false,
       "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Tiffany birthday ",
+      "date": "2026-09-09",
+      "time": "All day",
+      "end": "2026-09-10",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-03T01:14:35.075433Z",
+  "fetched_at": "2026-09-03T05:48:25.036516Z",
   "error": null
 }
