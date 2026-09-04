@@ -28,6 +28,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Supper @ M&K\u2019s",
+      "date": "2026-09-06",
+      "time": "3:00 PM",
+      "end": "2026-09-06T19:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Recycling day",
       "date": "2026-09-07",
       "time": "8:00 AM",
@@ -91,6 +100,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-03T22:56:49.408232Z",
+  "fetched_at": "2026-09-04T00:34:29.440809Z",
   "error": null
 }
