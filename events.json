@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Shoe shopping - Win and Aaron ",
-      "date": "2026-09-05",
-      "time": "9:00 AM",
-      "end": "2026-09-05T11:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Aaron -  check & clean furnace filter ",
-      "date": "2026-09-05",
-      "time": "9:00 AM",
-      "end": "2026-09-05T10:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Supper @ M&K\u2019s",
       "date": "2026-09-06",
       "time": "3:00 PM",
@@ -109,6 +91,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-06T01:35:15.072877Z",
+  "fetched_at": "2026-09-06T06:29:11.042206Z",
   "error": null
 }
