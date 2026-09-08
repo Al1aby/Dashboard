@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-09-07",
-      "time": "8:00 AM",
-      "end": "2026-09-07T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure therapy ",
-      "date": "2026-09-07",
-      "time": "7:00 PM",
-      "end": "2026-09-07T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Fantasy draft",
-      "date": "2026-09-07",
-      "time": "8:00 PM",
-      "end": "2026-09-07T23:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-09-08",
       "time": "All day",
@@ -80,8 +53,44 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-09-14",
+      "time": "All day",
+      "end": "2026-09-15",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Doctors appt ",
+      "date": "2026-09-14",
+      "time": "3:30 PM",
+      "end": "2026-09-14T16:00:00",
+      "all_day": false,
+      "location": "Chelsey drive ",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "NCC meeting",
+      "date": "2026-09-14",
+      "time": "7:00 PM",
+      "end": "2026-09-14T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie symperica",
+      "date": "2026-09-14",
+      "time": "8:00 PM",
+      "end": "2026-09-14T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-08T00:20:10.730270Z",
+  "fetched_at": "2026-09-08T04:53:38.870992Z",
   "error": null
 }
