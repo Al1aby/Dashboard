@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-09-08",
-      "time": "All day",
-      "end": "2026-09-09",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Garbage day",
-      "date": "2026-09-08",
-      "time": "8:00 AM",
-      "end": "2026-09-08T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Maternal fetal assessment appt - 1:45",
-      "date": "2026-09-08",
-      "time": "1:00 PM",
-      "end": "2026-09-08T15:30:00",
-      "all_day": false,
-      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Tiffany birthday ",
       "date": "2026-09-09",
       "time": "All day",
@@ -89,8 +62,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-09-15",
+      "time": "8:00 AM",
+      "end": "2026-09-15T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure massage",
+      "date": "2026-09-15",
+      "time": "6:30 PM",
+      "end": "2026-09-15T19:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-09T00:34:49.966921Z",
+  "fetched_at": "2026-09-09T05:13:34.861571Z",
   "error": null
 }
