@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Tiffany birthday ",
-      "date": "2026-09-09",
-      "time": "All day",
-      "end": "2026-09-10",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-09-10",
       "time": "All day",
@@ -80,8 +71,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-09-16",
+      "time": "All day",
+      "end": "2026-09-18",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-10T00:11:01.009317Z",
+  "fetched_at": "2026-09-10T04:36:04.993244Z",
   "error": null
 }
