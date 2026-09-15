@@ -28,15 +28,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Cap pele ?",
-      "date": "2026-09-19",
-      "time": "All day",
-      "end": "2026-09-21",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Heather & Paul - M&K?",
       "date": "2026-09-20",
       "time": "3:00 PM",
@@ -55,6 +46,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-15T10:12:46.405868Z",
+  "fetched_at": "2026-09-15T14:59:16.095644Z",
   "error": null
 }
