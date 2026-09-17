@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-09-16",
-      "time": "All day",
-      "end": "2026-09-18",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Heather & Paul - M&K?",
       "date": "2026-09-20",
       "time": "3:00 PM",
@@ -46,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-17T01:20:58.029602Z",
+  "fetched_at": "2026-09-17T06:14:50.471250Z",
   "error": null
 }
