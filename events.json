@@ -44,8 +44,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure Toronto",
+      "date": "2026-09-24",
+      "time": "All day",
+      "end": "2026-09-26",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-18T00:12:45.450329Z",
+  "fetched_at": "2026-09-18T04:40:33.213022Z",
   "error": null
 }
