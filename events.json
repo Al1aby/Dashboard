@@ -44,8 +44,17 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Cap pele ?",
+      "date": "2026-09-26",
+      "time": "All day",
+      "end": "2026-09-28",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-20T01:36:28.735852Z",
+  "fetched_at": "2026-09-20T06:58:36.230893Z",
   "error": null
 }
