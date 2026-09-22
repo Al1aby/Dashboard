@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-09-21",
-      "time": "8:00 AM",
-      "end": "2026-09-21T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-09-22",
       "time": "8:00 AM",
@@ -46,6 +37,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-22T01:50:59.740978Z",
+  "fetched_at": "2026-09-22T06:57:20.001161Z",
   "error": null
 }
