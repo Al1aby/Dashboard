@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Cap pele ?",
-      "date": "2026-09-26",
-      "time": "All day",
-      "end": "2026-09-28",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-09-29",
       "time": "8:00 AM",
@@ -62,8 +53,44 @@
       "all_day": false,
       "location": "Saint John Regional Hospital (400 University Ave, Saint John NB E2L 4L4, Canada)",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron -  check & clean furnace filter ",
+      "date": "2026-10-03",
+      "time": "9:00 AM",
+      "end": "2026-10-03T10:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-10-03",
+      "time": "10:40 AM",
+      "end": "2026-10-03T11:10:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Nauwigewauk Fall Fair",
+      "date": "2026-10-03",
+      "time": "11:00 AM",
+      "end": "2026-10-03T12:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Kids Cut at Bubbles Haircare for Kids",
+      "date": "2026-10-03",
+      "time": "12:30 PM",
+      "end": "2026-10-03T13:00:00",
+      "all_day": false,
+      "location": "3-168 Rothesay Ave, Saint John, NB, E2J 2B5",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-27T01:08:02.001030Z",
+  "fetched_at": "2026-09-27T06:34:53.762376Z",
   "error": null
 }
