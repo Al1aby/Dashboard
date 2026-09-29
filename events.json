@@ -107,8 +107,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-10-05",
+      "time": "8:00 AM",
+      "end": "2026-10-05T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-09-29T01:04:57.866743Z",
+  "fetched_at": "2026-09-29T06:51:16.335447Z",
   "error": null
 }
