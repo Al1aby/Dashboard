@@ -116,8 +116,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure away conference ",
+      "date": "2026-10-07",
+      "time": "All day",
+      "end": "2026-10-10",
+      "all_day": true,
+      "location": "Fredericton\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-01T01:33:11.282102Z",
+  "fetched_at": "2026-10-01T07:46:58.431693Z",
   "error": null
 }
