@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure away conference ",
-      "date": "2026-10-07",
-      "time": "All day",
-      "end": "2026-10-10",
-      "all_day": true,
-      "location": "Fredericton\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Aaron pickup produce box",
       "date": "2026-10-08",
       "time": "4:00 PM",
@@ -71,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Katie symperica",
+      "date": "2026-10-14",
+      "time": "8:00 PM",
+      "end": "2026-10-14T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-08T01:07:34.014942Z",
+  "fetched_at": "2026-10-08T07:18:25.700358Z",
   "error": null
 }
