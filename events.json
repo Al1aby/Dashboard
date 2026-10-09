@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Aaron pickup produce box",
-      "date": "2026-10-08",
-      "time": "4:00 PM",
-      "end": "2026-10-08T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Mom visiting ",
       "date": "2026-10-09",
       "time": "12:00 PM",
@@ -71,8 +62,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-10-15",
+      "time": "All day",
+      "end": "2026-10-16",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Doctors appt ",
+      "date": "2026-10-15",
+      "time": "8:30 AM",
+      "end": "2026-10-15T09:00:00",
+      "all_day": false,
+      "location": "Chelsey drive ",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-09T00:18:32.758814Z",
+  "fetched_at": "2026-10-09T06:23:18.441451Z",
   "error": null
 }
