@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Mom visiting ",
-      "date": "2026-10-09",
-      "time": "12:00 PM",
-      "end": "2026-10-14T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-10-10",
       "time": "10:40 AM",
@@ -89,8 +80,17 @@
       "all_day": false,
       "location": "Chelsey drive ",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-10-16",
+      "time": "All day",
+      "end": "2026-10-17",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-10T02:17:23.213343Z",
+  "fetched_at": "2026-10-10T08:41:47.299664Z",
   "error": null
 }
