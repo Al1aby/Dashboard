@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-10-13",
-      "time": "8:00 AM",
-      "end": "2026-10-13T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Maternal fetal assessment appt - 1:45",
-      "date": "2026-10-13",
-      "time": "1:00 PM",
-      "end": "2026-10-13T15:30:00",
-      "all_day": false,
-      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure massage",
-      "date": "2026-10-13",
-      "time": "6:30 PM",
-      "end": "2026-10-13T19:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Prenatal call with Horizon ",
       "date": "2026-10-14",
       "time": "9:15 AM",
@@ -107,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-10-20",
+      "time": "8:00 AM",
+      "end": "2026-10-20T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-14T01:30:32.147340Z",
+  "fetched_at": "2026-10-14T06:40:49.139516Z",
   "error": null
 }
