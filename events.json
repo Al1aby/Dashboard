@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-10-16",
-      "time": "All day",
-      "end": "2026-10-17",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-10-17",
       "time": "10:40 AM",
@@ -53,8 +44,17 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Drop & pickup Katie - 9am",
+      "date": "2026-10-23",
+      "time": "9:00 AM",
+      "end": "2026-10-25T09:00:00",
+      "all_day": false,
+      "location": "Mango Spaw and Services Inc\n648 Campbell Rd, Nerepis NB E5K 3W6, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-17T01:50:38.047275Z",
+  "fetched_at": "2026-10-17T06:19:19.640851Z",
   "error": null
 }
