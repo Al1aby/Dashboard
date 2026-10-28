@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-10-27",
-      "time": "8:00 AM",
-      "end": "2026-10-27T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Physio",
-      "date": "2026-10-27",
-      "time": "5:00 PM",
-      "end": "2026-10-27T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Josie dress shopping ",
       "date": "2026-10-31",
       "time": "9:00 AM",
@@ -53,8 +35,26 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-11-03",
+      "time": "8:00 AM",
+      "end": "2026-11-03T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winston appt - 815 ",
+      "date": "2026-11-03",
+      "time": "8:00 AM",
+      "end": "2026-11-03T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-28T00:12:34.102735Z",
+  "fetched_at": "2026-10-28T05:37:39.789533Z",
   "error": null
 }
