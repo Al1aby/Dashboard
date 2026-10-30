@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Dead end driveway",
-      "date": "2026-10-29",
-      "time": "5:00 PM",
-      "end": "2026-10-29T18:00:00",
-      "all_day": false,
-      "location": "Loch Lomond Rd\nSaint John, NB, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Josie dress shopping ",
       "date": "2026-10-31",
       "time": "10:00 AM",
@@ -62,8 +53,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Service check time at King Mazda",
+      "date": "2026-11-05",
+      "time": "8:00 AM",
+      "end": "2026-11-05T11:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-10-30T02:56:08.284903Z",
+  "fetched_at": "2026-10-30T09:17:05.207832Z",
   "error": null
 }
