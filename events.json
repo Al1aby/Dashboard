@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Josie dress shopping ",
-      "date": "2026-10-31",
-      "time": "10:00 AM",
-      "end": "2026-10-31T17:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Winnie swim \ud83c\udf0a",
-      "date": "2026-10-31",
-      "time": "10:40 AM",
-      "end": "2026-10-31T11:10:00",
-      "all_day": false,
-      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Trunk or treat ",
-      "date": "2026-10-31",
-      "time": "6:00 PM",
-      "end": "2026-10-31T19:00:00",
-      "all_day": false,
-      "location": "Nauwigewauk\nNB, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Recycling day",
       "date": "2026-11-02",
       "time": "8:00 AM",
@@ -71,8 +44,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron -  check & clean furnace filter ",
+      "date": "2026-11-07",
+      "time": "9:00 AM",
+      "end": "2026-11-07T10:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-11-07",
+      "time": "10:40 AM",
+      "end": "2026-11-07T11:10:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-01T01:35:34.256618Z",
+  "fetched_at": "2026-11-01T08:07:36.029370Z",
   "error": null
 }
