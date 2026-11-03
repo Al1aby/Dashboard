@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-11-02",
-      "time": "8:00 AM",
-      "end": "2026-11-02T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Garbage day",
       "date": "2026-11-03",
       "time": "8:00 AM",
@@ -62,8 +53,35 @@
       "all_day": false,
       "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-11-09",
+      "time": "All day",
+      "end": "2026-11-10",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure dr appt",
+      "date": "2026-11-09",
+      "time": "3:00 PM",
+      "end": "2026-11-09T16:00:00",
+      "all_day": false,
+      "location": "Port city primary care",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "NCC meeting",
+      "date": "2026-11-09",
+      "time": "7:00 PM",
+      "end": "2026-11-09T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-03T01:53:47.802003Z",
+  "fetched_at": "2026-11-03T08:44:32.603914Z",
   "error": null
 }
