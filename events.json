@@ -19,20 +19,20 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Laure therapy ",
-      "date": "2026-11-03",
-      "time": "6:00 PM",
-      "end": "2026-11-03T19:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Service check time at King Mazda",
       "date": "2026-11-05",
       "time": "8:00 AM",
       "end": "2026-11-05T11:00:00",
       "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ?",
+      "date": "2026-11-06",
+      "time": "All day",
+      "end": "2026-11-07",
+      "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
     },
@@ -82,6 +82,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-03T08:44:32.603914Z",
+  "fetched_at": "2026-11-03T16:35:40.423029Z",
   "error": null
 }
