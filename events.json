@@ -10,6 +10,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Aaron Covid and flu vaccine",
+      "date": "2026-11-05",
+      "time": "3:15 PM",
+      "end": "2026-11-05T16:15:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Laure in office ?",
       "date": "2026-11-06",
       "time": "All day",
@@ -109,6 +118,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-04T16:16:55.210737Z",
+  "fetched_at": "2026-11-04T21:59:51.226282Z",
   "error": null
 }
