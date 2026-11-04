@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Garbage day",
-      "date": "2026-11-03",
-      "time": "8:00 AM",
-      "end": "2026-11-03T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Winston appt - 815 ",
-      "date": "2026-11-03",
-      "time": "8:00 AM",
-      "end": "2026-11-03T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Service check time at King Mazda",
       "date": "2026-11-05",
       "time": "8:00 AM",
@@ -80,8 +62,44 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-11-10",
+      "time": "All day",
+      "end": "2026-11-11",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Maternal fetal assessment appt - 8:30",
+      "date": "2026-11-10",
+      "time": "8:00 AM",
+      "end": "2026-11-10T10:00:00",
+      "all_day": false,
+      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-11-10",
+      "time": "8:00 AM",
+      "end": "2026-11-10T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure concert?",
+      "date": "2026-11-10",
+      "time": "5:00 PM",
+      "end": "2026-11-10T23:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-04T01:52:11.005563Z",
+  "fetched_at": "2026-11-04T08:13:02.492964Z",
   "error": null
 }
