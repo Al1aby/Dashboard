@@ -73,6 +73,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Mackenzie stay overnight ",
+      "date": "2026-11-09",
+      "time": "5:00 PM",
+      "end": "2026-11-10T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "NCC meeting",
       "date": "2026-11-09",
       "time": "7:00 PM",
@@ -127,6 +136,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-05T09:23:46.331939Z",
+  "fetched_at": "2026-11-05T17:29:32.937307Z",
   "error": null
 }
