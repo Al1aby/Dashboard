@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-11-10",
-      "time": "All day",
-      "end": "2026-11-11",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Maternal fetal assessment appt - 8:30",
-      "date": "2026-11-10",
-      "time": "8:00 AM",
-      "end": "2026-11-10T10:00:00",
-      "all_day": false,
-      "location": "Saint John Regional Hospital\n400 University Ave, Saint John NB E2L 4L2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Compost day ",
-      "date": "2026-11-10",
-      "time": "8:00 AM",
-      "end": "2026-11-10T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure massage",
       "date": "2026-11-11",
       "time": "5:00 PM",
@@ -71,8 +44,35 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-11-17",
+      "time": "All day",
+      "end": "2026-11-18",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-11-17",
+      "time": "8:00 AM",
+      "end": "2026-11-17T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Work supper",
+      "date": "2026-11-17",
+      "time": "5:00 PM",
+      "end": "2026-11-17T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-11T02:19:55.018743Z",
+  "fetched_at": "2026-11-11T09:38:26.544564Z",
   "error": null
 }
