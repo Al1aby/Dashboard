@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure massage",
-      "date": "2026-11-11",
-      "time": "5:00 PM",
-      "end": "2026-11-11T18:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure off ",
       "date": "2026-11-12",
       "time": "All day",
@@ -71,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office",
+      "date": "2026-11-18",
+      "time": "All day",
+      "end": "2026-11-19",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-11T23:34:32.883338Z",
+  "fetched_at": "2026-11-12T04:12:15.341285Z",
   "error": null
 }
