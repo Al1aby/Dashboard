@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure off ",
-      "date": "2026-11-12",
-      "time": "All day",
-      "end": "2026-11-14",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Winnie swim \ud83c\udf0a",
       "date": "2026-11-14",
       "time": "10:40 AM",
@@ -71,8 +62,26 @@
       "all_day": true,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Bloodwork - 315",
+      "date": "2026-11-19",
+      "time": "2:30 PM",
+      "end": "2026-11-19T16:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure physio",
+      "date": "2026-11-19",
+      "time": "5:00 PM",
+      "end": "2026-11-19T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-13T01:15:11.040972Z",
+  "fetched_at": "2026-11-13T07:58:56.270956Z",
   "error": null
 }
