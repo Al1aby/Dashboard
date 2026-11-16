@@ -71,8 +71,17 @@
       "all_day": false,
       "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Supper at M & K - photos",
+      "date": "2026-11-22",
+      "time": "4:00 PM",
+      "end": "2026-11-22T19:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-16T01:23:56.693511Z",
+  "fetched_at": "2026-11-16T08:06:54.403305Z",
   "error": null
 }
