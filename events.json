@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Recycling day",
-      "date": "2026-11-16",
-      "time": "8:00 AM",
-      "end": "2026-11-16T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-11-17",
       "time": "All day",
@@ -80,8 +71,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure in office ",
+      "date": "2026-11-23",
+      "time": "All day",
+      "end": "2026-11-24",
+      "all_day": true,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure dr appt",
+      "date": "2026-11-23",
+      "time": "2:30 PM",
+      "end": "2026-11-23T15:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-17T01:55:32.432897Z",
+  "fetched_at": "2026-11-17T09:51:54.067955Z",
   "error": null
 }
