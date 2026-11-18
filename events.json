@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-11-17",
-      "time": "All day",
-      "end": "2026-11-18",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Garbage day",
-      "date": "2026-11-17",
-      "time": "8:00 AM",
-      "end": "2026-11-17T09:00:00",
-      "all_day": false,
-      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Work supper",
-      "date": "2026-11-17",
-      "time": "5:00 PM",
-      "end": "2026-11-17T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office",
       "date": "2026-11-18",
       "time": "All day",
@@ -89,8 +62,44 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Compost day ",
+      "date": "2026-11-24",
+      "time": "8:00 AM",
+      "end": "2026-11-24T09:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Aaron doctor apt",
+      "date": "2026-11-24",
+      "time": "11:00 AM",
+      "end": "2026-11-24T12:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Doula visit",
+      "date": "2026-11-24",
+      "time": "3:00 PM",
+      "end": "2026-11-24T17:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure therapy ",
+      "date": "2026-11-24",
+      "time": "7:00 PM",
+      "end": "2026-11-24T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-18T01:25:14.633613Z",
+  "fetched_at": "2026-11-18T08:41:35.406273Z",
   "error": null
 }
