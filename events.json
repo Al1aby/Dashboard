@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office",
-      "date": "2026-11-18",
-      "time": "All day",
-      "end": "2026-11-19",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Bloodwork - 315",
       "date": "2026-11-19",
       "time": "2:30 PM",
@@ -98,8 +89,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Amanda visiting ",
+      "date": "2026-11-25",
+      "time": "5:00 PM",
+      "end": "2026-11-25T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-18T23:34:21.008507Z",
+  "fetched_at": "2026-11-19T04:29:26.979682Z",
   "error": null
 }
