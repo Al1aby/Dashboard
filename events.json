@@ -48,8 +48,8 @@
     {
       "title": "Laure dr appt",
       "date": "2026-11-23",
-      "time": "2:30 PM",
-      "end": "2026-11-23T15:30:00",
+      "time": "11:30 AM",
+      "end": "2026-11-23T12:30:00",
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
@@ -100,6 +100,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-19T13:43:06.368664Z",
+  "fetched_at": "2026-11-19T21:49:02.356284Z",
   "error": null
 }
