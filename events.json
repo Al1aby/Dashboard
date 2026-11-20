@@ -80,8 +80,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Appointment at Massage Addict Saint John",
+      "date": "2026-11-26",
+      "time": "8:00 PM",
+      "end": "2026-11-26T21:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-20T10:29:56.968564Z",
+  "fetched_at": "2026-11-20T18:43:53.233330Z",
   "error": null
 }
