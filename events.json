@@ -73,6 +73,15 @@
       "calendar": "Laure and Aaron "
     },
     {
+      "title": "Laure off ",
+      "date": "2026-11-25",
+      "time": "12:30 PM",
+      "end": "2026-11-25T16:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
       "title": "Amanda visiting ",
       "date": "2026-11-25",
       "time": "5:00 PM",
@@ -91,6 +100,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-20T18:43:53.233330Z",
+  "fetched_at": "2026-11-21T00:15:17.774468Z",
   "error": null
 }
