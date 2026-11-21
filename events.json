@@ -98,8 +98,26 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Mazda oil change ",
+      "date": "2026-11-27",
+      "time": "12:45 PM",
+      "end": "2026-11-27T16:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Supper out & babysitter ",
+      "date": "2026-11-27",
+      "time": "5:00 PM",
+      "end": "2026-11-27T22:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-21T00:15:17.774468Z",
+  "fetched_at": "2026-11-21T07:28:25.808864Z",
   "error": null
 }
