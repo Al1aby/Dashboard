@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Winnie swim \ud83c\udf0a",
-      "date": "2026-11-21",
-      "time": "10:40 AM",
-      "end": "2026-11-21T11:10:00",
-      "all_day": false,
-      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Supper at M & K - photos",
       "date": "2026-11-22",
       "time": "4:00 PM",
@@ -116,8 +107,35 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Harrison\u2019s birthday party ",
+      "date": "2026-11-28",
+      "time": "10:00 AM",
+      "end": "2026-11-28T12:00:00",
+      "all_day": false,
+      "location": "Oasis Trampoline Park\n212 McAllister Dr., Saint John NB E2J 2S7, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Winnie swim \ud83c\udf0a",
+      "date": "2026-11-28",
+      "time": "10:40 AM",
+      "end": "2026-11-28T11:10:00",
+      "all_day": false,
+      "location": "Ymca\n191 Churchill Blvd, Saint John NB E2K 3E2, Canada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "KV Santa Claus Parade ",
+      "date": "2026-11-28",
+      "time": "6:00 PM",
+      "end": "2026-11-28T20:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-22T00:56:33.342069Z",
+  "fetched_at": "2026-11-22T07:39:14.109745Z",
   "error": null
 }
