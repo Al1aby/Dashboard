@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Supper at M & K - photos",
-      "date": "2026-11-22",
-      "time": "4:00 PM",
-      "end": "2026-11-22T19:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure in office ",
       "date": "2026-11-23",
       "time": "All day",
@@ -134,8 +125,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "NCC annual tree lighting ",
+      "date": "2026-11-29",
+      "time": "5:15 PM",
+      "end": "2026-11-29T19:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-23T01:51:44.329597Z",
+  "fetched_at": "2026-11-23T09:55:50.063332Z",
   "error": null
 }
