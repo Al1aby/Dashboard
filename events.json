@@ -19,15 +19,6 @@
       "calendar": "Laure and Aaron "
     },
     {
-      "title": "Doula visit",
-      "date": "2026-11-24",
-      "time": "3:00 PM",
-      "end": "2026-11-24T17:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure therapy ",
       "date": "2026-11-24",
       "time": "7:00 PM",
@@ -127,6 +118,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-24T05:39:14.844222Z",
+  "fetched_at": "2026-11-24T16:22:41.882650Z",
   "error": null
 }
