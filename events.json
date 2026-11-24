@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure in office ",
-      "date": "2026-11-23",
-      "time": "All day",
-      "end": "2026-11-24",
-      "all_day": true,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure dr appt",
-      "date": "2026-11-23",
-      "time": "11:30 AM",
-      "end": "2026-11-23T12:30:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Compost day ",
       "date": "2026-11-24",
       "time": "8:00 AM",
@@ -134,8 +116,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Recycling day",
+      "date": "2026-11-30",
+      "time": "8:00 AM",
+      "end": "2026-11-30T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-23T21:48:24.891947Z",
+  "fetched_at": "2026-11-24T05:39:14.844222Z",
   "error": null
 }
