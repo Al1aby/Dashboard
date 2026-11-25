@@ -1,33 +1,6 @@
 {
   "events": [
     {
-      "title": "Compost day ",
-      "date": "2026-11-24",
-      "time": "8:00 AM",
-      "end": "2026-11-24T09:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Aaron doctor apt",
-      "date": "2026-11-24",
-      "time": "11:00 AM",
-      "end": "2026-11-24T12:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Laure therapy ",
-      "date": "2026-11-24",
-      "time": "7:00 PM",
-      "end": "2026-11-24T20:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Laure off ",
       "date": "2026-11-25",
       "time": "12:30 PM",
@@ -61,24 +34,6 @@
       "end": "2026-11-27T16:30:00",
       "all_day": false,
       "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Supper out & babysitter ",
-      "date": "2026-11-27",
-      "time": "5:00 PM",
-      "end": "2026-11-27T22:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Harrison\u2019s birthday party ",
-      "date": "2026-11-28",
-      "time": "10:00 AM",
-      "end": "2026-11-28T12:00:00",
-      "all_day": false,
-      "location": "Oasis Trampoline Park\n212 McAllister Dr., Saint John NB E2J 2S7, Canada",
       "calendar": "Laure and Aaron "
     },
     {
@@ -116,8 +71,26 @@
       "all_day": false,
       "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Garbage day",
+      "date": "2026-12-01",
+      "time": "8:00 AM",
+      "end": "2026-12-01T09:00:00",
+      "all_day": false,
+      "location": "249 Route 100\nHampton NB E5N 6Z3\nCanada",
+      "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Hair appointment ",
+      "date": "2026-12-01",
+      "time": "7:30 PM",
+      "end": "2026-12-01T20:30:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-25T00:55:37.999051Z",
+  "fetched_at": "2026-11-25T09:21:43.133971Z",
   "error": null
 }
