@@ -1,24 +1,6 @@
 {
   "events": [
     {
-      "title": "Laure off ",
-      "date": "2026-11-25",
-      "time": "12:30 PM",
-      "end": "2026-11-25T16:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
-      "title": "Amanda visiting ",
-      "date": "2026-11-25",
-      "time": "5:00 PM",
-      "end": "2026-11-25T21:00:00",
-      "all_day": false,
-      "location": null,
-      "calendar": "Laure and Aaron "
-    },
-    {
       "title": "Appointment at Massage Addict Saint John",
       "date": "2026-11-26",
       "time": "8:00 PM",
@@ -91,6 +73,6 @@
       "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-26T02:21:12.545393Z",
+  "fetched_at": "2026-11-26T11:10:59.852472Z",
   "error": null
 }
