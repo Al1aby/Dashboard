@@ -62,8 +62,17 @@
       "all_day": false,
       "location": null,
       "calendar": "Laure and Aaron "
+    },
+    {
+      "title": "Laure physio",
+      "date": "2026-12-03",
+      "time": "5:00 PM",
+      "end": "2026-12-03T18:00:00",
+      "all_day": false,
+      "location": null,
+      "calendar": "Laure and Aaron "
     }
   ],
-  "fetched_at": "2026-11-27T02:48:51.805178Z",
+  "fetched_at": "2026-11-27T11:30:57.296734Z",
   "error": null
 }
